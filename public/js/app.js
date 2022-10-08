@@ -2077,9 +2077,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2100,6 +2097,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_routes__WEBPACK_IMPORTED_MODULE_4__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
@@ -2160,47 +2158,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*!********************************!*\
   !*** ./resources/js/routes.js ***!
   \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "routes": () => (/* binding */ routes)
-/* harmony export */ });
 var Home = function Home() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Home_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Home.vue */ "./resources/js/components/Home.vue"));
 };
-
-var Mostrar = function Mostrar() {
-  return __webpack_require__.e(/*! import() */ "resources_js_components_estudiante_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/estudiante/Mostrar.vue */ "./resources/js/components/estudiante/Mostrar.vue"));
-};
-
-var Crear = function Crear() {
-  return __webpack_require__.e(/*! import() */ "resources_js_components_estudiante_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/estudiante/Crear.vue */ "./resources/js/components/estudiante/Crear.vue"));
-};
-
-var Editar = function Editar() {
-  return __webpack_require__.e(/*! import() */ "resources_js_components_estudiante_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/estudiante/Editar.vue */ "./resources/js/components/estudiante/Editar.vue"));
-};
-
-var routes = [//ROUTAS DEL PRODUCT
-{
-  name: 'home',
-  path: '/',
-  component: Home
-}, {
-  name: 'mostrarEstudiantes',
-  path: '/estudiantes',
-  component: Mostrar
-}, {
-  name: 'crearEstudiante',
-  path: '/crear',
-  component: Crear
-}, {
-  name: 'editarEstudiante',
-  path: '/editar/:id',
-  component: Editar
-}];
 
 /***/ }),
 
@@ -19758,25 +19720,6 @@ var render = function() {
                   )
                 ],
                 1
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      attrs: {
-                        "exact-active-class": "active",
-                        to: "/estudiantes"
-                      }
-                    },
-                    [_vm._v("Estudiantes")]
-                  )
-                ],
-                1
               )
             ])
           ]
@@ -35249,7 +35192,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_estudiante_Mostrar_vue":1,"resources_js_components_estudiante_Crear_vue":1,"resources_js_components_estudiante_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if (chunkId === "resources_js_components_Home_vue") return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

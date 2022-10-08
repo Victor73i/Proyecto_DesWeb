@@ -68,32 +68,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container mt-4" }, [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col text-center" }, [
-        _c(
-          "h1",
-          [
-            _c(
-              "router-link",
-              {
-                staticClass: "nav-link",
-                attrs: { "exact-active-class": "active", to: "/estudiantes" }
-              },
-              [
-                _c("span", { staticClass: "badge bg-danger" }, [
-                  _vm._v("EXAMEN")
-                ])
-              ]
-            )
-          ],
-          1
-        )
-      ])
-    ])
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container mt-4" }, [
+      _c("div", { staticClass: "row" })
+    ])
+  }
+]
 render._withStripped = true
 
 
