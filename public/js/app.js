@@ -2080,6 +2080,55 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2171,35 +2220,10 @@ var Home = function Home() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Home_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Home.vue */ "./resources/js/components/Home.vue"));
 };
 
-var Mostrar = function Mostrar() {
-  return __webpack_require__.e(/*! import() */ "resources_js_components_estudiante_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/estudiante/Mostrar.vue */ "./resources/js/components/estudiante/Mostrar.vue"));
-};
-
-var Crear = function Crear() {
-  return __webpack_require__.e(/*! import() */ "resources_js_components_estudiante_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/estudiante/Crear.vue */ "./resources/js/components/estudiante/Crear.vue"));
-};
-
-var Editar = function Editar() {
-  return __webpack_require__.e(/*! import() */ "resources_js_components_estudiante_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/estudiante/Editar.vue */ "./resources/js/components/estudiante/Editar.vue"));
-};
-
-var routes = [//ROUTAS DEL PRODUCT
-{
+var routes = [{
   name: 'home',
   path: '/',
   component: Home
-}, {
-  name: 'mostrarEstudiantes',
-  path: '/estudiantes',
-  component: Mostrar
-}, {
-  name: 'crearEstudiante',
-  path: '/crear',
-  component: Crear
-}, {
-  name: 'editarEstudiante',
-  path: '/editar/:id',
-  component: Editar
 }];
 
 /***/ }),
@@ -19724,65 +19748,16 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("main", [
-    _c("nav", { staticClass: "navbar navbar-expand-lg navbar-light bg-info" }, [
-      _c("div", { staticClass: "container-fluid" }, [
-        _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
-          _vm._v("Tarea Vue.js")
-        ]),
-        _vm._v(" "),
-        _vm._m(0),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "collapse navbar-collapse",
-            attrs: { id: "navbarSupportedContent" }
-          },
-          [
-            _c("ul", { staticClass: "navbar-nav me-auto mb-2 mb-lg-0" }, [
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link active",
-                      attrs: {
-                        "exact-active-class": "active",
-                        to: "/",
-                        "aria-current": "page"
-                      }
-                    },
-                    [_vm._v("Inicio")]
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      attrs: {
-                        "exact-active-class": "active",
-                        to: "/estudiantes"
-                      }
-                    },
-                    [_vm._v("Estudiantes")]
-                  )
-                ],
-                1
-              )
-            ])
-          ]
-        )
-      ])
-    ]),
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _c(
+      "div",
+      { attrs: { id: "copyRight" } },
+      [_c("center", [_vm._v("© Copyright Codigo Rapidito")])],
+      1
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "container mt-5" }, [_c("router-view")], 1)
   ])
@@ -19793,19 +19768,158 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "button",
+      "nav",
+      { staticClass: "navbar navbar-expand-lg navbar-dark bg-secondary" },
+      [
+        _c("a", { staticClass: "navbar-brand", attrs: { href: "/" } }, [
+          _c("i", {
+            staticClass: "fa fa-laptop",
+            attrs: { "aria-hidden": "true" }
+          }),
+          _vm._v(" CODIGO RAPIDITO")
+        ]),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "navbar-toggler",
+            attrs: {
+              type: "button",
+              "data-toggle": "collapse",
+              "data-target": "#navbarNavDropdown",
+              "aria-controls": "navbarNavDropdown",
+              "aria-expanded": "false",
+              "aria-label": "Toggle navigation"
+            }
+          },
+          [_c("span", { staticClass: "navbar-toggler-icon" })]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "collapse navbar-collapse",
+            attrs: { id: "navbarNavDropdown" }
+          },
+          [
+            _c("ul", { staticClass: "navbar-nav" }, [
+              _c("li", { staticClass: "nav-item active" }, [
+                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                  _vm._v("Estudiantes")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "nav-item active" }, [
+                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                  _vm._v("Catedraticos")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "nav-item active" }, [
+                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                  _vm._v("Grados")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "nav-item active" }, [
+                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                  _vm._v("Niveles")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "nav-item active" }, [
+                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                  _vm._v("Sucursales")
+                ])
+              ])
+            ])
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
       {
-        staticClass: "navbar-toggler",
-        attrs: {
-          type: "button",
-          "data-bs-toggle": "collapse",
-          "data-bs-target": "#navbarSupportedContent",
-          "aria-controls": "navbarSupportedContent",
-          "aria-expanded": "false",
-          "aria-label": "Toggle navigation"
-        }
+        staticClass: "carousel slide my-4 mx-5",
+        attrs: { id: "carouselImage", "data-ride": "carousel" }
       },
-      [_c("span", { staticClass: "navbar-toggler-icon" })]
+      [
+        _c("ol", { staticClass: "carousel-indicators" }, [
+          _c("li", {
+            staticClass: "active",
+            attrs: { "data-target": "#carouselImage", "data-slide-to": "0" }
+          }),
+          _vm._v(" "),
+          _c("li", {
+            attrs: { "data-target": "#carouselImage", "data-slide-to": "1" }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "carousel-inner", attrs: { id: "imageCarusel" } },
+          [
+            _c("div", { staticClass: "carousel-item active" }, [
+              _c("img", {
+                staticClass: "d-block w-100",
+                attrs: { src: "img/img1.jpg", alt: "..." }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "carousel-item" }, [
+              _c("img", {
+                staticClass: "d-block w-100",
+                attrs: { src: "img/img2.jpg", alt: "..." }
+              })
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "carousel-control-prev",
+            attrs: {
+              href: "#carouselImage",
+              role: "button",
+              "data-slide": "prev"
+            }
+          },
+          [
+            _c("span", {
+              staticClass: "carousel-control-prev-icon",
+              attrs: { "aria-hidden": "true" }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "carousel-control-next",
+            attrs: {
+              href: "#carouselImage",
+              role: "button",
+              "data-slide": "next"
+            }
+          },
+          [
+            _c("span", {
+              staticClass: "carousel-control-next-icon",
+              attrs: { "aria-hidden": "true" }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
+          ]
+        )
+      ]
     )
   }
 ]
@@ -35249,7 +35363,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_estudiante_Mostrar_vue":1,"resources_js_components_estudiante_Crear_vue":1,"resources_js_components_estudiante_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if (chunkId === "resources_js_components_Home_vue") return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
