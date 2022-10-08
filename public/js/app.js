@@ -2212,6 +2212,18 @@ var Editar = function Editar() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_sucursal_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/sucursal/Editar.vue */ "./resources/js/components/sucursal/Editar.vue"));
 };
 
+var Mostrar1 = function Mostrar1() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_nivel_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/nivel/Mostrar.vue */ "./resources/js/components/nivel/Mostrar.vue"));
+};
+
+var Crear1 = function Crear1() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_nivel_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/nivel/Crear.vue */ "./resources/js/components/nivel/Crear.vue"));
+};
+
+var Editar1 = function Editar1() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_nivel_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/nivel/Editar.vue */ "./resources/js/components/nivel/Editar.vue"));
+};
+
 var routes = [{
   name: 'home',
   path: '/',
@@ -2228,6 +2240,18 @@ var routes = [{
   name: 'editarSucursal',
   path: '/editar/:id',
   component: Editar
+}, {
+  name: 'mostrarNivels',
+  path: '/nivels',
+  component: Mostrar1
+}, {
+  name: 'crearNivel',
+  path: '/crear',
+  component: Crear1
+}, {
+  name: 'editarNivel',
+  path: '/editar1/:id',
+  component: Editar1
 }];
 
 /***/ }),
@@ -19781,7 +19805,21 @@ var render = function() {
               _vm._v(" "),
               _vm._m(3),
               _vm._v(" "),
-              _vm._m(4),
+              _c(
+                "li",
+                { staticClass: "nav-item active" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { "exact-active-class": "active", to: "/nivels" }
+                    },
+                    [_vm._v("Niveles")]
+                  )
+                ],
+                1
+              ),
               _vm._v(" "),
               _c(
                 "li",
@@ -19866,16 +19904,6 @@ var staticRenderFns = [
     return _c("li", { staticClass: "nav-item active" }, [
       _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
         _vm._v("Grados")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item active" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-        _vm._v("Niveles")
       ])
     ])
   }
@@ -35320,7 +35348,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_sucursal_Mostrar_vue":1,"resources_js_components_sucursal_Crear_vue":1,"resources_js_components_sucursal_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_sucursal_Mostrar_vue":1,"resources_js_components_sucursal_Crear_vue":1,"resources_js_components_sucursal_Editar_vue":1,"resources_js_components_nivel_Mostrar_vue":1,"resources_js_components_nivel_Crear_vue":1,"resources_js_components_nivel_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

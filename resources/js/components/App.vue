@@ -36,7 +36,7 @@
                         <a class="nav-link" href="#">Grados</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Niveles</a>
+                        <router-link exact-active-class="active" to="/nivels" class="nav-link">Niveles</router-link>
                     </li>
                     <li class="nav-item active">
                         <router-link exact-active-class="active" to="/sucursals" class="nav-link">Sucursales</router-link>
