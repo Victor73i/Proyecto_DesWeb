@@ -11,7 +11,6 @@ use App\Http\Controllers\NivelController;
 Route::resource('sucursal',App\Http\Controllers\SucursalController::class);
 Route::resource('nivel',App\Http\Controllers\NivelController::class);
 
-
 //SIN UTILIZAR LA APLICACION DE SANCTUM EN SANCTUM
 //SUCURSAL
 Route::get('getsucursal', [\App\Http\Controllers\SucursalController::class, 'index'])->name('api-getAll');
@@ -47,12 +46,5 @@ Route::put('editnivel1/{id}', [App\Http\Controllers\NivelController::class, 'edi
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/userinfo', [AuthController::class, 'infouser'])->middleware('auth:sanctum');
-
-
-
-
-
-
-
 
 //Aqui se pondra todas las apis de este producto

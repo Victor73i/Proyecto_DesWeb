@@ -2106,9 +2106,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -19784,6 +19781,7 @@ var render = function() {
           "router-link",
           {
             staticClass: "nav-link",
+            staticStyle: { color: "beige" },
             attrs: { "exact-active-class": "active", to: "/" }
           },
           [_vm._v("CODIGO RAPIDITO")]
@@ -19846,14 +19844,7 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _c("div", { staticClass: "container mt-5" }, [_c("router-view")], 1),
-    _vm._v(" "),
-    _c(
-      "div",
-      { attrs: { id: "copyRight" } },
-      [_c("center", [_vm._v("© Copyright Codigo Rapidito")])],
-      1
-    )
+    _c("div", { staticClass: "container mt-5" }, [_c("router-view")], 1)
   ])
 }
 var staticRenderFns = [

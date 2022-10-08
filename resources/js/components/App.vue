@@ -19,7 +19,7 @@
 <!--            </div>-->
 <!--        </nav>-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-            <router-link exact-active-class="active" to="/" class="nav-link">CODIGO RAPIDITO</router-link>
+            <router-link exact-active-class="active" to="/" class="nav-link" style="color: beige">CODIGO RAPIDITO</router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,10 +50,7 @@
 
         <div class="container mt-5">
             <router-view></router-view>
-        </div>
-        <div id="copyRight">
-            <center>© Copyright Codigo Rapidito</center>
-        </div>
+        </div>     
     </main>
 </template>
 
