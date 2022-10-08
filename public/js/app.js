@@ -2109,26 +2109,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2220,10 +2200,34 @@ var Home = function Home() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Home_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Home.vue */ "./resources/js/components/Home.vue"));
 };
 
+var Mostrar = function Mostrar() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_sucursal_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/sucursal/Mostrar.vue */ "./resources/js/components/sucursal/Mostrar.vue"));
+};
+
+var Crear = function Crear() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_sucursal_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/sucursal/Crear.vue */ "./resources/js/components/sucursal/Crear.vue"));
+};
+
+var Editar = function Editar() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_sucursal_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/sucursal/Editar.vue */ "./resources/js/components/sucursal/Editar.vue"));
+};
+
 var routes = [{
   name: 'home',
   path: '/',
   component: Home
+}, {
+  name: 'mostrarSucursals',
+  path: '/sucursals',
+  component: Mostrar
+}, {
+  name: 'crearSucursal',
+  path: '/crear',
+  component: Crear
+}, {
+  name: 'editarSucursal',
+  path: '/editar/:id',
+  component: Editar
 }];
 
 /***/ }),
@@ -19748,52 +19752,20 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("main", [
-    _vm._m(0),
-    _vm._v(" "),
-    _vm._m(1),
-    _vm._v(" "),
     _c(
-      "div",
-      { attrs: { id: "copyRight" } },
-      [_c("center", [_vm._v("© Copyright Codigo Rapidito")])],
-      1
-    ),
-    _vm._v(" "),
-    _c("div", { staticClass: "container mt-5" }, [_c("router-view")], 1)
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
       "nav",
       { staticClass: "navbar navbar-expand-lg navbar-dark bg-secondary" },
       [
-        _c("a", { staticClass: "navbar-brand", attrs: { href: "/" } }, [
-          _c("i", {
-            staticClass: "fa fa-laptop",
-            attrs: { "aria-hidden": "true" }
-          }),
-          _vm._v(" CODIGO RAPIDITO")
-        ]),
-        _vm._v(" "),
         _c(
-          "button",
+          "router-link",
           {
-            staticClass: "navbar-toggler",
-            attrs: {
-              type: "button",
-              "data-toggle": "collapse",
-              "data-target": "#navbarNavDropdown",
-              "aria-controls": "navbarNavDropdown",
-              "aria-expanded": "false",
-              "aria-label": "Toggle navigation"
-            }
+            staticClass: "nav-link",
+            attrs: { "exact-active-class": "active", to: "/" }
           },
-          [_c("span", { staticClass: "navbar-toggler-icon" })]
+          [_vm._v("CODIGO RAPIDITO")]
         ),
+        _vm._v(" "),
+        _vm._m(0),
         _vm._v(" "),
         _c(
           "div",
@@ -19803,124 +19775,109 @@ var staticRenderFns = [
           },
           [
             _c("ul", { staticClass: "navbar-nav" }, [
-              _c("li", { staticClass: "nav-item active" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Estudiantes")
-                ])
-              ]),
+              _vm._m(1),
               _vm._v(" "),
-              _c("li", { staticClass: "nav-item active" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Catedraticos")
-                ])
-              ]),
+              _vm._m(2),
               _vm._v(" "),
-              _c("li", { staticClass: "nav-item active" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Grados")
-                ])
-              ]),
+              _vm._m(3),
               _vm._v(" "),
-              _c("li", { staticClass: "nav-item active" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Niveles")
-                ])
-              ]),
+              _vm._m(4),
               _vm._v(" "),
-              _c("li", { staticClass: "nav-item active" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Sucursales")
-                ])
-              ])
+              _c(
+                "li",
+                { staticClass: "nav-item active" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: {
+                        "exact-active-class": "active",
+                        to: "/sucursals"
+                      }
+                    },
+                    [_vm._v("Sucursales")]
+                  )
+                ],
+                1
+              )
             ])
           ]
         )
-      ]
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "container mt-5" }, [_c("router-view")], 1),
+    _vm._v(" "),
+    _c(
+      "div",
+      { attrs: { id: "copyRight" } },
+      [_c("center", [_vm._v("© Copyright Codigo Rapidito")])],
+      1
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "navbar-toggler",
+        attrs: {
+          type: "button",
+          "data-toggle": "collapse",
+          "data-target": "#navbarNavDropdown",
+          "aria-controls": "navbarNavDropdown",
+          "aria-expanded": "false",
+          "aria-label": "Toggle navigation"
+        }
+      },
+      [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "carousel slide my-4 mx-5",
-        attrs: { id: "carouselImage", "data-ride": "carousel" }
-      },
-      [
-        _c("ol", { staticClass: "carousel-indicators" }, [
-          _c("li", {
-            staticClass: "active",
-            attrs: { "data-target": "#carouselImage", "data-slide-to": "0" }
-          }),
-          _vm._v(" "),
-          _c("li", {
-            attrs: { "data-target": "#carouselImage", "data-slide-to": "1" }
-          })
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "carousel-inner", attrs: { id: "imageCarusel" } },
-          [
-            _c("div", { staticClass: "carousel-item active" }, [
-              _c("img", {
-                staticClass: "d-block w-100",
-                attrs: { src: "img/img1.jpg", alt: "..." }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "carousel-item" }, [
-              _c("img", {
-                staticClass: "d-block w-100",
-                attrs: { src: "img/img2.jpg", alt: "..." }
-              })
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "carousel-control-prev",
-            attrs: {
-              href: "#carouselImage",
-              role: "button",
-              "data-slide": "prev"
-            }
-          },
-          [
-            _c("span", {
-              staticClass: "carousel-control-prev-icon",
-              attrs: { "aria-hidden": "true" }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "carousel-control-next",
-            attrs: {
-              href: "#carouselImage",
-              role: "button",
-              "data-slide": "next"
-            }
-          },
-          [
-            _c("span", {
-              staticClass: "carousel-control-next-icon",
-              attrs: { "aria-hidden": "true" }
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
-          ]
-        )
-      ]
-    )
+    return _c("li", { staticClass: "nav-item active" }, [
+      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+        _vm._v("Estudiantes")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item active" }, [
+      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+        _vm._v("Catedraticos")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item active" }, [
+      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+        _vm._v("Grados")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item active" }, [
+      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+        _vm._v("Niveles")
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -35363,7 +35320,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if (chunkId === "resources_js_components_Home_vue") return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_sucursal_Mostrar_vue":1,"resources_js_components_sucursal_Crear_vue":1,"resources_js_components_sucursal_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

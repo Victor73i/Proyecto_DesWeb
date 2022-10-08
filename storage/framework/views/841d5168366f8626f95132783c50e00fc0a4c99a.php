@@ -4,10 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" value="<?php echo e(csrf_token()); ?>"/>
-<<<<<<< HEAD
-        <title>Proyecto_DesWeb</title>
-=======
->>>>>>> 3da429fa6359d24494dba83e1d1ce7e5f482beab
+
+
 
         <title>CODIGO RAPIDITO <?php echo $__env->yieldContent('title'); ?></title>
         <!--CDNs-->

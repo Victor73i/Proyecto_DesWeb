@@ -19,7 +19,7 @@
 <!--            </div>-->
 <!--        </nav>-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-            <a class="navbar-brand" href="/"><i class="fa fa-laptop" aria-hidden="true"></i> CODIGO RAPIDITO</a>
+            <router-link exact-active-class="active" to="/" class="nav-link">CODIGO RAPIDITO</router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,40 +39,20 @@
                         <a class="nav-link" href="#">Niveles</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Sucursales</a>
+                        <router-link exact-active-class="active" to="/sucursals" class="nav-link">Sucursales</router-link>
                     </li>
                 </ul>
             </div>
         </nav>
-        <div id="carouselImage" class="carousel slide my-4 mx-5" data-ride="carousel" >
-            <ol class="carousel-indicators">
-                <li data-target="#carouselImage" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselImage" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner" id="imageCarusel">
-                <div class="carousel-item active">
-                    <img src="img/img1.jpg" class="d-block w-100" alt="..."  />
-                </div>
-                <div class="carousel-item">
-                    <img src="img/img2.jpg" class="d-block w-100" alt="..."  />
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselImage" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselImage" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-        <div id="copyRight">
-            <center>© Copyright Codigo Rapidito</center>
-        </div>
+
+
 
 
         <div class="container mt-5">
             <router-view></router-view>
+        </div>
+        <div id="copyRight">
+            <center>© Copyright Codigo Rapidito</center>
         </div>
     </main>
 </template>

@@ -76,7 +76,87 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container mt-4" }, [
-      _c("div", { staticClass: "row" })
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "div",
+          {
+            staticClass: "carousel slide my-4 mx-5",
+            attrs: { id: "carouselImage", "data-ride": "carousel" }
+          },
+          [
+            _c("ol", { staticClass: "carousel-indicators" }, [
+              _c("li", {
+                staticClass: "active",
+                attrs: { "data-target": "#carouselImage", "data-slide-to": "0" }
+              }),
+              _vm._v(" "),
+              _c("li", {
+                attrs: { "data-target": "#carouselImage", "data-slide-to": "1" }
+              })
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "carousel-inner", attrs: { id: "imageCarusel" } },
+              [
+                _c("div", { staticClass: "carousel-item active" }, [
+                  _c("img", {
+                    staticClass: "d-block w-100",
+                    attrs: { src: "img/img1.jpg", alt: "..." }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carousel-item" }, [
+                  _c("img", {
+                    staticClass: "d-block w-100",
+                    attrs: { src: "img/img2.jpg", alt: "..." }
+                  })
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "carousel-control-prev",
+                attrs: {
+                  href: "#carouselImage",
+                  role: "button",
+                  "data-slide": "prev"
+                }
+              },
+              [
+                _c("span", {
+                  staticClass: "carousel-control-prev-icon",
+                  attrs: { "aria-hidden": "true" }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "carousel-control-next",
+                attrs: {
+                  href: "#carouselImage",
+                  role: "button",
+                  "data-slide": "next"
+                }
+              },
+              [
+                _c("span", {
+                  staticClass: "carousel-control-next-icon",
+                  attrs: { "aria-hidden": "true" }
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
+              ]
+            )
+          ]
+        )
+      ])
     ])
   }
 ]
