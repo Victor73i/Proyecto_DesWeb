@@ -15,6 +15,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/app.css" rel="stylesheet" type="text/css"/>
         <link rel="icon" href="favicon.ico">
         <script src="https://kit.fontawesome.com/85601d370d.js" crossorigin="anonymous"></script>
 
@@ -25,6 +26,7 @@
 
 
 
+<script src="https://use.fontawesome.com/11ba0db90b.js"></script>
     </head>
     <body>
         <div id="app">
@@ -32,5 +34,43 @@
         </div>
         <script src="<?php echo e(mix('js/app.js')); ?>" type="text/javascript"></script>
     </body>
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Recursos Utilizados</h3>
+                        <ul>
+                            <li><a href="https://laragon.org/">Laragon</a></li>
+                            <li><a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a></li>
+                            <li><a href="https://azure.microsoft.com/es-mx/free/search/?&ef_id=CjwKCAjwv4SaBhBPEiwA9YzZvIYSyQhNyogL_t-shmgysHyrFUj7S1pftUxJDMtKZ-a07ilB-UwrIxoCmYUQAvD_BwE:G:s&OCID=AIDcmmwxqbdk6m_SEM_CjwKCAjwv4SaBhBPEiwA9YzZvIYSyQhNyogL_t-shmgysHyrFUj7S1pftUxJDMtKZ-a07ilB-UwrIxoCmYUQAvD_BwE:G:s&gclid=CjwKCAjwv4SaBhBPEiwA9YzZvIYSyQhNyogL_t-shmgysHyrFUj7S1pftUxJDMtKZ-a07ilB-UwrIxoCmYUQAvD_BwE">Microsoft Azure</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Link de los Creadores:</h3>
+                        <ul>
+                            <li><a href="https://github.com/ricardo1435">Ricardo Oliva</a></li>
+                            <li><a href="https://github.com/Victor73i">Victor de Leon</a></li>
+                            <li><a href="https://github.com/LuisVillatoro02">Luis Villatoro</a></li>
+                            <li><a href="https://github.com/Sinder20">William de Leon </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Estudios</h3>
+                        <ul>
+                            <a>Universidad Mariano Galvez de Guatemla</a>
+                            <a>Facultad de Ingenieria en Sistemas </a><br>
+                            <a>Octavo Ciclo</a><br>
+                            <a>Puerto Barrios, Izabal, Guatemala</a>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social">
+                        <br><br>
+                        <p class="copyright">© Copyright Codigo Rapidito - 2022</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </html>
 <?php /**PATH C:\laragon\www\Proyecto_DesWeb\resources\views/app.blade.php ENDPATH**/ ?>

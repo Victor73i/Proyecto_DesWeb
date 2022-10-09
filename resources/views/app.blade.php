@@ -41,13 +41,15 @@
                     <div class="col-sm-4 col-md-3 item">
                         <h3>Recursos Utilizados</h3>
                         <ul>
-                            <li><a href="https://umg.edu.gt/">UMG</a></li>
+                            <li><a href="https://laragon.org/">Laragon</a></li>
+
                             <li><a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a></li>
                             <li><a href="https://azure.microsoft.com/es-mx/free/search/?&ef_id=CjwKCAjwv4SaBhBPEiwA9YzZvIYSyQhNyogL_t-shmgysHyrFUj7S1pftUxJDMtKZ-a07ilB-UwrIxoCmYUQAvD_BwE:G:s&OCID=AIDcmmwxqbdk6m_SEM_CjwKCAjwv4SaBhBPEiwA9YzZvIYSyQhNyogL_t-shmgysHyrFUj7S1pftUxJDMtKZ-a07ilB-UwrIxoCmYUQAvD_BwE:G:s&gclid=CjwKCAjwv4SaBhBPEiwA9YzZvIYSyQhNyogL_t-shmgysHyrFUj7S1pftUxJDMtKZ-a07ilB-UwrIxoCmYUQAvD_BwE">Microsoft Azure</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 col-md-3 item">
-                        <h3></i>Link de los Creadores:</h3>
+                        <h3>Link de los Creadores:</h3>
+
                         <ul>
                             <li><a href="https://github.com/ricardo1435">Ricardo Oliva</a></li>
                             <li><a href="https://github.com/Victor73i">Victor de Leon</a></li>
