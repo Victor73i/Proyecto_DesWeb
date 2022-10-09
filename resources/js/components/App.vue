@@ -19,7 +19,7 @@
 <!--            </div>-->
 <!--        </nav>-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-            <a class="navbar-brand" href="/"><i class="fa fa-laptop" aria-hidden="true"></i> CODIGO RAPIDITO</a>
+            <router-link exact-active-class="active" to="/" class="nav-link" style="color: beige">CODIGO RAPIDITO</router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,10 +36,10 @@
                         <a class="nav-link" href="#">Grados</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Niveles</a>
+                        <router-link exact-active-class="active" to="/nivels" class="nav-link">Niveles</router-link>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Sucursales</a>
+                        <router-link exact-active-class="active" to="/sucursals" class="nav-link">Sucursales</router-link>
                     </li>
                 </ul>
             </div>
@@ -66,6 +66,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+
         <div class="container mt-5">
             <router-view></router-view>
         </div>
