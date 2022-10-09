@@ -66,11 +66,6 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div id="copyRight">
-            <center>© Copyright Codigo Rapidito</center>
-        </div>
-
-
         <div class="container mt-5">
             <router-view></router-view>
         </div>
