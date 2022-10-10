@@ -49,3 +49,4 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/userinfo', [AuthController::class, 'infouser'])->middleware('auth:sanctum');
 
 //Aqui se pondra todas las apis de este producto
+//Cambios Genericos
