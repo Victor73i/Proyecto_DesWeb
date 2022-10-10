@@ -9,6 +9,7 @@ use App\Http\Controllers\NivelController;
 
 
 Route::resource('sucursal',App\Http\Controllers\SucursalController::class);
+Route::resource('nivel',App\Http\Controllers\NivelController::class);
 
 //Modificion de API
 
