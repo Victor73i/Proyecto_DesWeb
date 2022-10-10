@@ -53,12 +53,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "editar-sucursal",
   data: function data() {
@@ -980,102 +974,110 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [
-    _c(
-      "div",
-      { staticClass: "col-12" },
-      [
-        _c("center", [
-          _c(
-            "div",
-            {
-              staticClass: "card text-bg-light mb-3",
-              staticStyle: {
-                "max-width": "35rem",
-                "background-color": "#67DECD"
+  return _c("div", { staticClass: "container md mt-2 mb-3 col-lg-5" }, [
+    _c("div", { staticClass: "card border-info" }, [
+      _c(
+        "div",
+        { staticClass: "card-header bg-info text-white" },
+        [
+          _c("center", [
+            _c("h2", { staticClass: "mt-2 mb-2" }, [
+              _vm._v(" EDITAR SUCURSAL  "),
+              _c("i", { staticClass: "fas fa-pen-alt" })
+            ])
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body" }, [
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.actualizar.apply(null, arguments)
               }
-            },
-            [
-              _c("div", { staticClass: "card-header" }, [
-                _c("h4", [_vm._v("Editar Sucursal")])
-              ]),
+            }
+          },
+          [
+            _c("div", [
+              _vm._m(0),
               _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c(
-                  "form",
+              _c("input", {
+                directives: [
                   {
-                    on: {
-                      submit: function($event) {
-                        $event.preventDefault()
-                        return _vm.actualizar.apply(null, arguments)
-                      }
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.sucursal.nombre_sucursal,
+                    expression: "sucursal.nombre_sucursal"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "text",
+                  autocomplete: "off",
+                  name: "name",
+                  required: ""
+                },
+                domProps: { value: _vm.sucursal.nombre_sucursal },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
                     }
-                  },
-                  [
-                    _c("div", { staticClass: "row" }, [
-                      _c("div", { staticClass: "col-12 mb-2" }, [
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "form-group" }, [
-                          _c("label", [_vm._v("Nombre")]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.sucursal.nombre_sucursal,
-                                expression: "sucursal.nombre_sucursal"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            attrs: {
-                              type: "text",
-                              placeholder: "Ingrese el nombre",
-                              required: ""
-                            },
-                            domProps: { value: _vm.sucursal.nombre_sucursal },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.sucursal,
-                                  "nombre_sucursal",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("br")
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-12" }, [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-primary",
-                            attrs: { type: "submit" }
-                          },
-                          [_vm._v("Submit")]
-                        )
-                      ])
-                    ])
-                  ]
-                )
-              ])
-            ]
-          )
-        ])
-      ],
-      1
-    )
+                    _vm.$set(
+                      _vm.sucursal,
+                      "nombre_sucursal",
+                      $event.target.value
+                    )
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+              [_vm._v("Guardar")]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-secondary",
+                attrs: { to: { name: "mostrarSucursals" } }
+              },
+              [_vm._v("Cancelar")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "btn btn-danger", attrs: { type: "reset" } },
+              [_vm._v("Limpiar")]
+            )
+          ],
+          1
+        )
+      ])
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("b", [
+      _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
+        _vm._v("NOMBRE")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
