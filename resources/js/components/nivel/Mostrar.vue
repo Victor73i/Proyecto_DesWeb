@@ -19,7 +19,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
-
+                        <th>Grado</th>
                         <th>ACTIONS</th>
 
 
@@ -29,6 +29,8 @@
                     <tr v-for="nivel in nivels" :key="nivel.id">
                         <td>{{ nivel.id }}</td>
                         <td>{{ nivel.nombre_nivel }}</td>
+                        <td>{{ nivel.id_grado }}</td>
+
 
 
 
@@ -61,6 +63,8 @@ export default {
         async mostrarNivels(){
             await this.axios.get('/api/nivel').then(response=>{
                 this.nivels = response.data
+                alert('Nivel Mostrado con exito.')
+
             }).catch(error=>{
                 console.log(error)
                 this.nivels = []

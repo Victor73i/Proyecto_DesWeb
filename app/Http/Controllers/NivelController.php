@@ -9,7 +9,7 @@ class NivelController extends Controller
 {
     public function index()
     {
-        $nivels = Nivel::all(['id','nombre_nivel']);
+        $nivels = Nivel::all(['id','nombre_nivel','id_grado']);
         return response()->json($nivels);
     }
     public function create()
@@ -42,7 +42,7 @@ class NivelController extends Controller
 
 
     }
-    public function edit(Nivel $nivell)
+    public function edit(Nivel $nivel)
     {
 
         //

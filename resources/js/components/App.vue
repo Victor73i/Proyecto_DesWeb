@@ -27,19 +27,22 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Estudiantes</a>
+                        <router-link exact-active-class="active" to="/alumnos" class="nav-link">Estudiantes</router-link>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Catedraticos</a>
+                        <router-link exact-active-class="active" to="/catedraticos" class="nav-link">Catedraticos</router-link>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Grados</a>
+                        <router-link exact-active-class="active" to="/grados" class="nav-link">Grados</router-link>
                     </li>
                     <li class="nav-item active">
                         <router-link exact-active-class="active" to="/nivels" class="nav-link">Niveles</router-link>
                     </li>
                     <li class="nav-item active">
                         <router-link exact-active-class="active" to="/sucursals" class="nav-link">Sucursales</router-link>
+                    </li>
+                    <li class="nav-item active">
+                        <router-link exact-active-class="active" to="/cursos" class="nav-link">Cursos</router-link>
                     </li>
                 </ul>
             </div>

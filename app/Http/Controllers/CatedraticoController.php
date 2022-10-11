@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Catedratico;
 use Illuminate\Http\Request;
 
 class CatedraticoController extends Controller
 {
     public function index()
     {
-        $nivels = Nivel::all(['id','nombre_nivel']);
-        return response()->json($nivels);
+
+
+
+        $catedraticos = Catedratico::all(['id','carnet_catedratico','nombre_catedratico','telefono','correo']);
+        return response()->json($catedraticos);
+
     }
     public function create()
     {
@@ -23,86 +28,106 @@ class CatedraticoController extends Controller
 
     public function store(Request $request)
     {
-        $nivel = Nivel::create($request->post());
+
+
+
+        $catedratico = Catedratico::create($request->post());
         return response()->json([
-            'nivel'=>$nivel,
-            'mensaje'=>'¡Nivel ingresado correctamente!'
+            'catedratico'=>$catedratico,
+            'mensaje'=>'¡Catedratico ingresado correctamente!'
+
 
 
 
         ]);
 
     }
-    public function show(Nivel $nivel)
+
+
+
+
+
+    public function show(Catedratico $catedratico)
     {
 
 
-        return response()->json($nivel);
+        return response()->json($catedratico);
 
 
     }
-    public function edit(Nivel $nivell)
+    public function edit(Catedratico $catedratico)
+
     {
 
         //
 
 
     }
-    public function update(Request $request, Nivel $nivel)
+
+
+
+    public function update(Request $request, Catedratico $catedratico)
     {
 
 
-        $nivel->fill($request->post())->save();
+        $catedratico->fill($request->post())->save();
         return response()->json([
-            'nivel'=>$nivel
+            'catedratico'=>$catedratico
+
         ]);
 
 
     }
-    public function destroy(Nivel $nivel)
+
+
+
+    public function destroy(Catedratico $catedratico)
     {
 
 
-        $nivel->delete();
+        $catedratico->delete();
         return response()->json([
-            'mensaje'=>'¡Nivel eliminado correctamente!'
+            'mensaje'=>'¡Catedratico eliminado correctamente!'
         ]);
 
 
 
     }
-    public function deleteNivel($id){
-        $nivel= $this->getNivel($id);
-        $nivel->delete();
-        $nivel1 = response()->json([
-            'mensaje'=>'¡Nivel eliminado correctamente!'
+
+
+
+    public function deleteCatedratico($id){
+        $catedratico= $this->getCatedratico($id);
+        $catedratico->delete();
+        $catedratico1 = response()->json([
+            'mensaje'=>'¡Catedratico eliminado correctamente!'
         ]);
-        return [$nivel, $nivel1];
+        return [$catedratico, $catedratico1];
 
     }
-    public function getNivel($id)
+    public function getCatedratico($id)
     {
-        $nivel = Nivel::find($id);
+        $catedratico = Catedratico::find($id);
 
-        return $nivel;
+        return $catedratico;
 
     }
-    public function getNivel1($id)
+    public function getCatedratico1($id)
     {
-        $nivel = Nivel::find($id);
-        $nivel1 = response()->json([
-            'mensaje'=>'¡Nivell OBtenido correctamente!'
+        $catedratico = Catedratico::find($id);
+        $catedratico1 = response()->json([
+            'mensaje'=>'¡Catedratico OBtenido correctamente!'
         ]);
-        return [$nivel,$nivel1];
+        return [$catedratico,$catedratico1];
 
     }
 
-    public function editNivel($id, Request $request){
-        $nivel = $this->getNivel($id);
-        $nivel->fill($request->all())->save();
-        $nivel1 = response()->json([
-            'mensaje'=>'¡Nivel Editado correctamente!'
+    public function editCatedratico($id, Request $request){
+        $catedratico = $this->getCatedratico($id);
+        $catedratico->fill($request->all())->save();
+        $catedratico1 = response()->json([
+            'mensaje'=>'¡Catedratico Editado correctamente!'
         ]);
-        return [$nivel,$nivel1];
+        return [$catedratico,$catedratico1];
     }
 }

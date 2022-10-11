@@ -2102,6 +2102,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2217,6 +2223,54 @@ var Editar1 = function Editar1() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_nivel_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/nivel/Editar.vue */ "./resources/js/components/nivel/Editar.vue"));
 };
 
+var Mostrar2 = function Mostrar2() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_catedratico_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/catedratico/Mostrar.vue */ "./resources/js/components/catedratico/Mostrar.vue"));
+};
+
+var Crear2 = function Crear2() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_catedratico_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/catedratico/Crear.vue */ "./resources/js/components/catedratico/Crear.vue"));
+};
+
+var Editar2 = function Editar2() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_catedratico_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/catedratico/Editar.vue */ "./resources/js/components/catedratico/Editar.vue"));
+};
+
+var Mostrar3 = function Mostrar3() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_curso_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/curso/Mostrar.vue */ "./resources/js/components/curso/Mostrar.vue"));
+};
+
+var Crear3 = function Crear3() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_curso_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/curso/Crear.vue */ "./resources/js/components/curso/Crear.vue"));
+};
+
+var Editar3 = function Editar3() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_curso_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/curso/Editar.vue */ "./resources/js/components/curso/Editar.vue"));
+};
+
+var Mostrar4 = function Mostrar4() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_grado_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/grado/Mostrar.vue */ "./resources/js/components/grado/Mostrar.vue"));
+};
+
+var Crear4 = function Crear4() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_grado_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/grado/Crear.vue */ "./resources/js/components/grado/Crear.vue"));
+};
+
+var Editar4 = function Editar4() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_grado_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/grado/Editar.vue */ "./resources/js/components/grado/Editar.vue"));
+};
+
+var Mostrar5 = function Mostrar5() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_alumno_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/alumno/Mostrar.vue */ "./resources/js/components/alumno/Mostrar.vue"));
+};
+
+var Crear5 = function Crear5() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_alumno_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/alumno/Crear.vue */ "./resources/js/components/alumno/Crear.vue"));
+};
+
+var Editar5 = function Editar5() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_alumno_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/alumno/Editar.vue */ "./resources/js/components/alumno/Editar.vue"));
+};
+
 var routes = [{
   name: 'home',
   path: '/',
@@ -2239,12 +2293,60 @@ var routes = [{
   component: Mostrar1
 }, {
   name: 'crearNivel',
-  path: '/crear',
+  path: '/crear1',
   component: Crear1
 }, {
   name: 'editarNivel',
   path: '/editar1/:id',
   component: Editar1
+}, {
+  name: 'mostrarCatedraticos',
+  path: '/catedraticos',
+  component: Mostrar2
+}, {
+  name: 'crearCatedratico',
+  path: '/crear2',
+  component: Crear2
+}, {
+  name: 'editarCatedratico',
+  path: '/editar2/:id',
+  component: Editar2
+}, {
+  name: 'mostrarCursos',
+  path: '/cursos',
+  component: Mostrar3
+}, {
+  name: 'crearCurso',
+  path: '/crear3',
+  component: Crear3
+}, {
+  name: 'editarCurso',
+  path: '/editar3/:id',
+  component: Editar3
+}, {
+  name: 'mostrarGrados',
+  path: '/grados',
+  component: Mostrar4
+}, {
+  name: 'crearGrado',
+  path: '/crear4',
+  component: Crear4
+}, {
+  name: 'editarGrado',
+  path: '/editar4/:id',
+  component: Editar4
+}, {
+  name: 'mostrarAlumnos',
+  path: '/alumnos',
+  component: Mostrar5
+}, {
+  name: 'crearAlumno',
+  path: '/crear5',
+  component: Crear5
+}, {
+  name: 'editarAlumno',
+  path: '/editar5/:id',
+  component: Editar5
 }];
 
 /***/ }),
@@ -19686,7 +19788,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!function(e,t){ 
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -19709,7 +19811,7 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
   null,
   null,
   null
-  
+
 )
 
 /* hot reload */
@@ -19731,7 +19833,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./App.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/App.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /***/ }),
 
@@ -19793,11 +19895,56 @@ var render = function() {
           },
           [
             _c("ul", { staticClass: "navbar-nav" }, [
-              _vm._m(1),
+              _c(
+                "li",
+                { staticClass: "nav-item active" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { "exact-active-class": "active", to: "/alumnos" }
+                    },
+                    [_vm._v("Estudiantes")]
+                  )
+                ],
+                1
+              ),
               _vm._v(" "),
-              _vm._m(2),
+              _c(
+                "li",
+                { staticClass: "nav-item active" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: {
+                        "exact-active-class": "active",
+                        to: "/catedraticos"
+                      }
+                    },
+                    [_vm._v("Catedraticos")]
+                  )
+                ],
+                1
+              ),
               _vm._v(" "),
-              _vm._m(3),
+              _c(
+                "li",
+                { staticClass: "nav-item active" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { "exact-active-class": "active", to: "/grados" }
+                    },
+                    [_vm._v("Grados")]
+                  )
+                ],
+                1
+              ),
               _vm._v(" "),
               _c(
                 "li",
@@ -19832,6 +19979,22 @@ var render = function() {
                   )
                 ],
                 1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "nav-item active" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { "exact-active-class": "active", to: "/cursos" }
+                    },
+                    [_vm._v("Cursos")]
+                  )
+                ],
+                1
               )
             ])
           ]
@@ -19863,36 +20026,6 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item active" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-        _vm._v("Estudiantes")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item active" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-        _vm._v("Catedraticos")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item active" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-        _vm._v("Grados")
-      ])
-    ])
   }
 ]
 render._withStripped = true
@@ -35232,7 +35365,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -35246,20 +35379,20 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/chunk loaded */
 /******/ 	(() => {
@@ -35292,7 +35425,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 			return result;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -35304,7 +35437,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 			return getter;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -35316,7 +35449,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/ensure chunk */
 /******/ 	(() => {
 /******/ 		__webpack_require__.f = {};
@@ -35329,18 +35462,18 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 			}, []));
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/get javascript chunk filename */
 /******/ 	(() => {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_sucursal_Mostrar_vue":1,"resources_js_components_sucursal_Crear_vue":1,"resources_js_components_sucursal_Editar_vue":1,"resources_js_components_nivel_Mostrar_vue":1,"resources_js_components_nivel_Crear_vue":1,"resources_js_components_nivel_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_sucursal_Mostrar_vue":1,"resources_js_components_sucursal_Crear_vue":1,"resources_js_components_sucursal_Editar_vue":1,"resources_js_components_nivel_Mostrar_vue":1,"resources_js_components_nivel_Crear_vue":1,"resources_js_components_nivel_Editar_vue":1,"resources_js_components_catedratico_Mostrar_vue":1,"resources_js_components_catedratico_Crear_vue":1,"resources_js_components_catedratico_Editar_vue":1,"resources_js_components_curso_Mostrar_vue":1,"resources_js_components_curso_Crear_vue":1,"resources_js_components_curso_Editar_vue":1,"resources_js_components_grado_Mostrar_vue":1,"resources_js_components_grado_Crear_vue":1,"resources_js_components_grado_Editar_vue":1,"resources_js_components_alumno_Mostrar_vue":1,"resources_js_components_alumno_Crear_vue":1,"resources_js_components_alumno_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/get mini-css chunk filename */
 /******/ 	(() => {
 /******/ 		// This function allow to reference all chunks
@@ -35349,7 +35482,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 			return "" + chunkId + ".css";
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -35361,12 +35494,12 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 			}
 /******/ 		})();
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/load script */
 /******/ 	(() => {
 /******/ 		var inProgress = {};
@@ -35385,13 +35518,13 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 			if(!script) {
 /******/ 				needAttach = true;
 /******/ 				script = document.createElement('script');
-/******/ 		
+/******/
 /******/ 				script.charset = 'utf-8';
 /******/ 				script.timeout = 120;
 /******/ 				if (__webpack_require__.nc) {
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
-/******/ 		
+/******/
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -35412,7 +35545,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 			needAttach && document.head.appendChild(script);
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -35423,7 +35556,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nmd = (module) => {
@@ -35432,16 +35565,16 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 			return module;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
 /******/ 		__webpack_require__.p = "/";
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
 /******/ 		// no baseURI
-/******/ 		
+/******/
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
@@ -35449,12 +35582,12 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 			"/js/app": 0,
 /******/ 			"css/app": 0
 /******/ 		};
-/******/ 		
+/******/
 /******/ 		__webpack_require__.f.j = (chunkId, promises) => {
 /******/ 				// JSONP chunk loading for javascript
 /******/ 				var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
 /******/ 				if(installedChunkData !== 0) { // 0 means "already installed".
-/******/ 		
+/******/
 /******/ 					// a Promise means "currently loading".
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
@@ -35463,7 +35596,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 							promises.push(installedChunkData[2] = promise);
-/******/ 		
+/******/
 /******/ 							// start chunk loading
 /******/ 							var url = __webpack_require__.p + __webpack_require__.u(chunkId);
 /******/ 							// create error before stack unwound to get useful stacktrace later
@@ -35488,17 +35621,17 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 					}
 /******/ 				}
 /******/ 		};
-/******/ 		
+/******/
 /******/ 		// no prefetching
-/******/ 		
+/******/
 /******/ 		// no preloaded
-/******/ 		
+/******/
 /******/ 		// no HMR
-/******/ 		
+/******/
 /******/ 		// no HMR manifest
-/******/ 		
+/******/
 /******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
+/******/
 /******/ 		// install a JSONP callback for chunk loading
 /******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
 /******/ 			var [chunkIds, moreModules, runtime] = data;
@@ -35523,20 +35656,20 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
-/******/ 		
+/******/
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
-/******/ 	
+/******/
 /************************************************************************/
-/******/ 	
+/******/
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+/******/
 /******/ })()
 ;

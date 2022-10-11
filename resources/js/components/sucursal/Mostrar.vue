@@ -61,6 +61,8 @@ export default {
         async mostrarSucursals(){
             await this.axios.get('/api/sucursal').then(response=>{
                 this.sucursals = response.data
+                alert('Sucursal Mostrado con exito.')
+
             }).catch(error=>{
                 console.log(error)
                 this.sucursals = []

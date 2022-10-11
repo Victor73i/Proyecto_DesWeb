@@ -9,7 +9,7 @@ class Nivel extends Model
 {
     use HasFactory;
     protected $table = 'nivel';
-    protected $fillable = ['id','nombre_nivel'];
+    protected $fillable = ['id','nombre_nivel','id_grado'];
     public $timestamps = false;
 
 }
