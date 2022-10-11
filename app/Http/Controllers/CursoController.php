@@ -15,7 +15,7 @@ class CursoController extends Controller
     public function create()
     {
 
-        //PROYECTO
+        //PROYECTO 2.0
 
 
     }
