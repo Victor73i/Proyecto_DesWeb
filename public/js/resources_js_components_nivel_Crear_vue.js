@@ -67,12 +67,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "crear-nivel",
   data: function data() {
     return {
       nivel: {
-        nombre_nivel: ""
+        nombre_nivel: "",
+        id_grado: ""
       }
     };
   },
@@ -1024,6 +1029,40 @@ var render = function() {
                                 _vm.$set(
                                   _vm.nivel,
                                   "nombre_nivel",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group" }, [
+                          _c("label", [_vm._v("Grado")]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.nivel.id_grado,
+                                expression: "nivel.id_grado"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: {
+                              type: "text",
+                              placeholder: "Ingrese el Nombre",
+                              required: ""
+                            },
+                            domProps: { value: _vm.nivel.id_grado },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.nivel,
+                                  "id_grado",
                                   $event.target.value
                                 )
                               }

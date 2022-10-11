@@ -2104,6 +2104,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -2219,6 +2222,54 @@ var Editar1 = function Editar1() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_nivel_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/nivel/Editar.vue */ "./resources/js/components/nivel/Editar.vue"));
 };
 
+var Mostrar2 = function Mostrar2() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_catedratico_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/catedratico/Mostrar.vue */ "./resources/js/components/catedratico/Mostrar.vue"));
+};
+
+var Crear2 = function Crear2() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_catedratico_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/catedratico/Crear.vue */ "./resources/js/components/catedratico/Crear.vue"));
+};
+
+var Editar2 = function Editar2() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_catedratico_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/catedratico/Editar.vue */ "./resources/js/components/catedratico/Editar.vue"));
+};
+
+var Mostrar3 = function Mostrar3() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_curso_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/curso/Mostrar.vue */ "./resources/js/components/curso/Mostrar.vue"));
+};
+
+var Crear3 = function Crear3() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_curso_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/curso/Crear.vue */ "./resources/js/components/curso/Crear.vue"));
+};
+
+var Editar3 = function Editar3() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_curso_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/curso/Editar.vue */ "./resources/js/components/curso/Editar.vue"));
+};
+
+var Mostrar4 = function Mostrar4() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_grado_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/grado/Mostrar.vue */ "./resources/js/components/grado/Mostrar.vue"));
+};
+
+var Crear4 = function Crear4() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_grado_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/grado/Crear.vue */ "./resources/js/components/grado/Crear.vue"));
+};
+
+var Editar4 = function Editar4() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_grado_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/grado/Editar.vue */ "./resources/js/components/grado/Editar.vue"));
+};
+
+var Mostrar5 = function Mostrar5() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_alumno_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/alumno/Mostrar.vue */ "./resources/js/components/alumno/Mostrar.vue"));
+};
+
+var Crear5 = function Crear5() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_alumno_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/alumno/Crear.vue */ "./resources/js/components/alumno/Crear.vue"));
+};
+
+var Editar5 = function Editar5() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_alumno_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/alumno/Editar.vue */ "./resources/js/components/alumno/Editar.vue"));
+};
+
 var routes = [{
   name: 'home',
   path: '/',
@@ -2241,12 +2292,60 @@ var routes = [{
   component: Mostrar1
 }, {
   name: 'crearNivel',
-  path: '/crear',
+  path: '/crear1',
   component: Crear1
 }, {
   name: 'editarNivel',
   path: '/editar1/:id',
   component: Editar1
+}, {
+  name: 'mostrarCatedraticos',
+  path: '/catedraticos',
+  component: Mostrar2
+}, {
+  name: 'crearCatedratico',
+  path: '/crear2',
+  component: Crear2
+}, {
+  name: 'editarCatedratico',
+  path: '/editar2/:id',
+  component: Editar2
+}, {
+  name: 'mostrarCursos',
+  path: '/cursos',
+  component: Mostrar3
+}, {
+  name: 'crearCurso',
+  path: '/crear3',
+  component: Crear3
+}, {
+  name: 'editarCurso',
+  path: '/editar3/:id',
+  component: Editar3
+}, {
+  name: 'mostrarGrados',
+  path: '/grados',
+  component: Mostrar4
+}, {
+  name: 'crearGrado',
+  path: '/crear4',
+  component: Crear4
+}, {
+  name: 'editarGrado',
+  path: '/editar4/:id',
+  component: Editar4
+}, {
+  name: 'mostrarAlumnos',
+  path: '/alumnos',
+  component: Mostrar5
+}, {
+  name: 'crearAlumno',
+  path: '/crear5',
+  component: Crear5
+}, {
+  name: 'editarAlumno',
+  path: '/editar5/:id',
+  component: Editar5
 }];
 
 /***/ }),
@@ -19795,11 +19894,56 @@ var render = function() {
           },
           [
             _c("ul", { staticClass: "navbar-nav" }, [
-              _vm._m(1),
+              _c(
+                "li",
+                { staticClass: "nav-item active" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { "exact-active-class": "active", to: "/alumnos" }
+                    },
+                    [_vm._v("Estudiantes")]
+                  )
+                ],
+                1
+              ),
               _vm._v(" "),
-              _vm._m(2),
+              _c(
+                "li",
+                { staticClass: "nav-item active" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: {
+                        "exact-active-class": "active",
+                        to: "/catedraticos"
+                      }
+                    },
+                    [_vm._v("Catedraticos")]
+                  )
+                ],
+                1
+              ),
               _vm._v(" "),
-              _vm._m(3),
+              _c(
+                "li",
+                { staticClass: "nav-item active" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { "exact-active-class": "active", to: "/grados" }
+                    },
+                    [_vm._v("Grados")]
+                  )
+                ],
+                1
+              ),
               _vm._v(" "),
               _c(
                 "li",
@@ -19834,6 +19978,22 @@ var render = function() {
                   )
                 ],
                 1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "nav-item active" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { "exact-active-class": "active", to: "/cursos" }
+                    },
+                    [_vm._v("Cursos")]
+                  )
+                ],
+                1
               )
             ])
           ]
@@ -19865,36 +20025,6 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item active" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-        _vm._v("Estudiantes")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item active" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-        _vm._v("Catedraticos")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item active" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-        _vm._v("Grados")
-      ])
-    ])
   }
 ]
 render._withStripped = true
@@ -35337,7 +35467,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_sucursal_Mostrar_vue":1,"resources_js_components_sucursal_Crear_vue":1,"resources_js_components_sucursal_Editar_vue":1,"resources_js_components_nivel_Mostrar_vue":1,"resources_js_components_nivel_Crear_vue":1,"resources_js_components_nivel_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_sucursal_Mostrar_vue":1,"resources_js_components_sucursal_Crear_vue":1,"resources_js_components_sucursal_Editar_vue":1,"resources_js_components_nivel_Mostrar_vue":1,"resources_js_components_nivel_Crear_vue":1,"resources_js_components_nivel_Editar_vue":1,"resources_js_components_catedratico_Mostrar_vue":1,"resources_js_components_catedratico_Crear_vue":1,"resources_js_components_catedratico_Editar_vue":1,"resources_js_components_curso_Mostrar_vue":1,"resources_js_components_curso_Crear_vue":1,"resources_js_components_curso_Editar_vue":1,"resources_js_components_grado_Mostrar_vue":1,"resources_js_components_grado_Crear_vue":1,"resources_js_components_grado_Editar_vue":1,"resources_js_components_alumno_Mostrar_vue":1,"resources_js_components_alumno_Crear_vue":1,"resources_js_components_alumno_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

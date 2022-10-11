@@ -12,6 +12,10 @@
                                     <label>Nombre</label>
                                     <input type="text" class="form-control" v-model="nivel.nombre_nivel" placeholder="Ingrese el Nombre" required>
                                 </div>
+                                <div class="form-group">
+                                    <label>Grado</label>
+                                    <input type="text" class="form-control" v-model="nivel.id_grado" placeholder="Ingrese el Nombre" required>
+                                </div>
 
 
                             </div>
@@ -41,7 +45,9 @@ export default {
     data(){
         return {
             nivel:{
-                nombre_nivel:""
+                nombre_nivel:"",
+                id_grado:""
+
 
 
             }
