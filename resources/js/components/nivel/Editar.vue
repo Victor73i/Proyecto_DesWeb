@@ -12,6 +12,10 @@
                                     <label>Nombre Nivel</label>
                                     <input type="text" class="form-control" v-model="nivel.nombre_nivel" placeholder="Ingrese el nombre" required>
                                 </div>
+                                <div class="form-group">
+                                    <label>Grado</label>
+                                    <input type="text" class="form-control" v-model="nivel.id_grado" placeholder="Ingrese el nombre" required>
+                                </div>
                                 <br>
 
                             </div>
@@ -33,7 +37,9 @@ export default {
     data(){
         return {
             nivel:{
-                nombre_nivel:""
+                nombre_nivel:"",
+                id_grado:""
+
 
             }
         }
@@ -44,8 +50,10 @@ export default {
     methods:{
         async mostrarNivel(){
             await this.axios.get(`/api/nivel/${this.$route.params.id}`).then(response=>{
-                const { nombre_nivel } = response.data
+                const { nombre_nivel,id_grado } = response.data
                 this.nivel.nombre_nivel = nombre_nivel
+                this.nivel.id_grado = id_grado
+
 
 
             }).catch(error=>{

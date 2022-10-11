@@ -100,6 +100,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context.next = 2;
                 return _this.axios.get('/api/sucursal').then(function (response) {
                   _this.sucursals = response.data;
+                  alert('Sucursal Mostrado con exito.');
                 })["catch"](function (error) {
                   console.log(error);
                   _this.sucursals = [];

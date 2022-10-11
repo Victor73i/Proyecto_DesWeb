@@ -78,6 +78,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "nivels",
   data: function data() {
@@ -100,6 +102,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context.next = 2;
                 return _this.axios.get('/api/nivel').then(function (response) {
                   _this.nivels = response.data;
+                  alert('Nivel Mostrado con exito.');
                 })["catch"](function (error) {
                   console.log(error);
                   _this.nivels = [];
@@ -1039,6 +1042,8 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(nivel.nombre_nivel))]),
                   _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(nivel.id_grado))]),
+                  _vm._v(" "),
                   _c(
                     "td",
                     [
@@ -1102,6 +1107,8 @@ var staticRenderFns = [
           _c("th", [_vm._v("ID")]),
           _vm._v(" "),
           _c("th", [_vm._v("Nombre")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("Grado")]),
           _vm._v(" "),
           _c("th", [_vm._v("ACTIONS")])
         ])
