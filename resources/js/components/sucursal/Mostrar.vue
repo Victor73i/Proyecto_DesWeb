@@ -20,7 +20,7 @@
                         <th>ID</th>
                         <th>Nombre</th>
 
-                        <th>ACTIONS</th>
+                        <th>Opciones</th>
 
 
                     </tr>

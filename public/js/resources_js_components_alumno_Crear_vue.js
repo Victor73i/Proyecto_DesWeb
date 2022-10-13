@@ -1151,7 +1151,7 @@ var render = function() {
                 ],
                 staticClass: "form-control",
                 attrs: {
-                  type: "number",
+                  type: "text",
                   autocomplete: "off",
                   name: "telefono",
                   required: ""
@@ -1181,12 +1181,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "form-control",
-                attrs: {
-                  type: "email",
-                  autocomplete: "off",
-                  name: "correo",
-                  required: ""
-                },
+                attrs: { type: "email", autocomplete: "off", name: "correo" },
                 domProps: { value: _vm.alumno.correo },
                 on: {
                   input: function($event) {
@@ -1266,7 +1261,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("CARNET")
+        _vm._v("Carnet")
       ])
     ])
   },
@@ -1276,7 +1271,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("NOMBRE")
+        _vm._v("Nombre")
       ])
     ])
   },
@@ -1286,7 +1281,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("Fecha Nacimiento")
+        _vm._v("Fecha de Nacimiento")
       ])
     ])
   },
@@ -1296,7 +1291,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("Direccion")
+        _vm._v("Dirección")
       ])
     ])
   },
@@ -1306,7 +1301,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("TELEFONO")
+        _vm._v("Teléfono")
       ])
     ])
   },
@@ -1316,7 +1311,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("CORREO")
+        _vm._v("Correo")
       ])
     ])
   },
@@ -1326,7 +1321,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("SUCURSAL")
+        _vm._v("Sucursal")
       ])
     ])
   }

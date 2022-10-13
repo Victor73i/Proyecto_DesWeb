@@ -9,7 +9,7 @@
                 <form @submit.prevent="actualizar">
 
                     <div>
-                        <b><label for="name" class="mt-2">NOMBRE</label></b>
+                        <b><label for="name" class="mt-2">Nombre</label></b>
                         <input type="text" class="form-control" autocomplete="off" name="name" v-model="sucursal.nombre_sucursal" required>
                     </div>
                     <br>

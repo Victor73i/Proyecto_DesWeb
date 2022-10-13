@@ -1110,7 +1110,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("th", [_vm._v("Grado")]),
           _vm._v(" "),
-          _c("th", [_vm._v("ACTIONS")])
+          _c("th", [_vm._v("Opciones")])
         ])
       ]
     )

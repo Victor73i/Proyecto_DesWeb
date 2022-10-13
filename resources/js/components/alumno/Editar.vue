@@ -9,31 +9,31 @@
                 <form @submit.prevent="actualizar">
 
                     <div>
-                        <b><label for="name" class="mt-2">CARNET</label></b>
+                        <b><label for="name" class="mt-2">Carnet</label></b>
                         <input type="text" class="form-control" autocomplete="off" name="carnet" v-model="alumno.carnet_alumno" required>
                     </div>
                     <div>
-                        <b><label for="name" class="mt-2">NOMBRE</label></b>
+                        <b><label for="name" class="mt-2">Nombre</label></b>
                         <input type="text" class="form-control" autocomplete="off" name="nombre" v-model="alumno.nombre_alumno" required>
                     </div>
                     <div>
-                        <b><label for="name" class="mt-2">FECHA NACIMIENTO</label></b>
+                        <b><label for="name" class="mt-2">Fecha de Nacimiento</label></b>
                         <input type="text" class="form-control" autocomplete="off" name="fecha_nacimiento" v-model="alumno.fecha_nacimiento" required>
                     </div>
                     <div>
-                        <b><label for="name" class="mt-2">DIRECCION</label></b>
+                        <b><label for="name" class="mt-2">Dirección</label></b>
                         <input type="text" class="form-control" autocomplete="off" name="direccion" v-model="alumno.direccion" required>
                     </div>
                     <div>
-                        <b><label for="name" class="mt-2">TELEFONO</label></b>
+                        <b><label for="name" class="mt-2">Teléfono</label></b>
                         <input type="text" class="form-control" autocomplete="off" name="telefono" v-model="alumno.telefono" required>
                     </div>
                     <div>
-                        <b><label for="name" class="mt-2">CORREO</label></b>
+                        <b><label for="name" class="mt-2">Correo</label></b>
                         <input type="text" class="form-control" autocomplete="off" name="correo" v-model="alumno.correo" required>
                     </div>
                     <div>
-                        <b><label for="name" class="mt-2">SUCURSAL</label></b>
+                        <b><label for="name" class="mt-2">Sucursal</label></b>
                         <input type="text" class="form-control" autocomplete="off" name="sucursal" v-model="alumno.id_sucursal" required>
                     </div>
                     <br>

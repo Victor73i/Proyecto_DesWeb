@@ -107,7 +107,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 })["catch"](function (error) {
                   console.log(error);
                   _this.cursos = [];
-                  alert('Mostrar Curso ERRADO con exito.');
+                  console.log(error);
                 });
 
               case 2:
@@ -1108,7 +1108,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("th", [_vm._v("Nombre")]),
           _vm._v(" "),
-          _c("th", [_vm._v("ACTIONS")])
+          _c("th", [_vm._v("Opciones")])
         ])
       ]
     )

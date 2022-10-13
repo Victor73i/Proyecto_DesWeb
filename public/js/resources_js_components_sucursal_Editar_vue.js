@@ -1073,7 +1073,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("NOMBRE")
+        _vm._v("Nombre")
       ])
     ])
   }

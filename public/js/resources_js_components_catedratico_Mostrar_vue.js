@@ -121,7 +121,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee);
       }))();
     },
-    borrarNivel: function borrarNivel(id) {
+    borrarCatedratico: function borrarCatedratico(id) {
       var _this2 = this;
 
       if (confirm("¿Confirma eliminar el Catedratico?")) {
@@ -1119,11 +1119,11 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("th", [_vm._v("Nombre")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Telefono")]),
+          _c("th", [_vm._v("Teléfono")]),
           _vm._v(" "),
           _c("th", [_vm._v("Correo")]),
           _vm._v(" "),
-          _c("th", [_vm._v("ACTIONS")])
+          _c("th", [_vm._v("Opciones")])
         ])
       ]
     )

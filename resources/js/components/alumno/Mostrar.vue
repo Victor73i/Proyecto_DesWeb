@@ -20,14 +20,14 @@
                         <th>ID</th>
                         <th>Carnet</th>
                         <th>Nombre</th>
-                        <th>Fecha_nacimiento</th>
+                        <th>Fecha de Nacimiento</th>
                         <th>Direccion</th>
-                        <th>Telefono</th>
+                        <th>Teléfono</th>
                         <th>Correo</th>
                         <th>Sucursal</th>
 
 
-                        <th>ACTIONS</th>
+                        <th>Opciones</th>
 
 
                     </tr>

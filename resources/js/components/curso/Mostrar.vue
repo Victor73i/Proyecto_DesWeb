@@ -22,7 +22,7 @@
 
 
 
-                        <th>ACTIONS</th>
+                        <th>Opciones</th>
 
 
                     </tr>
@@ -69,7 +69,7 @@ export default {
             }).catch(error=>{
                 console.log(error)
                 this.cursos = []
-                alert('Mostrar Curso ERRADO con exito.')
+                console.log(error)
 
             })
         },
