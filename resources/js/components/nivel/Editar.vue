@@ -1,33 +1,59 @@
 <template>
-    <div class="row">
-        <div class="col-12">
-            <center><div class="card text-bg-light mb-3" style="max-width: 35rem; background-color: #67DECD;">
-                <div class="card-header"><h4>Editar Nivel</h4></div>
-                <div class="card-body">
-                    <form @submit.prevent="actualizar">
-                        <div class="row">
-                            <div class="col-12 mb-2">
-                                <br>
-                                <div class="form-group">
-                                    <label>Nombre Nivel</label>
-                                    <input type="text" class="form-control" v-model="nivel.nombre_nivel" placeholder="Ingrese el nombre" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Grado</label>
-                                    <input type="text" class="form-control" v-model="nivel.id_grado" placeholder="Ingrese el nombre" required>
-                                </div>
-                                <br>
+<!--    <div class="row">-->
+<!--        <div class="col-12">-->
+<!--            <center><div class="card text-bg-light mb-3" style="max-width: 35rem; background-color: #67DECD;">-->
+<!--                <div class="card-header"><h4>Editar Nivel</h4></div>-->
+<!--                <div class="card-body">-->
+<!--                    <form @submit.prevent="actualizar">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-12 mb-2">-->
+<!--                                <br>-->
+<!--                                <div class="form-group">-->
+<!--                                    <label>Nombre Nivel</label>-->
+<!--                                    <input type="text" class="form-control" v-model="nivel.nombre_nivel" placeholder="Ingrese el nombre" required>-->
+<!--                                </div>-->
+<!--                                <div class="form-group">-->
+<!--                                    <label>Grado</label>-->
+<!--                                    <input type="text" class="form-control" v-model="nivel.id_grado" placeholder="Ingrese el nombre" required>-->
+<!--                                </div>-->
+<!--                                <br>-->
 
-                            </div>
+<!--                            </div>-->
 
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+<!--                            <div class="col-12">-->
+<!--                                <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            </center></div>-->
+<!--    </div>-->
+    <div class="container md mt-2 mb-3 col-lg-5">
+        <div class="card border-info">
+            <div class="card-header bg-info text-white">
+                <center><h2 class="mt-2 mb-2"> EDITAR NIVEL &nbsp;<i class="fas fa-pen-alt"></i></h2> </center>
             </div>
-            </center></div>
+            <div class="card-body">
+                <!-- Formulario -->
+                <form @submit.prevent="actualizar">
+
+                    <div>
+                        <b><label for="name" class="mt-2">Nombre</label></b>
+                        <input type="text" class="form-control" autocomplete="off" name="nombre" v-model="nivel.nombre_nivel" required>
+                    </div>
+                    <div>
+                        <b><label for="name" class="mt-2">Grado</label></b>
+                        <input type="text" class="form-control" autocomplete="off" name="name" v-model="nivel.id_grado" required>
+                    </div>
+
+                    <br>
+                    <button type="submit" class="btn btn-primary" >Guardar</button>
+                    <router-link :to='{name:"mostrarNivels"}' class="btn btn-secondary">Cancelar</router-link>
+                    <button type="reset" class="btn btn-danger">Limpiar</button>
+                </form>
+            </div>
+        </div>
     </div>
 </template>
 

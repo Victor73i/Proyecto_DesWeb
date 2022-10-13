@@ -19,21 +19,13 @@
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
-
-                        <th>ACTIONS</th>
-
-
+                        <th>Opciones</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr v-for="grado in grados" :key="grado.id">
                         <td>{{ grado.id }}</td>
                         <td>{{ grado.nombre_grado }}</td>
-
-
-
-
-
                         <td>
                             <router-link :to='{name:"editarGrado",params:{id:grado.id}}' class="btn btn-outline-warning"><i class="fa fa-cog fa-spin fa-2x fa-fw"></i></router-link>
                             <a type="button" @click="borrarGrado(grado.id)" class="btn btn-outline-danger"><i class="fas fa-trash fa-2x"></i></a>

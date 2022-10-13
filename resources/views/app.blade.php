@@ -19,13 +19,6 @@
         <link rel="icon" href="favicon.ico">
         <script src="https://kit.fontawesome.com/85601d370d.js" crossorigin="anonymous"></script>
 
-{{--        <!-- CDNs de Bootstrap 5 -->--}}
-{{--        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">--}}
-
-{{--        <!-- CDNs de Font-Awesome -->--}}
-{{--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />--}}
-
-{{--        <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet"/>--}}
 <script src="https://use.fontawesome.com/11ba0db90b.js"></script>
     </head>
     <body>
@@ -42,6 +35,7 @@
                         <h3>Recursos Utilizados</h3>
                         <ul>
                             <li><a href="https://laragon.org/">Laragon</a></li>
+                            <li><a href="https://github.com/">GitHub</a></li>
                             <li><a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a></li>
                             <li><a href="https://azure.microsoft.com/es-mx/free/search/?&ef_id=CjwKCAjwv4SaBhBPEiwA9YzZvIYSyQhNyogL_t-shmgysHyrFUj7S1pftUxJDMtKZ-a07ilB-UwrIxoCmYUQAvD_BwE:G:s&OCID=AIDcmmwxqbdk6m_SEM_CjwKCAjwv4SaBhBPEiwA9YzZvIYSyQhNyogL_t-shmgysHyrFUj7S1pftUxJDMtKZ-a07ilB-UwrIxoCmYUQAvD_BwE:G:s&gclid=CjwKCAjwv4SaBhBPEiwA9YzZvIYSyQhNyogL_t-shmgysHyrFUj7S1pftUxJDMtKZ-a07ilB-UwrIxoCmYUQAvD_BwE">Microsoft Azure</a></li>
                         </ul>

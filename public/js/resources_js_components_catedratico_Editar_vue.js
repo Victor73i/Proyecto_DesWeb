@@ -996,7 +996,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container md mt-2 mb-3 col-lg-5" }, [
+  return _c("div", { staticClass: "container md mt-2 mb-3 col-lg-6" }, [
     _c("div", { staticClass: "card border-info" }, [
       _c(
         "div",
@@ -1004,7 +1004,7 @@ var render = function() {
         [
           _c("center", [
             _c("h2", { staticClass: "mt-2 mb-2" }, [
-              _vm._v(" EDITAR CATEDRATICO  "),
+              _vm._v(" EDITAR CATEDRÁTICO  "),
               _c("i", { staticClass: "fas fa-pen-alt" })
             ])
           ])
@@ -1138,12 +1138,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  autocomplete: "off",
-                  name: "correo",
-                  required: ""
-                },
+                attrs: { type: "email", autocomplete: "off", name: "correo" },
                 domProps: { value: _vm.catedratico.correo },
                 on: {
                   input: function($event) {
@@ -1192,7 +1187,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("CARNET")
+        _vm._v("Carnet")
       ])
     ])
   },
@@ -1202,7 +1197,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("NOMBRE")
+        _vm._v("Nombre")
       ])
     ])
   },
@@ -1212,7 +1207,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("TELEFONO")
+        _vm._v("Teléfono")
       ])
     ])
   },
@@ -1222,7 +1217,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("CORREO")
+        _vm._v("Correo")
       ])
     ])
   }

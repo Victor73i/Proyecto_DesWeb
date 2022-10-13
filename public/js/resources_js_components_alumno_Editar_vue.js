@@ -1303,7 +1303,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("CARNET")
+        _vm._v("Carnet")
       ])
     ])
   },
@@ -1313,7 +1313,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("NOMBRE")
+        _vm._v("Nombre")
       ])
     ])
   },
@@ -1323,7 +1323,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("FECHA NACIMIENTO")
+        _vm._v("Fecha de Nacimiento")
       ])
     ])
   },
@@ -1333,7 +1333,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("DIRECCION")
+        _vm._v("Dirección")
       ])
     ])
   },
@@ -1343,7 +1343,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("TELEFONO")
+        _vm._v("Teléfono")
       ])
     ])
   },
@@ -1353,7 +1353,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("CORREO")
+        _vm._v("Correo")
       ])
     ])
   },
@@ -1363,7 +1363,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("SUCURSAL")
+        _vm._v("Sucursal")
       ])
     ])
   }

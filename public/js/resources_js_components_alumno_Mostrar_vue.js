@@ -1132,17 +1132,17 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("th", [_vm._v("Nombre")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Fecha_nacimiento")]),
+          _c("th", [_vm._v("Fecha de Nacimiento")]),
           _vm._v(" "),
           _c("th", [_vm._v("Direccion")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Telefono")]),
+          _c("th", [_vm._v("Teléfono")]),
           _vm._v(" "),
           _c("th", [_vm._v("Correo")]),
           _vm._v(" "),
           _c("th", [_vm._v("Sucursal")]),
           _vm._v(" "),
-          _c("th", [_vm._v("ACTIONS")])
+          _c("th", [_vm._v("Opciones")])
         ])
       ]
     )

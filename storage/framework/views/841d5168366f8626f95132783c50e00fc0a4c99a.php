@@ -19,13 +19,6 @@
         <link rel="icon" href="favicon.ico">
         <script src="https://kit.fontawesome.com/85601d370d.js" crossorigin="anonymous"></script>
 
-
-
-
-
-
-
-
 <script src="https://use.fontawesome.com/11ba0db90b.js"></script>
     </head>
     <body>
@@ -42,6 +35,7 @@
                         <h3>Recursos Utilizados</h3>
                         <ul>
                             <li><a href="https://laragon.org/">Laragon</a></li>
+                            <li><a href="https://github.com/">GitHub</a></li>
                             <li><a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a></li>
                             <li><a href="https://azure.microsoft.com/es-mx/free/search/?&ef_id=CjwKCAjwv4SaBhBPEiwA9YzZvIYSyQhNyogL_t-shmgysHyrFUj7S1pftUxJDMtKZ-a07ilB-UwrIxoCmYUQAvD_BwE:G:s&OCID=AIDcmmwxqbdk6m_SEM_CjwKCAjwv4SaBhBPEiwA9YzZvIYSyQhNyogL_t-shmgysHyrFUj7S1pftUxJDMtKZ-a07ilB-UwrIxoCmYUQAvD_BwE:G:s&gclid=CjwKCAjwv4SaBhBPEiwA9YzZvIYSyQhNyogL_t-shmgysHyrFUj7S1pftUxJDMtKZ-a07ilB-UwrIxoCmYUQAvD_BwE">Microsoft Azure</a></li>
                         </ul>

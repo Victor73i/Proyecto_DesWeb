@@ -20,11 +20,11 @@
                         <th>ID</th>
                         <th>Carnet</th>
                         <th>Nombre</th>
-                        <th>Telefono</th>
+                        <th>Teléfono</th>
                         <th>Correo</th>
 
 
-                        <th>ACTIONS</th>
+                        <th>Opciones</th>
 
 
                     </tr>
@@ -75,7 +75,7 @@ export default {
                 this.catedraticos = []
             })
         },
-        borrarNivel(id){
+        borrarCatedratico(id){
             if(confirm("¿Confirma eliminar el Catedratico?")){
                 this.axios.delete(`/api/catedratico/${id}`).then(response=>{
                     this.mostrarCatedraticos()
