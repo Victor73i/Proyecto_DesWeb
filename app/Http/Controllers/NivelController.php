@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Nivel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class NivelController extends Controller
 {
     public function index()
     {
-        $nivels = Nivel::all(['id','nombre_nivel','id_grado']);
+        $nivels = DB::table('nivel as ni')
+            ->join('grado as gr','ni.id_grado','=','gr.id')
+            ->select('ni.id','ni.nombre_nivel','gr.nombre_grado')->get();
         return response()->json($nivels);
     }
     public function create()

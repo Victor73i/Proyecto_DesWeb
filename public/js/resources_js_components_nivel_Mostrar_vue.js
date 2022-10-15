@@ -274,7 +274,7 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(nivel.nombre_nivel))]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(nivel.id_grado))]),
+                  _c("td", [_vm._v(_vm._s(nivel.nombre_grado))]),
                   _vm._v(" "),
                   _c(
                     "td",
