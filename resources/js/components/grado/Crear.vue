@@ -40,9 +40,21 @@ export default {
         async crear(){
             await this.axios.post('/api/grado',this.grado).then(response=>{
                 this.$router.push({name:"mostrarGrados"})
-                alert('Grado creado con exito.')
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Grado registrado exitosamente ',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
             }).catch(error=>{
-                console.log(error)
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
             })
         }
     }

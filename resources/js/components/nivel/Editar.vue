@@ -1,34 +1,4 @@
 <template>
-<!--    <div class="row">-->
-<!--        <div class="col-12">-->
-<!--            <center><div class="card text-bg-light mb-3" style="max-width: 35rem; background-color: #67DECD;">-->
-<!--                <div class="card-header"><h4>Editar Nivel</h4></div>-->
-<!--                <div class="card-body">-->
-<!--                    <form @submit.prevent="actualizar">-->
-<!--                        <div class="row">-->
-<!--                            <div class="col-12 mb-2">-->
-<!--                                <br>-->
-<!--                                <div class="form-group">-->
-<!--                                    <label>Nombre Nivel</label>-->
-<!--                                    <input type="text" class="form-control" v-model="nivel.nombre_nivel" placeholder="Ingrese el nombre" required>-->
-<!--                                </div>-->
-<!--                                <div class="form-group">-->
-<!--                                    <label>Grado</label>-->
-<!--                                    <input type="text" class="form-control" v-model="nivel.id_grado" placeholder="Ingrese el nombre" required>-->
-<!--                                </div>-->
-<!--                                <br>-->
-
-<!--                            </div>-->
-
-<!--                            <div class="col-12">-->
-<!--                                <button type="submit" class="btn btn-primary">Submit</button>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </form>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            </center></div>-->
-<!--    </div>-->
     <div class="container md mt-2 mb-3 col-lg-5">
         <div class="card border-info">
             <div class="card-header bg-info text-white">
@@ -65,8 +35,6 @@ export default {
             nivel:{
                 nombre_nivel:"",
                 id_grado:""
-
-
             }
         }
     },
@@ -80,8 +48,6 @@ export default {
                 this.nivel.nombre_nivel = nombre_nivel
                 this.nivel.id_grado = id_grado
 
-
-
             }).catch(error=>{
                 console.log(error)
             })
@@ -89,10 +55,22 @@ export default {
         async actualizar(){
             await this.axios.put(`/api/nivel/${this.$route.params.id}`,this.nivel).then(response=>{
                 this.$router.push({name:"mostrarNivels"})
-                alert('Nivel editado con exito.')
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Nivel actualizado exitosamente ',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
 
             }).catch(error=>{
-                console.log(error)
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
             })
         }
 

@@ -21,20 +21,13 @@
                         <th>Nombre</th>
                         <th>Grado</th>
                         <th>Opciones</th>
-
-
                     </tr>
                     </thead>
                     <tbody>
                     <tr v-for="nivel in nivels" :key="nivel.id">
                         <td>{{ nivel.id }}</td>
                         <td>{{ nivel.nombre_nivel }}</td>
-                        <td>{{ nivel.id_grado }}</td>
-
-
-
-
-
+                        <td>{{ nivel.id_grado}}</td>
 
                         <td>
                             <router-link :to='{name:"editarNivel",params:{id:nivel.id}}' class="btn btn-outline-warning"><i class="fa fa-cog fa-spin fa-2x fa-fw"></i></router-link>
@@ -63,23 +56,59 @@ export default {
         async mostrarNivels(){
             await this.axios.get('/api/nivel').then(response=>{
                 this.nivels = response.data
-                alert('Nivel Mostrado con exito.')
+
 
             }).catch(error=>{
-                console.log(error)
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
                 this.nivels = []
             })
         },
         borrarNivel(id){
-            if(confirm("¿Confirma eliminar el Nivel?")){
-                this.axios.delete(`/api/nivel/${id}`).then(response=>{
-                    this.mostrarNivels()
-                    alert('Nivel eliminado con exito.')
+            Swal.fire({
+                title: 'Deseas eliminar el registro?',
+                text: "Si lo haces no podras recuperarlo!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Eliminar',
+                cancelButtonText: 'Cancelar',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    this.axios.delete(`/api/nivel/${id}`).then(response=>{
+                        this.mostrarNivels()
+                        Swal.fire(
+                            'Eliminado!',
+                            'El registro se ha eliminado',
+                            'success'
+                        )
+                    }).catch(error=>{
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'error',
+                            title: 'Este registro no puede ser eliminado',
+                            showConfirmButton: false,
+                            timer: 2000
+                        })
+                    })
+                } else if (
+                    /* Read more about handling dismissals below */
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    Swal.fire(
+                        'Cancelado',
+                        'El registro se encuentra a salvo',
+                        'error'
+                    )
+                }
+            })
 
-                }).catch(error=>{
-                    console.log(error)
-                })
-            }
         }
     }
 }

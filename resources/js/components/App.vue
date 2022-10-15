@@ -10,10 +10,10 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <router-link exact-active-class="active" to="/alumnos" class="nav-link">Estudiantes</router-link>
+                        <router-link exact-active-class="active" to="/alumnos" class="nav-link">Alumnos</router-link>
                     </li>
                     <li class="nav-item active">
-                        <router-link exact-active-class="active" to="/catedraticos" class="nav-link">Catedraticos</router-link>
+                        <router-link exact-active-class="active" to="/catedraticos" class="nav-link">Catedráticos</router-link>
                     </li>
                     <li class="nav-item active">
                         <router-link exact-active-class="active" to="/grados" class="nav-link">Grados</router-link>

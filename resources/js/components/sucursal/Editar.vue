@@ -49,10 +49,22 @@ export default {
         async actualizar(){
             await this.axios.put(`/api/sucursal/${this.$route.params.id}`,this.sucursal).then(response=>{
                 this.$router.push({name:"mostrarSucursals"})
-                alert('Sucursal editado con exito.')
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Sucursal actualizada exitosamente ',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
 
             }).catch(error=>{
-                console.log(error)
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
             })
         }
 

@@ -58,8 +58,6 @@ export default {
                 this.catedratico.telefono = telefono
                 this.catedratico.correo = correo
 
-
-
             }).catch(error=>{
                 console.log(error)
             })
@@ -67,9 +65,21 @@ export default {
         async actualizar(){
             await this.axios.put(`/api/catedratico/${this.$route.params.id}`,this.catedratico).then(response=>{
                 this.$router.push({name:"mostrarCatedraticos"})
-                alert('Catedratico editado con exito.')
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Catedrático actualizado exitosamente ',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
             }).catch(error=>{
-                console.log(error)
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
             })
         }
     }

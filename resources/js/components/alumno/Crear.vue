@@ -62,9 +62,6 @@ export default {
                 telefono:"",
                 correo:"",
                 id_sucursal:"",
-
-
-
             }
         }
     },
@@ -72,9 +69,22 @@ export default {
         async crear(){
             await this.axios.post('/api/alumno',this.alumno).then(response=>{
                 this.$router.push({name:"mostrarAlumnos"})
-                alert('Alumno creado con exito.')
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Alumno registrado exitosamente ',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
             }).catch(error=>{
-                console.log(error)
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+
             })
         }
     }

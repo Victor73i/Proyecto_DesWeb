@@ -2,8 +2,8 @@ require('./bootstrap');
 import vue from 'vue'
 window.Vue = vue;
 
-import App from './components/App.vue';
 
+import App from './components/App.vue';
 import VueAxios from 'vue-axios';
 import axios from 'axios';
 
@@ -23,3 +23,6 @@ const app = new Vue({
     router: router,
     render: h => h(App),
 });
+
+import Swal from 'sweetalert2';
+window.Swal=Swal;
