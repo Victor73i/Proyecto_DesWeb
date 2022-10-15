@@ -27,7 +27,7 @@
                     <tr v-for="nivel in nivels" :key="nivel.id">
                         <td>{{ nivel.id }}</td>
                         <td>{{ nivel.nombre_nivel }}</td>
-                        <td>{{ nivel.id_grado}}</td>
+                        <td>{{ nivel.nombre_grado}}</td>
 
                         <td>
                             <router-link :to='{name:"editarNivel",params:{id:nivel.id}}' class="btn btn-outline-warning"><i class="fa fa-cog fa-spin fa-2x fa-fw"></i></router-link>
