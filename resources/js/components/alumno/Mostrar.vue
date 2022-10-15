@@ -25,11 +25,7 @@
                         <th>Teléfono</th>
                         <th>Correo</th>
                         <th>Sucursal</th>
-
-
                         <th>Opciones</th>
-
-
                     </tr>
                     </thead>
                     <tbody>
@@ -42,11 +38,6 @@
                         <td>{{ alumno.telefono }}</td>
                         <td>{{ alumno.correo }}</td>
                         <td>{{ alumno.nombre_sucursal }}</td>
-
-
-
-
-
 
                         <td>
                             <router-link :to='{name:"editarAlumno",params:{id:alumno.id}}' class="btn btn-outline-warning"><i class="fa fa-cog fa-spin fa-2x fa-fw"></i></router-link>
@@ -75,23 +66,59 @@ export default {
         async mostrarAlumnos(){
             await this.axios.get('/api/alumno').then(response=>{
                 this.alumnos = response.data
-                alert('Alumno Mostrado con exito.')
+
 
             }).catch(error=>{
-                console.log(error)
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
                 this.alumnos = []
             })
         },
         borrarAlumno(id){
-            if(confirm("¿Confirma eliminar el Alumno?")){
-                this.axios.delete(`/api/alumno/${id}`).then(response=>{
-                    this.mostrarAlumnos()
-                    alert('Alumno eliminado con exito.')
+            Swal.fire({
+                title: 'Deseas eliminar el registro?',
+                text: "Si lo haces no podras recuperarlo!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Eliminar',
+                cancelButtonText: 'Cancelar',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    this.axios.delete(`/api/alumno/${id}`).then(response=>{
+                        this.mostrarAlumnos()
+                        Swal.fire(
+                            'Eliminado!',
+                            'El registro se ha eliminado',
+                            'success'
+                        )
+                    }).catch(error=>{
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'error',
+                            title: 'Este registro no puede ser eliminado',
+                            showConfirmButton: false,
+                            timer: 2000
+                        })
+                    })
+                } else if (
+                    /* Read more about handling dismissals below */
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    Swal.fire(
+                        'Cancelado',
+                        'El registro se encuentra a salvo',
+                        'error'
+                    )
+                }
+            })
 
-                }).catch(error=>{
-                    console.log(error)
-                })
-            }
         }
     }
 }

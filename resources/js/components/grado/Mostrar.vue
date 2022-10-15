@@ -53,23 +53,58 @@ export default {
         async mostrarGrados(){
             await this.axios.get('/api/grado').then(response=>{
                 this.grados = response.data
-                alert('Grado Mostrado con exito.')
+
 
             }).catch(error=>{
-                console.log(error)
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
                 this.grados = []
             })
         },
         borrarGrado(id){
-            if(confirm("¿Confirma eliminar el Grado?")){
-                this.axios.delete(`/api/grado/${id}`).then(response=>{
-                    this.mostrarGrados()
-                    alert('Grado eliminado con exito.')
-
-                }).catch(error=>{
-                    console.log(error)
-                })
-            }
+            Swal.fire({
+                title: 'Deseas eliminar el registro?',
+                text: "Si lo haces no podras recuperarlo!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Eliminar',
+                cancelButtonText: 'Cancelar',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    this.axios.delete(`/api/grado/${id}`).then(response=>{
+                        this.mostrarGrados()
+                        Swal.fire(
+                            'Eliminado!',
+                            'El registro se ha eliminado',
+                            'success'
+                        )
+                    }).catch(error=>{
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'error',
+                            title: 'Este registro no puede ser eliminado',
+                            showConfirmButton: false,
+                            timer: 2000
+                        })
+                    })
+                } else if (
+                    /* Read more about handling dismissals below */
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    Swal.fire(
+                        'Cancelado',
+                        'El registro se encuentra a salvo',
+                        'error'
+                    )
+                }
+            })
         }
     }
 }

@@ -19,23 +19,13 @@
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
-
-
-
                         <th>Opciones</th>
-
-
                     </tr>
                     </thead>
                     <tbody>
                     <tr v-for="curso in cursos" :key="curso.id">
                         <td>{{ curso.id }}</td>
                         <td>{{ curso.nombre_curso }}</td>
-
-
-
-
-
 
                         <td>
                             <router-link :to='{name:"editarCurso",params:{id:curso.id}}' class="btn btn-outline-warning"><i class="fa fa-cog fa-spin fa-2x fa-fw"></i></router-link>
@@ -64,12 +54,18 @@ export default {
         async mostrarCursos(){
             await this.axios.get('/api/curso').then(response=>{
                 this.cursos = response.data
-                alert('Curso Mostrado con exito.')
+
 
             }).catch(error=>{
-                console.log(error)
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
                 this.cursos = []
-                console.log(error)
+
 
             })
         },

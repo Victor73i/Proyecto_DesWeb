@@ -30,7 +30,7 @@
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Correo</label></b>
-                        <input type="text" class="form-control" autocomplete="off" name="correo" v-model="alumno.correo" required>
+                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="alumno.correo" >
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Sucursal</label></b>
@@ -78,8 +78,6 @@ export default {
                 this.alumno.correo = correo
                 this.alumno.id_sucursal = id_sucursal
 
-
-
             }).catch(error=>{
                 console.log(error)
             })
@@ -87,9 +85,21 @@ export default {
         async actualizar(){
             await this.axios.put(`/api/alumno/${this.$route.params.id}`,this.alumno).then(response=>{
                 this.$router.push({name:"mostrarAlumnos"})
-                alert('Alumno editado con exito.')
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Alumno actualizado exitosamente ',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
             }).catch(error=>{
-                console.log(error)
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
             })
         }
     }

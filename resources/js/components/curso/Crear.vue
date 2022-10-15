@@ -40,9 +40,21 @@ export default {
         async crear(){
             await this.axios.post('/api/curso',this.curso).then(response=>{
                 this.$router.push({name:"mostrarCursos"})
-                alert('Curso creado con exito.')
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Curso registrado exitosamente ',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
             }).catch(error=>{
-                console.log(error)
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
             })
         }
     }
