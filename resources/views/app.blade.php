@@ -52,7 +52,7 @@
                     <div class="col-sm-4 col-md-3 item">
                         <h3>Estudios</h3>
                         <ul>
-                            <a>Universidad Mariano Galvez de Guatemla</a>
+                            <a>Universidad Mariano Galvez de Guatemala</a>
                             <a>Facultad de Ingenieria en Sistemas </a><br>
                             <a>Octavo Ciclo</a><br>
                             <a>Puerto Barrios, Izabal, Guatemala</a>
