@@ -16,7 +16,7 @@ Route::resource('curso',App\Http\Controllers\CursoController::class);
 Route::resource('grado',App\Http\Controllers\GradoController::class);
 Route::resource('alumno',App\Http\Controllers\AlumnoController::class);
 
-
+//rutas
 
 //Modificion de API
 
