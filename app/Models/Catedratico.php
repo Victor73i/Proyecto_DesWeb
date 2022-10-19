@@ -9,6 +9,6 @@ class Catedratico extends Model
 {
     use HasFactory;
     protected $table = 'catedratico';
-    protected $fillable = ['id','carnet_catedratico','nombre_catedratico','telefono','correo'];
+    protected $fillable = ['id','carnet_catedratico','nombre_catedratico','fecha_nacimiento', 'direccion', 'telefono','correo', 'id_sucursal'];
     public $timestamps = false;
 }

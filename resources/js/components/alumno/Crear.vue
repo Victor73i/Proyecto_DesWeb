@@ -1,7 +1,7 @@
 
 <template>
 
-    <div class="container md mt-2 mb-3 col-lg-5">
+    <div class="container md mt-2 mb-3 col-lg-6">
         <div class="card border-info">
             <div class="card-header bg-info text-white">
                 <center><h2 class="mt-2 mb-2"> AGREGAR ALUMNO &nbsp;<i class="fas fa-pen-alt"></i></h2> </center>
@@ -12,14 +12,14 @@
 
                     <div>
                         <b><label for="name" class="mt-2">Carnet</label></b>
-                        <input type="text" class="form-control" autocomplete="off" name="carnet" v-model="alumno.carnet_alumno" required>
+                        <input type="text" class="form-control" autocomplete="off" name="carnet_alumno" v-model="alumno.carnet_alumno" required>
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Nombre</label></b>
-                        <input type="text" class="form-control" autocomplete="off" name="name" v-model="alumno.nombre_alumno" required>
+                        <input type="text" class="form-control" autocomplete="off" name="nombre_alumno" v-model="alumno.nombre_alumno" required>
                     </div>
                     <div>
-                            <b><label for="name" class="mt-2">Fecha de Nacimiento</label></b>
+                        <b><label for="name" class="mt-2">Fecha de Nacimiento</label></b>
                         <input type="date" class="form-control" autocomplete="off" name="fecha_nacimiento" v-model="alumno.fecha_nacimiento" required>
                     </div>
                     <div>
@@ -32,17 +32,17 @@
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Correo</label></b>
-                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="alumno.correo">
+                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="alumno.correo" required>
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Sucursal</label></b>
-                        <input type="text" class="form-control" autocomplete="off" name="correo" v-model="alumno.id_sucursal" required>
+                        <input type="text" class="form-control" autocomplete="off" name="sucursal" v-model="alumno.id_sucursal" required>
                     </div>
 
                     <br>
-                    <button type="submit" class="btn btn-primary" >Guardar</button>
-                    <router-link :to='{name:"mostrarAlumnos"}' class="btn btn-secondary">Cancelar</router-link>
-                    <button type="reset" class="btn btn-danger">Limpiar</button>
+                    <button type="submit" class="btn btn-primary" > 💾 Guardar</button>
+                    <router-link :to='{name:"mostrarAlumnos"}' class="btn btn-secondary">✖ Cancelar</router-link>
+                    <button type="reset" class="btn btn-danger">🧹 Limpiar</button>
                 </form>
             </div>
         </div>

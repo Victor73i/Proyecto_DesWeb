@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Catedratico;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CatedraticoController extends Controller
 {
     public function index()
     {
-
-
-
-        $catedraticos = Catedratico::all(['id','carnet_catedratico','nombre_catedratico','telefono','correo']);
+        $catedraticos = DB::table('catedratico as ca')
+            ->join('sucursal as su','ca.id_sucursal','=','su.id')
+            ->select('ca.id','ca.carnet_catedratico','ca.nombre_catedratico','ca.fecha_nacimiento', 'ca.direccion','ca.telefono','ca.correo','su.nombre_sucursal')->get();
         return response()->json($catedraticos);
 
     }

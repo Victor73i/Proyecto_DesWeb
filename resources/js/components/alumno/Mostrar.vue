@@ -1,18 +1,14 @@
 <template>
 
     <div class="row">
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="col-12 mb-2">
-            <router-link :to='{name:"crearAlumno"}' class="btn btn-outline-secondary"><i class="fa fa-book  fa-2x">Nuevo Alumno</i></router-link>
+
+        <div class="col-12 mb-5">
+            <router-link :to='{name:"crearAlumno"}' class="btn btn-outline-secondary"><i class="fa fa-plus fa-2x"> Nuevo Alumno</i></router-link>
+            <router-link  to ="/" class="btn btn-outline-info" style="float: right;"> <i class="fa fa-address-book fa-2x" aria-hidden="true"> Alumnos Inscritos </i> </router-link>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="col-12"  >
+
+
+        <div class="col-12 m-0 p-0">
             <div class="table-responsive"  >
                 <table class="table table-bordered border-dark" style="background-color: #F3F0E7; ">
                     <thead class="bg-dark text-white" STYLE="background-color: #67DECD;">
@@ -21,7 +17,7 @@
                         <th>Carnet</th>
                         <th>Nombre</th>
                         <th>Fecha de Nacimiento</th>
-                        <th>Direccion</th>
+                        <th>Dirección</th>
                         <th>Teléfono</th>
                         <th>Correo</th>
                         <th>Sucursal</th>

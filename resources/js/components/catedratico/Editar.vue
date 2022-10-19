@@ -10,11 +10,19 @@
 
                     <div>
                         <b><label for="name" class="mt-2">Carnet</label></b>
-                        <input type="text" class="form-control" autocomplete="off" name="carnet" v-model="catedratico.carnet_catedratico" required>
+                        <input type="text" class="form-control" autocomplete="off" name="carnet_catedratico" v-model="catedratico.carnet_catedratico" required>
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Nombre</label></b>
-                        <input type="text" class="form-control" autocomplete="off" name="nombre" v-model="catedratico.nombre_catedratico" required>
+                        <input type="text" class="form-control" autocomplete="off" name="nombre_catedratico" v-model="catedratico.nombre_catedratico" required>
+                    </div>
+                    <div>
+                        <b><label for="name" class="mt-2">Fecha de Nacimiento</label></b>
+                        <input type="text" class="form-control" autocomplete="off" name="fecha_nacimiento" v-model="catedratico.fecha_nacimiento" required>
+                    </div>
+                    <div>
+                        <b><label for="name" class="mt-2">Dirección</label></b>
+                        <input type="text" class="form-control" autocomplete="off" name="direccion" v-model="catedratico.direccion" required>
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Teléfono</label></b>
@@ -22,7 +30,11 @@
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Correo</label></b>
-                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="catedratico.correo" >
+                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="catedratico.correo" required>
+                    </div>
+                    <div>
+                        <b><label for="name" class="mt-2">Sucursal</label></b>
+                        <input type="text" class="form-control" autocomplete="off" name="sucursal" v-model="catedratico.id_sucursal" required>
                     </div>
                     <br>
                     <button type="submit" class="btn btn-primary" >Guardar</button> <router-link :to='{name:"mostrarCatedraticos"}' class="btn btn-secondary">Cancelar</router-link>
@@ -41,8 +53,11 @@ export default {
             catedratico:{
                 carnet_catedratico:"",
                 nombre_catedratico:"",
+                fecha_nacimiento:"",
+                direccion:"",
                 telefono:"",
-                correo:""
+                correo:"",
+                id_sucursal:""
             }
         }
     },
@@ -52,12 +67,14 @@ export default {
     methods:{
         async mostrarCatedratico(){
             await this.axios.get(`/api/catedratico/${this.$route.params.id}`).then(response=>{
-                const { carnet_catedratico,nombre_catedratico,telefono,correo } = response.data
+                const { carnet_catedratico,nombre_catedratico,fecha_nacimiento,direccion,telefono,correo,id_sucursal } = response.data
                 this.catedratico.carnet_catedratico = carnet_catedratico
                 this.catedratico.nombre_catedratico = nombre_catedratico
+                this.catedratico.fecha_nacimiento = fecha_nacimiento
+                this.catedratico.direccion = direccion
                 this.catedratico.telefono = telefono
                 this.catedratico.correo = correo
-
+                this.catedratico.id_sucursal = id_sucursal
             }).catch(error=>{
                 console.log(error)
             })

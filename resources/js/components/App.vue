@@ -10,27 +10,26 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <router-link exact-active-class="active" to="/alumnos" class="nav-link">Alumnos</router-link>
+                        <router-link exact-active-class="active" to="/alumnos" class="nav-link">Alumnos Registrados</router-link>
                     </li>
                     <li class="nav-item active">
-                        <router-link exact-active-class="active" to="/catedraticos" class="nav-link">Catedráticos</router-link>
+                        <router-link exact-active-class="active" to="/catedraticos" class="nav-link">Catedráticos Registrados</router-link>
                     </li>
-                    <li class="nav-item active">
-                        <router-link exact-active-class="active" to="/grados" class="nav-link">Grados</router-link>
-                    </li>
-                    <li class="nav-item active">
-                        <router-link exact-active-class="active" to="/nivels" class="nav-link">Niveles</router-link>
-                    </li>
-                    <li class="nav-item active">
-                        <router-link exact-active-class="active" to="/cursos" class="nav-link">Cursos</router-link>
-                    </li>
-                    <li class="nav-item active">
-                        <router-link exact-active-class="active" to="/sucursals" class="nav-link">Sucursales</router-link>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Más
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/nivels">   Niveles </a>
+                            <a class="dropdown-item" href="/grados">   Grados </a>
+                            <a class="dropdown-item" href="/cursos">   Cursos </a>
+                            <a class="dropdown-item" href="/sucursals">  Sucursales </a>
+                        </div>
                     </li>
                 </ul>
             </div>
         </nav>
-        <div class="container mt-5">
+        <div class="container mt-4 mb-2 p-1">
             <router-view></router-view>
         </div>
     </main>

@@ -30,7 +30,7 @@
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Correo</label></b>
-                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="alumno.correo" >
+                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="alumno.correo" required>
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Sucursal</label></b>
