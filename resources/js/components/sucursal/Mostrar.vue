@@ -1,12 +1,8 @@
 <template>
 
     <div class="row">
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="col-12 mb-2">
-            <router-link :to='{name:"crearSucursal"}' class="btn btn-outline-secondary"><i class="fa fa-book  fa-2x">Nueva Sucursal</i></router-link>
+        <div class="col-12 mb-5">
+            <router-link :to='{name:"crearSucursal"}' class="btn btn-outline-secondary"><i class="fa fa-plus  fa-2x"> Nueva Sucursal</i></router-link>
         </div>
         <br>
         <br>
@@ -19,21 +15,13 @@
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
-
                         <th>Opciones</th>
-
-
                     </tr>
                     </thead>
                     <tbody>
                     <tr v-for="sucursal in sucursals" :key="sucursal.id">
                         <td>{{ sucursal.id }}</td>
                         <td>{{ sucursal.nombre_sucursal }}</td>
-
-
-
-
-
                         <td>
                             <router-link :to='{name:"editarSucursal",params:{id:sucursal.id}}' class="btn btn-outline-warning"><i class="fa fa-cog fa-spin fa-2x fa-fw"></i></router-link>
                             <a type="button" @click="borrarSucursal(sucursal.id)" class="btn btn-outline-danger"><i class="fas fa-trash fa-2x"></i></a>

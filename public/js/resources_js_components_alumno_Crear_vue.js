@@ -208,7 +208,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container md mt-2 mb-3 col-lg-5" }, [
+  return _c("div", { staticClass: "container md mt-2 mb-3 col-lg-6" }, [
     _c("div", { staticClass: "card border-info" }, [
       _c(
         "div",
@@ -252,7 +252,7 @@ var render = function() {
                 attrs: {
                   type: "text",
                   autocomplete: "off",
-                  name: "carnet",
+                  name: "carnet_alumno",
                   required: ""
                 },
                 domProps: { value: _vm.alumno.carnet_alumno },
@@ -283,7 +283,7 @@ var render = function() {
                 attrs: {
                   type: "text",
                   autocomplete: "off",
-                  name: "name",
+                  name: "nombre_alumno",
                   required: ""
                 },
                 domProps: { value: _vm.alumno.nombre_alumno },
@@ -408,7 +408,12 @@ var render = function() {
                   }
                 ],
                 staticClass: "form-control",
-                attrs: { type: "email", autocomplete: "off", name: "correo" },
+                attrs: {
+                  type: "email",
+                  autocomplete: "off",
+                  name: "correo",
+                  required: ""
+                },
                 domProps: { value: _vm.alumno.correo },
                 on: {
                   input: function($event) {
@@ -437,7 +442,7 @@ var render = function() {
                 attrs: {
                   type: "text",
                   autocomplete: "off",
-                  name: "correo",
+                  name: "sucursal",
                   required: ""
                 },
                 domProps: { value: _vm.alumno.id_sucursal },
@@ -457,7 +462,7 @@ var render = function() {
             _c(
               "button",
               { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-              [_vm._v("Guardar")]
+              [_vm._v(" 💾 Guardar")]
             ),
             _vm._v(" "),
             _c(
@@ -466,13 +471,13 @@ var render = function() {
                 staticClass: "btn btn-secondary",
                 attrs: { to: { name: "mostrarAlumnos" } }
               },
-              [_vm._v("Cancelar")]
+              [_vm._v("✖ Cancelar")]
             ),
             _vm._v(" "),
             _c(
               "button",
               { staticClass: "btn btn-danger", attrs: { type: "reset" } },
-              [_vm._v("Limpiar")]
+              [_vm._v("🧹 Limpiar")]
             )
           ],
           1

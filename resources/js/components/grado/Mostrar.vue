@@ -1,17 +1,9 @@
 <template>
 
     <div class="row">
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="col-12 mb-2">
-            <router-link :to='{name:"crearGrado"}' class="btn btn-outline-secondary"><i class="fa fa-book  fa-2x">Nuevo Grado</i></router-link>
+        <div class="col-12 mb-5">
+            <router-link :to='{name:"crearGrado"}' class="btn btn-outline-secondary"><i class="fa fa-plus  fa-2x"> Nuevo Grado</i></router-link>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
         <div class="col-12"  >
             <div class="table-responsive"  >
                 <table class="table table-bordered border-dark" style="background-color: #F3F0E7; ">

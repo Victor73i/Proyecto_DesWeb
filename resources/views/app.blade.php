@@ -44,23 +44,23 @@
                         <h3>Perfil de los Creadores:</h3>
                         <ul>
                             <li><a href="https://github.com/ricardo1435">Ricardo Oliva</a></li>
-                            <li><a href="https://github.com/Victor73i">Victor de Leon</a></li>
+                            <li><a href="https://github.com/Victor73i">Victor de León</a></li>
                             <li><a href="https://github.com/LuisVillatoro02">Luis Villatoro</a></li>
-                            <li><a href="https://github.com/Sinder20">William de Leon </a></li>
+                            <li><a href="https://github.com/Sinder20">William de León </a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 col-md-3 item">
                         <h3>Estudios</h3>
                         <ul>
-                            <a>Universidad Mariano Galvez de Guatemla</a>
-                            <a>Facultad de Ingenieria en Sistemas </a><br>
+                            <a>Universidad Mariano Gálvez</a><br>
+                            <a>Facultad de Ingeniería en Sistemas </a><br>
                             <a>Octavo Ciclo</a><br>
                             <a>Puerto Barrios, Izabal, Guatemala</a>
                         </ul>
                     </div>
                     <div class="col-lg-3 item social">
                         <br><br>
-                        <p class="copyright">© Copyright Codigo Rapidito - 2022</p>
+                        <p class="copyright">© Copyright Código Rapidito - 2022</p>
                     </div>
                 </div>
             </div>

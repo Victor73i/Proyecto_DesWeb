@@ -2087,7 +2087,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
@@ -24096,7 +24095,7 @@ var render = function() {
                       staticClass: "nav-link",
                       attrs: { "exact-active-class": "active", to: "/alumnos" }
                     },
-                    [_vm._v("Alumnos")]
+                    [_vm._v("Alumnos Registrados")]
                   )
                 ],
                 1
@@ -24115,85 +24114,25 @@ var render = function() {
                         to: "/catedraticos"
                       }
                     },
-                    [_vm._v("Catedráticos")]
+                    [_vm._v("Catedráticos Registrados")]
                   )
                 ],
                 1
               ),
               _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item active" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      attrs: { "exact-active-class": "active", to: "/grados" }
-                    },
-                    [_vm._v("Grados")]
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item active" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      attrs: { "exact-active-class": "active", to: "/nivels" }
-                    },
-                    [_vm._v("Niveles")]
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item active" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      attrs: { "exact-active-class": "active", to: "/cursos" }
-                    },
-                    [_vm._v("Cursos")]
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item active" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      attrs: {
-                        "exact-active-class": "active",
-                        to: "/sucursals"
-                      }
-                    },
-                    [_vm._v("Sucursales")]
-                  )
-                ],
-                1
-              )
+              _vm._m(2)
             ])
           ]
         )
       ]
     ),
     _vm._v(" "),
-    _c("div", { staticClass: "container mt-5" }, [_c("router-view")], 1)
+    _c(
+      "div",
+      { staticClass: "container mt-4 mb-2 p-1" },
+      [_c("router-view")],
+      1
+    )
   ])
 }
 var staticRenderFns = [
@@ -24228,6 +24167,61 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item dropdown" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nav-link dropdown-toggle",
+          attrs: {
+            href: "#",
+            id: "navbarDropdownMenuLink",
+            role: "button",
+            "data-toggle": "dropdown",
+            "aria-haspopup": "true",
+            "aria-expanded": "false"
+          }
+        },
+        [_vm._v("\n                            Más\n                        ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "dropdown-menu",
+          attrs: { "aria-labelledby": "navbarDropdownMenuLink" }
+        },
+        [
+          _c(
+            "a",
+            { staticClass: "dropdown-item", attrs: { href: "/nivels" } },
+            [_vm._v("   Niveles ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            { staticClass: "dropdown-item", attrs: { href: "/grados" } },
+            [_vm._v("   Grados ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            { staticClass: "dropdown-item", attrs: { href: "/cursos" } },
+            [_vm._v("   Cursos ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            { staticClass: "dropdown-item", attrs: { href: "/sucursals" } },
+            [_vm._v("  Sucursales ")]
+          )
+        ]
+      )
+    ])
   }
 ]
 render._withStripped = true

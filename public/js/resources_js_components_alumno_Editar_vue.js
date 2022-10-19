@@ -443,7 +443,12 @@ var render = function() {
                   }
                 ],
                 staticClass: "form-control",
-                attrs: { type: "email", autocomplete: "off", name: "correo" },
+                attrs: {
+                  type: "email",
+                  autocomplete: "off",
+                  name: "correo",
+                  required: ""
+                },
                 domProps: { value: _vm.alumno.correo },
                 on: {
                   input: function($event) {
