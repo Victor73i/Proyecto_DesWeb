@@ -11,4 +11,11 @@ class Alumno extends Model
     protected $table = 'alumno';
     protected $fillable = ['id','carnet_alumno','nombre_alumno','direccion','fecha_nacimiento','telefono','correo','id_sucursal'];
     public $timestamps = false;
+
+    public function sucursal()
+    {
+        return $this->hasMany(Sucursal::class);
+    }
+
+
 }

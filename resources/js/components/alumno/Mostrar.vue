@@ -4,7 +4,7 @@
 
         <div class="col-12 mb-5">
             <router-link :to='{name:"crearAlumno"}' class="btn btn-outline-secondary"><i class="fa fa-plus fa-2x"> Nuevo Alumno</i></router-link>
-            <router-link  to ="/" class="btn btn-outline-info" style="float: right;"> <i class="fa fa-address-book fa-2x" aria-hidden="true"> Alumnos Inscritos </i> </router-link>
+            <router-link  to ="/alumno_inscritos" class="btn btn-outline-info" style="float: right;"> <i class="fa fa-address-book fa-2x" aria-hidden="true"> Alumnos Inscritos </i> </router-link>
         </div>
 
 

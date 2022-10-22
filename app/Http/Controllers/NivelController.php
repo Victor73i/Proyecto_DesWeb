@@ -27,10 +27,13 @@ class NivelController extends Controller
 
     public function store(Request $request)
     {
+        $grados = DB::table('nivel as ni')
+            ->join('grado as gr','ni.id_grado','=','gr.id')
+            ->select('ni.id','ni.nombre_nivel','gr.nombre_grado')->get();
         $nivel = Nivel::create($request->post());
         return response()->json([
             'nivel'=>$nivel,
-            'mensaje'=>'¡Nivel ingresado correctamente!'
+            'mensaje'=>'¡Nivel ingresado correctamente!',$grados
 
 
 
@@ -55,10 +58,12 @@ class NivelController extends Controller
     public function update(Request $request, Nivel $nivel)
     {
 
-
+        $grados = DB::table('nivel as ni')
+            ->join('grado as gr','ni.id_grado','=','gr.id')
+            ->select('ni.id','ni.nombre_nivel','gr.nombre_grado')->get();
         $nivel->fill($request->post())->save();
         return response()->json([
-            'nivel'=>$nivel
+            'nivel'=>$nivel,$grados
         ]);
 
 

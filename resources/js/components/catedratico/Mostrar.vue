@@ -3,7 +3,7 @@
 
         <div class="col-12 mb-5">
             <router-link :to='{name:"crearCatedratico"}' class="btn btn-outline-secondary"><i class="fa fa-plus  fa-2x"> Nuevo Catedrático</i></router-link>
-            <router-link  to ="/" class="btn btn-outline-info" style="float: right;"> <i class="fa fa-address-book fa-2x" aria-hidden="true"> Catedráticos Asignados </i> </router-link>
+            <router-link  to ="/asigna_catedraticos" class="btn btn-outline-info" style="float: right;"> <i class="fa fa-address-book fa-2x" aria-hidden="true"> Catedráticos Asignados </i> </router-link>
         </div>
         <div class="col-12 m-0 p-0">
             <div class="table-responsive"  >
