@@ -1,0 +1,120 @@
+<template>
+
+    <div class="row">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="col-12 mb-2">
+            <router-link :to='{name:"crearAsigna_catedratico"}' class="btn btn-outline-secondary"><i class="fa fa-book  fa-2x">Nuevo Asignacion de Catedratico</i></router-link>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="col-12"  >
+            <div class="table-responsive"  >
+                <table class="table table-bordered border-dark" style="background-color: #F3F0E7; ">
+                    <thead class="bg-dark text-white" STYLE="background-color: #67DECD;">
+                    <tr>
+                        <th>ID</th>
+                        <th>Catedratico</th>
+                        <th>Curso</th>
+                        <th>Nivel</th>
+                        <th>Fecha</th>
+                        <th>Opciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="asigna_catedratico in asigna_catedraticos" :key="asigna_catedratico.id">
+                        <td>{{ asigna_catedratico.id }}</td>
+                        <td>{{ asigna_catedratico.nombre_catedratico }}</td>
+                        <td>{{ asigna_catedratico.nombre_curso }}</td>
+                        <td>{{ asigna_catedratico.nombre_nivel }}</td>
+                        <td>{{ asigna_catedratico.fecha }}</td>
+
+
+                        <td>
+                            <router-link :to='{name:"editarAsigna_catedratico",params:{id:asigna_catedratico.id}}' class="btn btn-outline-warning"><i class="fa fa-cog fa-spin fa-2x fa-fw"></i></router-link>
+                            <a type="button" @click="borrarAsigna_catedratico(asigna_catedratico.id)" class="btn btn-outline-danger"><i class="fas fa-trash fa-2x"></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name:"asigna_catedraticos",
+    data(){
+        return {
+            asigna_catedraticos:[]
+        }
+    },
+    mounted(){
+        this.mostrarAsigna_catedraticos()
+    },
+    methods:{
+        async mostrarAsigna_catedraticos(){
+            await this.axios.get('/api/asigna_catedratico').then(response=>{
+                this.asigna_catedraticos = response.data
+
+
+            }).catch(error=>{
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+                this.asigna_catedraticos = []
+            })
+        },
+        borrarAsigna_catedratico(id){
+            Swal.fire({
+                title: 'Deseas eliminar el registro?',
+                text: "Si lo haces no podras recuperarlo!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Eliminar',
+                cancelButtonText: 'Cancelar',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    this.axios.delete(`/api/asigna_catedratico/${id}`).then(response=>{
+                        this.mostrarAsigna_catedraticos()
+                        Swal.fire(
+                            'Eliminado!',
+                            'El registro se ha eliminado',
+                            'success'
+                        )
+                    }).catch(error=>{
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'error',
+                            title: 'Este registro no puede ser eliminado',
+                            showConfirmButton: false,
+                            timer: 2000
+                        })
+                    })
+                } else if (
+                    /* Read more about handling dismissals below */
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    Swal.fire(
+                        'Cancelado',
+                        'El registro se encuentra a salvo',
+                        'error'
+                    )
+                }
+            })
+
+        }
+    }
+}
+</script>

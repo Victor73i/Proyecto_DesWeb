@@ -243,7 +243,7 @@ var render = function() {
           {
             staticClass: "btn btn-outline-info",
             staticStyle: { float: "right" },
-            attrs: { to: "/" }
+            attrs: { to: "/asigna_catedraticos" }
           },
           [
             _c(

@@ -8,7 +8,7 @@
                 <!-- Formulario -->
                 <form @submit.prevent="actualizar">
 
-                    <div>
+                      <div>
                         <b><label for="name" class="mt-2">Carnet</label></b>
                         <input type="text" class="form-control" autocomplete="off" name="carnet" v-model="alumno.carnet_alumno" required>
                     </div>
@@ -30,11 +30,21 @@
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Correo</label></b>
-                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="alumno.correo" required>
+                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="alumno.correo" >
                     </div>
-                    <div>
-                        <b><label for="name" class="mt-2">Sucursal</label></b>
-                        <input type="text" class="form-control" autocomplete="off" name="sucursal" v-model="alumno.id_sucursal" required>
+                    <div class="col-span-6 sm:col-span-2">
+                        <label for="id_sucursal" class="block text-sm font-medium text-gray-700">Sucursal</label>
+                        <select
+                            class="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                            :required="true"
+                            v-model="alumno.id_sucursal"
+
+                        >
+                            <option
+                                v-for="sucursal in sucursals"
+                                v-bind:value="sucursal.id"
+                            >{{ sucursal.id }} {{ sucursal.nombre_sucursal }}</option>
+                        </select>
                     </div>
                     <br>
                     <button type="submit" class="btn btn-primary" >Guardar</button>
@@ -60,13 +70,29 @@ export default {
                 correo:"",
                 id_sucursal:""
 
-            }
+            },sucursals:[],
         }
     },
     mounted(){
-        this.mostrarAlumno()
+        {this.mostrarAlumno()}{this.mostrarSucursals()}
     },
     methods:{
+        async mostrarSucursals(){
+            await this.axios.get('/api/sucursal').then(response=>{
+                this.sucursals = response.data
+
+
+            }).catch(error=>{
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+                this.sucursals = []
+            })
+        },
         async mostrarAlumno(){
             await this.axios.get(`/api/alumno/${this.$route.params.id}`).then(response=>{
                 const { carnet_alumno,nombre_alumno,fecha_nacimiento,direccion,telefono,correo,id_sucursal } = response.data

@@ -10,9 +10,13 @@ class CatedraticoController extends Controller
 {
     public function index()
     {
+
+
+
         $catedraticos = DB::table('catedratico as ca')
             ->join('sucursal as su','ca.id_sucursal','=','su.id')
-            ->select('ca.id','ca.carnet_catedratico','ca.nombre_catedratico','ca.fecha_nacimiento', 'ca.direccion','ca.telefono','ca.correo','su.nombre_sucursal')->get();
+            ->select('ca.id','ca.carnet_catedratico','ca.nombre_catedratico','ca.fecha_nacimiento','ca.direccion','ca.telefono','ca.correo','su.nombre_sucursal')->get();
+
         return response()->json($catedraticos);
 
     }
@@ -28,7 +32,6 @@ class CatedraticoController extends Controller
 
     public function store(Request $request)
     {
-
 
 
         $catedratico = Catedratico::create($request->post());
@@ -68,7 +71,6 @@ class CatedraticoController extends Controller
 
     public function update(Request $request, Catedratico $catedratico)
     {
-
 
         $catedratico->fill($request->post())->save();
         return response()->json([

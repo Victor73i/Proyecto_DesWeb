@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alumno;
+use App\Models\Sucursal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -29,9 +30,13 @@ class AlumnoController extends Controller
 
     public function store(Request $request)
     {
+
         $alumno = Alumno::create($request->post());
+        $sucursal = Sucursal::All();
+
         return response()->json([
             'alumno'=>$alumno,
+            'sucursal'=>$sucursal,
             'mensaje'=>'¡Alumno ingresado correctamente!'
 
 

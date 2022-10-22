@@ -2240,6 +2240,24 @@ var Crear5 = function Crear5() {
 var Editar5 = function Editar5() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_alumno_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/alumno/Editar.vue */ "./resources/js/components/alumno/Editar.vue"));
 };
+var Mostrar6 = function Mostrar6() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_asigna_catedratico_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/asigna_catedratico/Mostrar.vue */ "./resources/js/components/asigna_catedratico/Mostrar.vue"));
+};
+var Crear6 = function Crear6() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_asigna_catedratico_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/asigna_catedratico/Crear.vue */ "./resources/js/components/asigna_catedratico/Crear.vue"));
+};
+var Editar6 = function Editar6() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_asigna_catedratico_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/asigna_catedratico/Editar.vue */ "./resources/js/components/asigna_catedratico/Editar.vue"));
+};
+var Mostrar7 = function Mostrar7() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_alumno_inscrito_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/alumno_inscrito/Mostrar.vue */ "./resources/js/components/alumno_inscrito/Mostrar.vue"));
+};
+var Crear7 = function Crear7() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_alumno_inscrito_Crear_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/alumno_inscrito/Crear.vue */ "./resources/js/components/alumno_inscrito/Crear.vue"));
+};
+var Editar7 = function Editar7() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_alumno_inscrito_Editar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/alumno_inscrito/Editar.vue */ "./resources/js/components/alumno_inscrito/Editar.vue"));
+};
 var routes = [{
   name: 'home',
   path: '/',
@@ -2316,6 +2334,30 @@ var routes = [{
   name: 'editarAlumno',
   path: '/editar5/:id',
   component: Editar5
+}, {
+  name: 'mostrarAsigna_catedraticos',
+  path: '/asigna_catedraticos',
+  component: Mostrar6
+}, {
+  name: 'crearAsigna_catedratico',
+  path: '/crear6',
+  component: Crear6
+}, {
+  name: 'editarAsigna_catedratico',
+  path: '/editar6/:id',
+  component: Editar6
+}, {
+  name: 'mostrarAlumno_inscritos',
+  path: '/alumno_inscritos',
+  component: Mostrar7
+}, {
+  name: 'crearAlumno_inscrito',
+  path: '/crear7',
+  component: Crear7
+}, {
+  name: 'editarAlumno_inscrito',
+  path: '/editar7/:id',
+  component: Editar7
 }];
 
 /***/ }),
@@ -39664,7 +39706,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.3","C:\\\\laragon\\\\www\\\\
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_sucursal_Mostrar_vue":1,"resources_js_components_sucursal_Crear_vue":1,"resources_js_components_sucursal_Editar_vue":1,"resources_js_components_nivel_Mostrar_vue":1,"resources_js_components_nivel_Crear_vue":1,"resources_js_components_nivel_Editar_vue":1,"resources_js_components_catedratico_Mostrar_vue":1,"resources_js_components_catedratico_Crear_vue":1,"resources_js_components_catedratico_Editar_vue":1,"resources_js_components_curso_Mostrar_vue":1,"resources_js_components_curso_Crear_vue":1,"resources_js_components_curso_Editar_vue":1,"resources_js_components_grado_Mostrar_vue":1,"resources_js_components_grado_Crear_vue":1,"resources_js_components_grado_Editar_vue":1,"resources_js_components_alumno_Mostrar_vue":1,"resources_js_components_alumno_Crear_vue":1,"resources_js_components_alumno_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_sucursal_Mostrar_vue":1,"resources_js_components_sucursal_Crear_vue":1,"resources_js_components_sucursal_Editar_vue":1,"resources_js_components_nivel_Mostrar_vue":1,"resources_js_components_nivel_Crear_vue":1,"resources_js_components_nivel_Editar_vue":1,"resources_js_components_catedratico_Mostrar_vue":1,"resources_js_components_catedratico_Crear_vue":1,"resources_js_components_catedratico_Editar_vue":1,"resources_js_components_curso_Mostrar_vue":1,"resources_js_components_curso_Crear_vue":1,"resources_js_components_curso_Editar_vue":1,"resources_js_components_grado_Mostrar_vue":1,"resources_js_components_grado_Crear_vue":1,"resources_js_components_grado_Editar_vue":1,"resources_js_components_alumno_Mostrar_vue":1,"resources_js_components_alumno_Crear_vue":1,"resources_js_components_alumno_Editar_vue":1,"resources_js_components_asigna_catedratico_Mostrar_vue":1,"resources_js_components_asigna_catedratico_Crear_vue":1,"resources_js_components_asigna_catedratico_Editar_vue":1,"resources_js_components_alumno_inscrito_Mostrar_vue":1,"resources_js_components_alumno_inscrito_Crear_vue":1,"resources_js_components_alumno_inscrito_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

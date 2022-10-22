@@ -24,6 +24,14 @@ const Mostrar5 = () => import('./components/alumno/Mostrar.vue')
 const Crear5 = () => import('./components/alumno/Crear.vue')
 const Editar5 = () => import('./components/alumno/Editar.vue')
 
+const Mostrar6 = () => import('./components/asigna_catedratico/Mostrar.vue')
+const Crear6 = () => import('./components/asigna_catedratico/Crear.vue')
+const Editar6 = () => import('./components/asigna_catedratico/Editar.vue')
+
+const Mostrar7 = () => import('./components/alumno_inscrito/Mostrar.vue')
+const Crear7 = () => import('./components/alumno_inscrito/Crear.vue')
+const Editar7 = () => import('./components/alumno_inscrito/Editar.vue')
+
 export const routes = [
 
 
@@ -122,5 +130,34 @@ export const routes = [
         path: '/editar5/:id',
         component: Editar5
     },
-
+    {
+        name: 'mostrarAsigna_catedraticos',
+        path: '/asigna_catedraticos',
+        component: Mostrar6
+    },
+    {
+        name: 'crearAsigna_catedratico',
+        path: '/crear6',
+        component: Crear6
+    },
+    {
+        name: 'editarAsigna_catedratico',
+        path: '/editar6/:id',
+        component: Editar6
+    },
+    {
+        name: 'mostrarAlumno_inscritos',
+        path: '/alumno_inscritos',
+        component: Mostrar7
+    },
+    {
+        name: 'crearAlumno_inscrito',
+        path: '/crear7',
+        component: Crear7
+    },
+    {
+        name: 'editarAlumno_inscrito',
+        path: '/editar7/:id',
+        component: Editar7
+    },
 ]

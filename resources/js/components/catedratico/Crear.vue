@@ -12,19 +12,11 @@
 
                     <div>
                         <b><label for="name" class="mt-2">Carnet</label></b>
-                        <input type="text" class="form-control" autocomplete="off" name="carnet_catedratico" v-model="catedratico.carnet_catedratico" required>
+                        <input type="text" class="form-control" autocomplete="off" name="carnet" v-model="catedratico.carnet_catedratico" required>
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Nombre</label></b>
-                        <input type="text" class="form-control" autocomplete="off" name="nombre_catedratico" v-model="catedratico.nombre_catedratico" required>
-                    </div>
-                    <div>
-                        <b><label for="name" class="mt-2">Fecha de Nacimiento</label></b>
-                        <input type="date" class="form-control" autocomplete="off" name="fecha_nacimiento" v-model="catedratico.fecha_nacimiento" required>
-                    </div>
-                    <div>
-                        <b><label for="name" class="mt-2">Dirección</label></b>
-                        <input type="text" class="form-control" autocomplete="off" name="direccion" v-model="catedratico.direccion" required>
+                        <input type="text" class="form-control" autocomplete="off" name="name" v-model="catedratico.nombre_catedratico" required>
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Teléfono</label></b>
@@ -32,17 +24,26 @@
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Correo</label></b>
-                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="catedratico.correo" required>
+                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="catedratico.correo" >
                     </div>
+                    <div class="col-span-6 sm:col-span-2">
+                        <label for="id_sucursal" class="block text-sm font-medium text-gray-700">Sucursal</label>
+                        <select
+                            class="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                            :required="true"
+                            v-model="catedratico.id_sucursal"
 
-                    <div>
-                        <b><label for="name" class="mt-2">Sucursal</label></b>
-                        <input type="text" class="form-control" autocomplete="off" name="sucursal" v-model="catedratico.id_sucursal" required>
+                        > <option disabled value="">-- Sucursal --</option>
+                            <option
+                                v-for="sucursal in sucursals"
+                                v-bind:value="sucursal.id"
+                            >{{ sucursal.id }} {{ sucursal.nombre_sucursal }}</option>
+                        </select>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-primary" >💾 Guardar</button>
-                    <router-link :to='{name:"mostrarCatedraticos"}' class="btn btn-secondary">✖ Cancelar</router-link>
-                    <button type="reset" class="btn btn-danger">🧹 Limpiar</button>
+                    <button type="submit" class="btn btn-primary" >Guardar</button>
+                    <router-link :to='{name:"mostrarCatedraticos"}' class="btn btn-secondary">Cancelar</router-link>
+                    <button type="reset" class="btn btn-danger">Limpiar</button>
                 </form>
             </div>
         </div>
@@ -57,16 +58,36 @@ export default {
             catedratico:{
                 carnet_catedratico:"",
                 nombre_catedratico:"",
-                fecha_nacimiento: "",
-                direccion: "",
                 telefono:"",
                 correo:"",
                 id_sucursal:"",
 
-            }
+            },
+            sucursals:[],
         }
     },
+
+    mounted(){
+        this.mostrarSucursals()
+    },
+
     methods:{
+        async mostrarSucursals(){
+            await this.axios.get('/api/sucursal').then(response=>{
+                this.sucursals = response.data
+
+
+            }).catch(error=>{
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+                this.sucursals = []
+            })
+        },
         async crear(){
             await this.axios.post('/api/catedratico',this.catedratico).then(response=>{
                 this.$router.push({name:"mostrarCatedraticos"})

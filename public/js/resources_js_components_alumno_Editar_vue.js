@@ -63,6 +63,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "editar-alumno",
@@ -76,14 +86,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         telefono: "",
         correo: "",
         id_sucursal: ""
-      }
+      },
+      sucursals: []
     };
   },
   mounted: function mounted() {
-    this.mostrarAlumno();
+    {
+      this.mostrarAlumno();
+    }
+    {
+      this.mostrarSucursals();
+    }
   },
   methods: {
-    mostrarAlumno: function mostrarAlumno() {
+    mostrarSucursals: function mostrarSucursals() {
       var _this = this;
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
         return _regeneratorRuntime().wrap(function _callee$(_context) {
@@ -91,24 +107,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _this.axios.get("/api/alumno/".concat(_this.$route.params.id)).then(function (response) {
-                  var _response$data = response.data,
-                    carnet_alumno = _response$data.carnet_alumno,
-                    nombre_alumno = _response$data.nombre_alumno,
-                    fecha_nacimiento = _response$data.fecha_nacimiento,
-                    direccion = _response$data.direccion,
-                    telefono = _response$data.telefono,
-                    correo = _response$data.correo,
-                    id_sucursal = _response$data.id_sucursal;
-                  _this.alumno.carnet_alumno = carnet_alumno;
-                  _this.alumno.nombre_alumno = nombre_alumno;
-                  _this.alumno.fecha_nacimiento = fecha_nacimiento;
-                  _this.alumno.direccion = direccion;
-                  _this.alumno.telefono = telefono;
-                  _this.alumno.correo = correo;
-                  _this.alumno.id_sucursal = id_sucursal;
+                return _this.axios.get('/api/sucursal').then(function (response) {
+                  _this.sucursals = response.data;
                 })["catch"](function (error) {
-                  console.log(error);
+                  Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Ha ocurrido un error',
+                    showConfirmButton: false,
+                    timer: 2000
+                  });
+                  _this.sucursals = [];
                 });
               case 2:
               case "end":
@@ -118,7 +127,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee);
       }))();
     },
-    actualizar: function actualizar() {
+    mostrarAlumno: function mostrarAlumno() {
       var _this2 = this;
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
         return _regeneratorRuntime().wrap(function _callee2$(_context2) {
@@ -126,8 +135,43 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return _this2.axios.put("/api/alumno/".concat(_this2.$route.params.id), _this2.alumno).then(function (response) {
-                  _this2.$router.push({
+                return _this2.axios.get("/api/alumno/".concat(_this2.$route.params.id)).then(function (response) {
+                  var _response$data = response.data,
+                    carnet_alumno = _response$data.carnet_alumno,
+                    nombre_alumno = _response$data.nombre_alumno,
+                    fecha_nacimiento = _response$data.fecha_nacimiento,
+                    direccion = _response$data.direccion,
+                    telefono = _response$data.telefono,
+                    correo = _response$data.correo,
+                    id_sucursal = _response$data.id_sucursal;
+                  _this2.alumno.carnet_alumno = carnet_alumno;
+                  _this2.alumno.nombre_alumno = nombre_alumno;
+                  _this2.alumno.fecha_nacimiento = fecha_nacimiento;
+                  _this2.alumno.direccion = direccion;
+                  _this2.alumno.telefono = telefono;
+                  _this2.alumno.correo = correo;
+                  _this2.alumno.id_sucursal = id_sucursal;
+                })["catch"](function (error) {
+                  console.log(error);
+                });
+              case 2:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
+    },
+    actualizar: function actualizar() {
+      var _this3 = this;
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+        return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                _context3.next = 2;
+                return _this3.axios.put("/api/alumno/".concat(_this3.$route.params.id), _this3.alumno).then(function (response) {
+                  _this3.$router.push({
                     name: "mostrarAlumnos"
                   });
                   Swal.fire({
@@ -148,10 +192,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 });
               case 2:
               case "end":
-                return _context2.stop();
+                return _context3.stop();
             }
           }
-        }, _callee2);
+        }, _callee3);
       }))();
     }
   }
@@ -443,12 +487,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "form-control",
-                attrs: {
-                  type: "email",
-                  autocomplete: "off",
-                  name: "correo",
-                  required: ""
-                },
+                attrs: { type: "email", autocomplete: "off", name: "correo" },
                 domProps: { value: _vm.alumno.correo },
                 on: {
                   input: function($event) {
@@ -461,35 +500,61 @@ var render = function() {
               })
             ]),
             _vm._v(" "),
-            _c("div", [
-              _vm._m(6),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.alumno.id_sucursal,
-                    expression: "alumno.id_sucursal"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  autocomplete: "off",
-                  name: "sucursal",
-                  required: ""
+            _c("div", { staticClass: "col-span-6 sm:col-span-2" }, [
+              _c(
+                "label",
+                {
+                  staticClass: "block text-sm font-medium text-gray-700",
+                  attrs: { for: "id_sucursal" }
                 },
-                domProps: { value: _vm.alumno.id_sucursal },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
+                [_vm._v("Sucursal")]
+              ),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.alumno.id_sucursal,
+                      expression: "alumno.id_sucursal"
                     }
-                    _vm.$set(_vm.alumno, "id_sucursal", $event.target.value)
+                  ],
+                  staticClass:
+                    "form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm",
+                  attrs: { required: true },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.alumno,
+                        "id_sucursal",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
                   }
-                }
-              })
+                },
+                _vm._l(_vm.sucursals, function(sucursal) {
+                  return _c("option", { domProps: { value: sucursal.id } }, [
+                    _vm._v(
+                      _vm._s(sucursal.id) +
+                        " " +
+                        _vm._s(sucursal.nombre_sucursal)
+                    )
+                  ])
+                }),
+                0
+              )
             ]),
             _vm._v(" "),
             _c("br"),
@@ -579,16 +644,6 @@ var staticRenderFns = [
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
         _vm._v("Correo")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("b", [
-      _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
-        _vm._v("Sucursal")
       ])
     ])
   }

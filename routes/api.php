@@ -15,6 +15,10 @@ Route::resource('catedratico',App\Http\Controllers\CatedraticoController::class)
 Route::resource('curso',App\Http\Controllers\CursoController::class);
 Route::resource('grado',App\Http\Controllers\GradoController::class);
 Route::resource('alumno',App\Http\Controllers\AlumnoController::class);
+Route::resource('asigna_catedratico',App\Http\Controllers\Asigna_catedraticoController::class);
+Route::resource('alumno_inscrito',App\Http\Controllers\Alumno_inscritoController::class);
+
+
 
 //rutas
 
@@ -57,8 +61,18 @@ Route::get('getalumno/{id}', [\App\Http\Controllers\AlumnoController::class, 'ge
 Route::delete('deletealumno/{id}', [\App\Http\Controllers\AlumnoController::class, 'deleteAlumno'])->name('api-delete');
 Route::post('savealumno', [App\Http\Controllers\AlumnoController::class, 'store'])->name('api-saveAlumno');
 Route::put('editalumno/{id}', [App\Http\Controllers\AlumnoController::class, 'editAlumno'])->name('api-editAlumno');
-
-
+//ASGINA CATEDRATICO
+Route::get('getasigna_catedratico', [\App\Http\Controllers\Asigna_catedraticoController::class, 'index'])->name('api-getAll');
+Route::get('getasigna_catedratico/{id}', [\App\Http\Controllers\Asigna_catedraticoController::class, 'getAsigna_catedratico11'])->name('api-getAllid');
+Route::delete('deleteasigna_catedratico/{id}', [\App\Http\Controllers\Asigna_catedraticoController::class, 'deleteAsigna_catedratico'])->name('api-delete');
+Route::post('saveasigna_catedratico', [App\Http\Controllers\Asigna_catedraticoController::class, 'store'])->name('api-saveAsigna_catedratico');
+Route::put('editasigna_catedratico/{id}', [App\Http\Controllers\Asigna_catedraticoController::class, 'editAsigna_catedratico'])->name('api-editAsigna_catedratico');
+//ALUMNO INSCRITO
+Route::get('getalumno_inscrito', [\App\Http\Controllers\Alumno_inscritoController::class, 'index'])->name('api-getAll');
+Route::get('getalumno_inscrito/{id}', [\App\Http\Controllers\Alumno_inscritoController::class, 'getAlumno_inscrito1'])->name('api-getAllid');
+Route::delete('deletealumno_inscrito/{id}', [\App\Http\Controllers\Alumno_inscritoController::class, 'deleteAlumno_inscrito'])->name('api-delete');
+Route::post('savealumno_inscrito', [App\Http\Controllers\Alumno_inscritoController::class, 'store'])->name('api-saveAlumno');
+Route::put('editalumno_inscrito/{id}', [App\Http\Controllers\Alumno_inscritoController::class, 'editAlumno_inscrito'])->name('api-editAlumno');
 
 //UTILIZANDO LA APLICACION DE SANCTUM EN CUSTOMER
 //Sucursal
@@ -99,6 +113,18 @@ Route::get('getalumno1/{id}', [\App\Http\Controllers\AlumnoController::class, 'g
 Route::delete('deletealumno1/{id}', [\App\Http\Controllers\AlumnoController::class, 'deleteAlumno'])->name('api-delete')->middleware('auth:sanctum');
 Route::post('savealumno1', [App\Http\Controllers\AlumnoController::class, 'store'])->name('api-saveAlumno')->middleware('auth:sanctum');
 Route::put('editalumno1/{id}', [App\Http\Controllers\AlumnoController::class, 'editAlumno'])->name('api-editAlumno')->middleware('auth:sanctum');
+//ASIGNA_CATEDRATICO
+Route::get('getasigna_catedratico1', [\App\Http\Controllers\Asigna_catedraticoController::class, 'index'])->name('api-getAll')->middleware('auth:sanctum');
+Route::get('getasigna_catedratico1/{id}', [\App\Http\Controllers\Asigna_catedraticoController::class, 'getAsigna_catedratico1'])->name('api-getAllid')->middleware('auth:sanctum');
+Route::delete('deleteasigna_catedratico1/{id}', [\App\Http\Controllers\Asigna_catedraticoController::class, 'deleteAsigna_catedratico'])->name('api-delete')->middleware('auth:sanctum');
+Route::post('saveasigna_catedratico1', [App\Http\Controllers\Asigna_catedraticoController::class, 'store'])->name('api-saveAsigna_catedratico')->middleware('auth:sanctum');
+Route::put('editasigna_catedratico1/{id}', [App\Http\Controllers\Asigna_catedraticoController::class, 'editAsigna_catedratico'])->name('api-editAsigna_catedratico')->middleware('auth:sanctum');
+//ALUMNO INSCRITO
+Route::get('getalumno_inscrito1', [\App\Http\Controllers\Alumno_inscritoController::class, 'index'])->name('api-getAll')->middleware('auth:sanctum');
+Route::get('getalumno_inscrito1/{id}', [\App\Http\Controllers\Alumno_inscritoController::class, 'getAlumno_inscrito1'])->name('api-getAllid')->middleware('auth:sanctum');
+Route::delete('deletealumno_inscrito1/{id}', [\App\Http\Controllers\Alumno_inscritoController::class, 'deleteAlumno_inscrito'])->name('api-delete')->middleware('auth:sanctum');
+Route::post('savealumno_inscrito1', [App\Http\Controllers\Alumno_inscritoController::class, 'store'])->name('api-saveAlumno')->middleware('auth:sanctum');
+Route::put('editalumno_inscrito1/{id}', [App\Http\Controllers\Alumno_inscritoController::class, 'editAlumno_inscrito'])->name('api-editAlumno')->middleware('auth:sanctum');
 
 
 
