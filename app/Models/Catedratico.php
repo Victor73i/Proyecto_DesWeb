@@ -9,6 +9,11 @@ class Catedratico extends Model
 {
     use HasFactory;
     protected $table = 'catedratico';
-    protected $fillable = ['id','carnet_catedratico','nombre_catedratico','telefono','correo','id_sucursal'];
+    protected $fillable = ['id','carnet_catedratico','nombre_catedratico', 'fecha_nacimiento', 'direccion', 'telefono','correo','id_sucursal'];
     public $timestamps = false;
+
+    public function sucursal()
+    {
+        return $this->hasMany(Sucursal::class);
+    }
 }

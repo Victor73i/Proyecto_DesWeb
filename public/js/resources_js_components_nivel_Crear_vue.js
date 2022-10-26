@@ -49,11 +49,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "crear-nivel",
@@ -282,15 +277,8 @@ var render = function() {
               })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-span-6 sm:col-span-2" }, [
-              _c(
-                "label",
-                {
-                  staticClass: "block text-sm font-medium text-gray-700",
-                  attrs: { for: "id_grado" }
-                },
-                [_vm._v("Grado")]
-              ),
+            _c("div", [
+              _vm._m(1),
               _vm._v(" "),
               _c(
                 "select",
@@ -328,14 +316,12 @@ var render = function() {
                 },
                 [
                   _c("option", { attrs: { disabled: "", value: "" } }, [
-                    _vm._v("-- GRADO --")
+                    _vm._v("-- Seleccione una opción --")
                   ]),
                   _vm._v(" "),
                   _vm._l(_vm.grados, function(grado) {
                     return _c("option", { domProps: { value: grado.id } }, [
-                      _vm._v(
-                        _vm._s(grado.id) + " " + _vm._s(grado.nombre_grado)
-                      )
+                      _vm._v(_vm._s(grado.nombre_grado))
                     ])
                   })
                 ],
@@ -348,7 +334,7 @@ var render = function() {
             _c(
               "button",
               { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-              [_vm._v("Guardar")]
+              [_vm._v("💾 Guardar")]
             ),
             _vm._v(" "),
             _c(
@@ -357,13 +343,13 @@ var render = function() {
                 staticClass: "btn btn-secondary",
                 attrs: { to: { name: "mostrarNivels" } }
               },
-              [_vm._v("Cancelar")]
+              [_vm._v("✖ Cancelar")]
             ),
             _vm._v(" "),
             _c(
               "button",
               { staticClass: "btn btn-danger", attrs: { type: "reset" } },
-              [_vm._v("Limpiar")]
+              [_vm._v(" 🧹 Limpiar")]
             )
           ],
           1
@@ -380,6 +366,16 @@ var staticRenderFns = [
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
         _vm._v("Nombre del Nivel")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("b", [
+      _c("label", { staticClass: "mt-2", attrs: { for: "id_grado" } }, [
+        _vm._v("Grado")
       ])
     ])
   }

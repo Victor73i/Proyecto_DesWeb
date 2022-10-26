@@ -62,6 +62,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "editar-catedratico",
@@ -70,6 +79,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       catedratico: {
         carnet_catedratico: "",
         nombre_catedratico: "",
+        fecha_nacimiento: "",
+        direccion: "",
         telefono: "",
         correo: "",
         id_sucursal: ""
@@ -126,11 +137,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   var _response$data = response.data,
                     carnet_catedratico = _response$data.carnet_catedratico,
                     nombre_catedratico = _response$data.nombre_catedratico,
+                    fecha_nacimiento = _response$data.fecha_nacimiento,
+                    direccion = _response$data.direccion,
                     telefono = _response$data.telefono,
                     correo = _response$data.correo,
                     id_sucursal = _response$data.id_sucursal;
                   _this2.catedratico.carnet_catedratico = carnet_catedratico;
                   _this2.catedratico.nombre_catedratico = nombre_catedratico;
+                  _this2.catedratico.fecha_nacimiento = fecha_nacimiento;
+                  _this2.catedratico.direccion = direccion;
                   _this2.catedratico.telefono = telefono;
                   _this2.catedratico.correo = correo;
                   _this2.catedratico.id_sucursal = id_sucursal;
@@ -376,6 +391,72 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
+                    value: _vm.catedratico.fecha_nacimiento,
+                    expression: "catedratico.fecha_nacimiento"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "date",
+                  autocomplete: "off",
+                  name: "fecha_nacimiento",
+                  required: ""
+                },
+                domProps: { value: _vm.catedratico.fecha_nacimiento },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.catedratico,
+                      "fecha_nacimiento",
+                      $event.target.value
+                    )
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _vm._m(3),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.catedratico.direccion,
+                    expression: "catedratico.direccion"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "text",
+                  autocomplete: "off",
+                  name: "direccion",
+                  required: ""
+                },
+                domProps: { value: _vm.catedratico.direccion },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.catedratico, "direccion", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _vm._m(4),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
                     value: _vm.catedratico.telefono,
                     expression: "catedratico.telefono"
                   }
@@ -400,7 +481,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", [
-              _vm._m(3),
+              _vm._m(5),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -412,7 +493,12 @@ var render = function() {
                   }
                 ],
                 staticClass: "form-control",
-                attrs: { type: "email", autocomplete: "off", name: "correo" },
+                attrs: {
+                  type: "email",
+                  autocomplete: "off",
+                  name: "correo",
+                  required: ""
+                },
                 domProps: { value: _vm.catedratico.correo },
                 on: {
                   input: function($event) {
@@ -425,15 +511,8 @@ var render = function() {
               })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-span-6 sm:col-span-2" }, [
-              _c(
-                "label",
-                {
-                  staticClass: "block text-sm font-medium text-gray-700",
-                  attrs: { for: "id_sucursal" }
-                },
-                [_vm._v("Sucursal")]
-              ),
+            _c("div", [
+              _vm._m(6),
               _vm._v(" "),
               _c(
                 "select",
@@ -471,11 +550,7 @@ var render = function() {
                 },
                 _vm._l(_vm.sucursals, function(sucursal) {
                   return _c("option", { domProps: { value: sucursal.id } }, [
-                    _vm._v(
-                      _vm._s(sucursal.id) +
-                        " " +
-                        _vm._s(sucursal.nombre_sucursal)
-                    )
+                    _vm._v(_vm._s(sucursal.nombre_sucursal))
                   ])
                 }),
                 0
@@ -487,7 +562,7 @@ var render = function() {
             _c(
               "button",
               { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-              [_vm._v("Guardar")]
+              [_vm._v("💾 Guardar")]
             ),
             _vm._v(" "),
             _c(
@@ -496,13 +571,13 @@ var render = function() {
                 staticClass: "btn btn-secondary",
                 attrs: { to: { name: "mostrarCatedraticos" } }
               },
-              [_vm._v("Cancelar")]
+              [_vm._v("✖ Cancelar")]
             ),
             _vm._v(" "),
             _c(
               "button",
               { staticClass: "btn btn-danger", attrs: { type: "reset" } },
-              [_vm._v("Limpiar")]
+              [_vm._v(" 🧹 Limpiar")]
             )
           ],
           1
@@ -538,6 +613,26 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
+        _vm._v("Fecha de Nacimiento")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("b", [
+      _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
+        _vm._v("Dirección")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("b", [
+      _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
         _vm._v("Teléfono")
       ])
     ])
@@ -549,6 +644,16 @@ var staticRenderFns = [
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
         _vm._v("Correo")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("b", [
+      _c("label", { staticClass: "mt-2", attrs: { for: "id_sucursal" } }, [
+        _vm._v("Sucursal")
       ])
     ])
   }

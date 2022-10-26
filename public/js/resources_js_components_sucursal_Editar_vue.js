@@ -38,6 +38,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "editar-sucursal",
@@ -267,7 +268,7 @@ var render = function() {
             _c(
               "button",
               { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-              [_vm._v("Guardar")]
+              [_vm._v("💾 Guardar")]
             ),
             _vm._v(" "),
             _c(
@@ -276,13 +277,13 @@ var render = function() {
                 staticClass: "btn btn-secondary",
                 attrs: { to: { name: "mostrarSucursals" } }
               },
-              [_vm._v("Cancelar")]
+              [_vm._v("✖ Cancelar")]
             ),
             _vm._v(" "),
             _c(
               "button",
               { staticClass: "btn btn-danger", attrs: { type: "reset" } },
-              [_vm._v("Limpiar")]
+              [_vm._v(" 🧹 Limpiar")]
             )
           ],
           1

@@ -1,5 +1,5 @@
 <template>
-    <div class="container md mt-2 mb-3 col-lg-5">
+    <div class="container md mt-2 mb-3 col-lg-6">
         <div class="card border-info">
             <div class="card-header bg-info text-white">
                 <center><h2 class="mt-2 mb-2"> EDITAR ALUMNO &nbsp;<i class="fas fa-pen-alt"></i></h2> </center>
@@ -32,24 +32,19 @@
                         <b><label for="name" class="mt-2">Correo</label></b>
                         <input type="email" class="form-control" autocomplete="off" name="correo" v-model="alumno.correo" >
                     </div>
-                    <div class="col-span-6 sm:col-span-2">
-                        <label for="id_sucursal" class="block text-sm font-medium text-gray-700">Sucursal</label>
+                    <div>
+                        <b> <label for="id_sucursal" class="mt-2">Sucursal</label></b>
                         <select
                             class="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                             :required="true"
-                            v-model="alumno.id_sucursal"
-
-                        >
-                            <option
-                                v-for="sucursal in sucursals"
-                                v-bind:value="sucursal.id"
-                            >{{ sucursal.id }} {{ sucursal.nombre_sucursal }}</option>
+                            v-model="alumno.id_sucursal">
+                            <option v-for="sucursal in sucursals" v-bind:value="sucursal.id">{{ sucursal.nombre_sucursal }}</option>
                         </select>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-primary" >Guardar</button>
-                    <router-link :to='{name:"mostrarAlumnos"}' class="btn btn-secondary">Cancelar</router-link>
-                    <button type="reset" class="btn btn-danger">Limpiar</button>
+                    <button type="submit" class="btn btn-primary" >💾 Guardar</button>
+                    <router-link :to='{name:"mostrarAlumnos"}' class="btn btn-secondary">✖ Cancelar</router-link>
+                    <button type="reset" class="btn btn-danger">🧹 Limpiar</button>
                 </form>
             </div>
         </div>

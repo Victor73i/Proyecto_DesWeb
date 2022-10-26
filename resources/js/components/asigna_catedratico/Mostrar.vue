@@ -1,12 +1,8 @@
 <template>
 
     <div class="row">
-        <br>
-        <br>
-        <br>
-        <br>
         <div class="col-12 mb-2">
-            <router-link :to='{name:"crearAsigna_catedratico"}' class="btn btn-outline-secondary"><i class="fa fa-book  fa-2x">Nuevo Asignacion de Catedratico</i></router-link>
+            <router-link :to='{name:"crearAsigna_catedratico"}' class="btn btn-outline-secondary"><i class="fa fa-plus  fa-2x"> Asignar Catedrático</i></router-link>
         </div>
         <br>
         <br>
@@ -61,8 +57,6 @@ export default {
         async mostrarAsigna_catedraticos(){
             await this.axios.get('/api/asigna_catedratico').then(response=>{
                 this.asigna_catedraticos = response.data
-
-
             }).catch(error=>{
                 Swal.fire({
                     position: 'top',
@@ -113,7 +107,6 @@ export default {
                     )
                 }
             })
-
         }
     }
 }

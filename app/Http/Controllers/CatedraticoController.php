@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Catedratico;
+use App\Models\Sucursal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -35,8 +36,10 @@ class CatedraticoController extends Controller
 
 
         $catedratico = Catedratico::create($request->post());
+        $sucursal = Sucursal::All();
         return response()->json([
             'catedratico'=>$catedratico,
+            'sucursal'=>$sucursal,
             'mensaje'=>'¡Catedratico ingresado correctamente!'
 
 

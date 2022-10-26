@@ -1,18 +1,14 @@
 <template>
 
     <div class="row">
-        <br>
-        <br>
-        <br>
-        <br>
         <div class="col-12 mb-2">
-            <router-link :to='{name:"crearAlumno_inscrito"}' class="btn btn-outline-secondary"><i class="fa fa-book  fa-2x">Nuevo Alumno Inscrito</i></router-link>
+            <router-link :to='{name:"crearAlumno_inscrito"}' class="btn btn-outline-secondary"><i class="fa fa-plus  fa-2x"> Inscribir Alumno</i></router-link>
         </div>
         <br>
         <br>
         <br>
         <br>
-        <div class="col-12"  >
+        <div class="col-12 m-0 p-0"  >
             <div class="table-responsive"  >
                 <table class="table table-bordered border-dark" style="background-color: #F3F0E7; ">
                     <thead class="bg-dark text-white" STYLE="background-color: #67DECD;">
