@@ -59,10 +59,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "asigna_catedraticos",
@@ -224,14 +220,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
     _c(
       "div",
       { staticClass: "col-12 mb-2" },
@@ -243,8 +231,8 @@ var render = function() {
             attrs: { to: { name: "crearAsigna_catedratico" } }
           },
           [
-            _c("i", { staticClass: "fa fa-book  fa-2x" }, [
-              _vm._v("Nuevo Asignacion de Catedratico")
+            _c("i", { staticClass: "fa fa-plus  fa-2x" }, [
+              _vm._v(" Asignar Catedrático")
             ])
           ]
         )

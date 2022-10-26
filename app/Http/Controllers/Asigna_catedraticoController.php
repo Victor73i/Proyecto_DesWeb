@@ -14,11 +14,10 @@ class Asigna_catedraticoController extends Controller
     {
 
         $asigna_catedraticos = DB::table('asigna_catedratico as as')
-
             ->join('catedratico as ca','as.id_catedratico','=','ca.id')
             ->join('curso as cu','as.id_curso','=','cu.id')
             ->join('nivel as ni','as.id_nivel','=','ni.id')
-            ->select('as.id','ca.nombre_catedratico','cu.nombre_curso','ni.nombre_nivel','as.fecha')->get();
+            ->select('as.id','ca.nombre_catedratico', 'cu.nombre_curso','ni.nombre_nivel','as.fecha')->get();
 
         return response()->json($asigna_catedraticos);
 

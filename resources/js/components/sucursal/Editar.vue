@@ -13,8 +13,9 @@
                         <input type="text" class="form-control" autocomplete="off" name="name" v-model="sucursal.nombre_sucursal" required>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-primary" >Guardar</button> <router-link :to='{name:"mostrarSucursals"}' class="btn btn-secondary">Cancelar</router-link>
-                    <button type="reset" class="btn btn-danger">Limpiar</button>
+                    <button type="submit" class="btn btn-primary" >💾 Guardar</button>
+                    <router-link :to='{name:"mostrarSucursals"}' class="btn btn-secondary">✖ Cancelar</router-link>
+                    <button type="reset" class="btn btn-danger" > 🧹 Limpiar</button>
                 </form>
             </div>
         </div>

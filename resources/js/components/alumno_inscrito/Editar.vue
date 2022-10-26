@@ -2,14 +2,14 @@
     <div class="container md mt-2 mb-3 col-lg-5">
         <div class="card border-info">
             <div class="card-header bg-info text-white">
-                <center><h2 class="mt-2 mb-2"> EDITAR ASIGNA CATEDRATICO &nbsp;<i class="fas fa-pen-alt"></i></h2> </center>
+                <center><h2 class="mt-2 mb-2"> EDITAR ALUMNO INSCRITO &nbsp;<i class="fas fa-pen-alt"></i></h2> </center>
             </div>
             <div class="card-body">
                 <!-- Formulario -->
                 <form @submit.prevent="actualizar">
 
-                    <div class="col-span-6 sm:col-span-2">
-                        <label for="id_alumno" class="block text-sm font-medium text-gray-700">Alumno</label>
+                    <div>
+                       <b><label for="id_alumno" class="mt-2">Alumno</label></b>
                         <select
                             class="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                             :required="true"
@@ -18,11 +18,11 @@
                             <option
                                 v-for="alumno in alumnos"
                                 v-bind:value="alumno.id"
-                            >{{ alumno.id }} {{ alumno.nombre_alumno }}</option>
+                            >{{ alumno.nombre_alumno }}</option>
                         </select>
                     </div>
-                    <div class="col-span-6 sm:col-span-2">
-                        <label for="id_curso" class="block text-sm font-medium text-gray-700">Curso</label>
+                    <div>
+                        <b><label for="id_curso" class="mt-2">Curso</label></b>
                         <select
                             class="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                             :required="true"
@@ -32,11 +32,11 @@
                             <option
                                 v-for="curso in cursos"
                                 v-bind:value="curso.id"
-                            >{{ curso.id }} {{ curso.nombre_curso }}</option>
+                            >{{ curso.nombre_curso }}</option>
                         </select>
                     </div>
-                    <div class="col-span-6 sm:col-span-2">
-                        <label for="id_nivel" class="block text-sm font-medium text-gray-700">Nivel</label>
+                    <div>
+                        <b><label for="id_nivel" class="mt-2">Nivel</label></b>
                         <select
                             class="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                             :required="true"
@@ -46,11 +46,11 @@
                             <option
                                 v-for="nivel in nivels"
                                 v-bind:value="nivel.id"
-                            >{{ nivel.id }} {{ nivel.nombre_nivel }}</option>
+                            >{{ nivel.nombre_nivel }}</option>
                         </select>
                     </div>
                     <div>
-                        <b><label for="name" class="mt-2">Fecha</label></b>
+                        <b><label for="fecha" class="mt-2">Fecha</label></b>
                         <input type="date" class="form-control" autocomplete="off" name="fecha" v-model="alumno_inscrito.fecha">
                     </div>
                     <div>
@@ -58,9 +58,9 @@
                         <input type="number" class="form-control" autocomplete="off" name="fecha" v-model="alumno_inscrito.nota">
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-primary" >Guardar</button>
-                    <router-link :to='{name:"mostrarAlumno_inscritos"}' class="btn btn-secondary">Cancelar</router-link>
-                    <button type="reset" class="btn btn-danger">Limpiar</button>
+                    <button type="submit" class="btn btn-primary" >💾 Guardar</button>
+                    <router-link :to='{name:"mostrarAlumno_inscritos"}' class="btn btn-secondary">✖ Cancelar</router-link>
+                    <button type="reset" class="btn btn-danger">🧹 Limpiar</button>
                 </form>
             </div>
         </div>

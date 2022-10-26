@@ -10,7 +10,7 @@
                 <!-- Formulario -->
                 <form @submit.prevent="crear">
 
-                       <div>
+                    <div>
                         <b><label for="name" class="mt-2">Carnet</label></b>
                         <input type="text" class="form-control" autocomplete="off" name="carnet" v-model="alumno.carnet_alumno" required>
                     </div>
@@ -19,7 +19,7 @@
                         <input type="text" class="form-control" autocomplete="off" name="name" v-model="alumno.nombre_alumno" required>
                     </div>
                     <div>
-                            <b><label for="name" class="mt-2">Fecha de Nacimiento</label></b>
+                        <b><label for="name" class="mt-2">Fecha de Nacimiento</label></b>
                         <input type="date" class="form-control" autocomplete="off" name="fecha_nacimiento" v-model="alumno.fecha_nacimiento" required>
                     </div>
                     <div>
@@ -32,27 +32,23 @@
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Correo</label></b>
-                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="alumno.correo">
+                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="alumno.correo" required>
                     </div>
-                    <div class="col-span-6 sm:col-span-2">
-                        <label for="id_sucursal" class="block text-sm font-medium text-gray-700">Sucursal</label>
+                    <div>
+                        <b> <label for="id_sucursal" class="mt-2">Sucursal</label></b>
                         <select
                             class="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                             :required="true"
-                            v-model="alumno.id_sucursal"
-
-                        > <option disabled value="">-- Sucursal --</option>
-                            <option
-                                v-for="sucursal in sucursals"
-                                v-bind:value="sucursal.id"
-                            >{{ sucursal.id }} {{ sucursal.nombre_sucursal }}</option>
+                            v-model="alumno.id_sucursal">
+                            <option disabled value="">-- Seleccione una opción --</option>
+                            <option v-for="sucursal in sucursals" v-bind:value="sucursal.id">{{ sucursal.nombre_sucursal }}</option>
                         </select>
                     </div>
 
                     <br>
-                    <button type="submit" class="btn btn-primary" >Guardar</button>
-                    <router-link :to='{name:"mostrarAlumnos"}' class="btn btn-secondary">Cancelar</router-link>
-                    <button type="reset" class="btn btn-danger">Limpiar</button>
+                    <button type="submit" class="btn btn-primary" >💾 Guardar</button>
+                    <router-link :to='{name:"mostrarAlumnos"}' class="btn btn-secondary">✖ Cancelar</router-link>
+                    <button type="reset" class="btn btn-danger">🧹 Limpiar</button>
                 </form>
             </div>
         </div>

@@ -17,15 +17,23 @@
                         <input type="text" class="form-control" autocomplete="off" name="nombre" v-model="catedratico.nombre_catedratico" required>
                     </div>
                     <div>
+                        <b><label for="name" class="mt-2">Fecha de Nacimiento</label></b>
+                        <input type="date" class="form-control" autocomplete="off" name="fecha_nacimiento" v-model="catedratico.fecha_nacimiento" required>
+                    </div>
+                    <div>
+                        <b><label for="name" class="mt-2">Dirección</label></b>
+                        <input type="text" class="form-control" autocomplete="off" name="direccion" v-model="catedratico.direccion" required>
+                    </div>
+                    <div>
                         <b><label for="name" class="mt-2">Teléfono</label></b>
                         <input type="text" class="form-control" autocomplete="off" name="telefono" v-model="catedratico.telefono" required>
                     </div>
                     <div>
                         <b><label for="name" class="mt-2">Correo</label></b>
-                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="catedratico.correo" >
+                        <input type="email" class="form-control" autocomplete="off" name="correo" v-model="catedratico.correo" required>
                     </div>
-                    <div class="col-span-6 sm:col-span-2">
-                        <label for="id_sucursal" class="block text-sm font-medium text-gray-700">Sucursal</label>
+                    <div>
+                        <b><label for="id_sucursal" class="mt-2">Sucursal</label></b>
                         <select
                             class="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                             :required="true"
@@ -33,12 +41,13 @@
                             <option
                                 v-for="sucursal in sucursals"
                                 v-bind:value="sucursal.id"
-                            >{{ sucursal.id }} {{ sucursal.nombre_sucursal }}</option>
+                            >{{ sucursal.nombre_sucursal }}</option>
                         </select>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-primary" >Guardar</button> <router-link :to='{name:"mostrarCatedraticos"}' class="btn btn-secondary">Cancelar</router-link>
-                    <button type="reset" class="btn btn-danger">Limpiar</button>
+                    <button type="submit" class="btn btn-primary" >💾 Guardar</button>
+                    <router-link :to='{name:"mostrarCatedraticos"}' class="btn btn-secondary">✖ Cancelar</router-link>
+                    <button type="reset" class="btn btn-danger" > 🧹 Limpiar</button>
                 </form>
             </div>
         </div>
@@ -53,10 +62,12 @@ export default {
             catedratico:{
                 carnet_catedratico:"",
                 nombre_catedratico:"",
+                fecha_nacimiento:"",
+                direccion:"",
                 telefono:"",
                 correo:"",
                 id_sucursal:""
-            },sucursals:[],
+            }, sucursals:[],
         }
     },
     mounted(){
@@ -81,12 +92,14 @@ export default {
         },
         async mostrarCatedratico(){
             await this.axios.get(`/api/catedratico/${this.$route.params.id}`).then(response=>{
-                const { carnet_catedratico,nombre_catedratico,telefono,correo,id_sucursal } = response.data
+                const { carnet_catedratico,nombre_catedratico,fecha_nacimiento,direccion,telefono,correo,id_sucursal } = response.data
                 this.catedratico.carnet_catedratico = carnet_catedratico
                 this.catedratico.nombre_catedratico = nombre_catedratico
+                this.catedratico.fecha_nacimiento = fecha_nacimiento
+                this.catedratico.direccion = direccion
                 this.catedratico.telefono = telefono
                 this.catedratico.correo = correo
-                this.catedratico.id_sucursal= id_sucursal
+                this.catedratico.id_sucursal = id_sucursal
 
             }).catch(error=>{
                 console.log(error)

@@ -68,11 +68,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "editar-alumno",
@@ -287,7 +282,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container md mt-2 mb-3 col-lg-5" }, [
+  return _c("div", { staticClass: "container md mt-2 mb-3 col-lg-6" }, [
     _c("div", { staticClass: "card border-info" }, [
       _c(
         "div",
@@ -500,15 +495,8 @@ var render = function() {
               })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-span-6 sm:col-span-2" }, [
-              _c(
-                "label",
-                {
-                  staticClass: "block text-sm font-medium text-gray-700",
-                  attrs: { for: "id_sucursal" }
-                },
-                [_vm._v("Sucursal")]
-              ),
+            _c("div", [
+              _vm._m(6),
               _vm._v(" "),
               _c(
                 "select",
@@ -546,11 +534,7 @@ var render = function() {
                 },
                 _vm._l(_vm.sucursals, function(sucursal) {
                   return _c("option", { domProps: { value: sucursal.id } }, [
-                    _vm._v(
-                      _vm._s(sucursal.id) +
-                        " " +
-                        _vm._s(sucursal.nombre_sucursal)
-                    )
+                    _vm._v(_vm._s(sucursal.nombre_sucursal))
                   ])
                 }),
                 0
@@ -562,7 +546,7 @@ var render = function() {
             _c(
               "button",
               { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-              [_vm._v("Guardar")]
+              [_vm._v("💾 Guardar")]
             ),
             _vm._v(" "),
             _c(
@@ -571,13 +555,13 @@ var render = function() {
                 staticClass: "btn btn-secondary",
                 attrs: { to: { name: "mostrarAlumnos" } }
               },
-              [_vm._v("Cancelar")]
+              [_vm._v("✖ Cancelar")]
             ),
             _vm._v(" "),
             _c(
               "button",
               { staticClass: "btn btn-danger", attrs: { type: "reset" } },
-              [_vm._v("Limpiar")]
+              [_vm._v("🧹 Limpiar")]
             )
           ],
           1
@@ -644,6 +628,16 @@ var staticRenderFns = [
     return _c("b", [
       _c("label", { staticClass: "mt-2", attrs: { for: "name" } }, [
         _vm._v("Correo")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("b", [
+      _c("label", { staticClass: "mt-2", attrs: { for: "id_sucursal" } }, [
+        _vm._v("Sucursal")
       ])
     ])
   }

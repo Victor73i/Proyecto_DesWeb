@@ -81,10 +81,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -322,7 +318,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container md mt-2 mb-3 col-lg-5" }, [
+  return _c("div", { staticClass: "container md mt-2 mb-3 col-lg-6" }, [
     _c("div", { staticClass: "card border-info" }, [
       _c(
         "div",
@@ -330,7 +326,7 @@ var render = function() {
         [
           _c("center", [
             _c("h2", { staticClass: "mt-2 mb-2" }, [
-              _vm._v(" AGREGAR ASIGNACION CATEDRATICO  "),
+              _vm._v(" ASIGNAR CATEDRÁTICO  "),
               _c("i", { staticClass: "fas fa-pen-alt" })
             ])
           ])
@@ -350,15 +346,8 @@ var render = function() {
             }
           },
           [
-            _c("div", { staticClass: "col-span-6 sm:col-span-2" }, [
-              _c(
-                "label",
-                {
-                  staticClass: "block text-sm font-medium text-gray-700",
-                  attrs: { for: "id_catedratico" }
-                },
-                [_vm._v("Catedratico")]
-              ),
+            _c("div", [
+              _vm._m(0),
               _vm._v(" "),
               _c(
                 "select",
@@ -396,20 +385,14 @@ var render = function() {
                 },
                 [
                   _c("option", { attrs: { disabled: "", value: "" } }, [
-                    _vm._v("-- Catedratico --")
+                    _vm._v("-- Seleccione el catedrático --")
                   ]),
                   _vm._v(" "),
                   _vm._l(_vm.catedraticos, function(catedratico) {
                     return _c(
                       "option",
                       { domProps: { value: catedratico.id } },
-                      [
-                        _vm._v(
-                          _vm._s(catedratico.id) +
-                            " " +
-                            _vm._s(catedratico.nombre_catedratico)
-                        )
-                      ]
+                      [_vm._v(_vm._s(catedratico.nombre_catedratico))]
                     )
                   })
                 ],
@@ -417,15 +400,8 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-span-6 sm:col-span-2" }, [
-              _c(
-                "label",
-                {
-                  staticClass: "block text-sm font-medium text-gray-700",
-                  attrs: { for: "id_curso" }
-                },
-                [_vm._v("Curso")]
-              ),
+            _c("div", [
+              _vm._m(1),
               _vm._v(" "),
               _c(
                 "select",
@@ -463,14 +439,12 @@ var render = function() {
                 },
                 [
                   _c("option", { attrs: { disabled: "", value: "" } }, [
-                    _vm._v("-- Curso --")
+                    _vm._v("-- Seleccione el curso --")
                   ]),
                   _vm._v(" "),
                   _vm._l(_vm.cursos, function(curso) {
                     return _c("option", { domProps: { value: curso.id } }, [
-                      _vm._v(
-                        _vm._s(curso.id) + " " + _vm._s(curso.nombre_curso)
-                      )
+                      _vm._v(_vm._s(curso.nombre_curso))
                     ])
                   })
                 ],
@@ -478,15 +452,8 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-span-6 sm:col-span-2" }, [
-              _c(
-                "label",
-                {
-                  staticClass: "block text-sm font-medium text-gray-700",
-                  attrs: { for: "id_nivel" }
-                },
-                [_vm._v("Nivel")]
-              ),
+            _c("div", [
+              _vm._m(2),
               _vm._v(" "),
               _c(
                 "select",
@@ -524,14 +491,12 @@ var render = function() {
                 },
                 [
                   _c("option", { attrs: { disabled: "", value: "" } }, [
-                    _vm._v("-- Nivel --")
+                    _vm._v("-- Seleccione el nivel --")
                   ]),
                   _vm._v(" "),
                   _vm._l(_vm.nivels, function(nivel) {
                     return _c("option", { domProps: { value: nivel.id } }, [
-                      _vm._v(
-                        _vm._s(nivel.id) + " " + _vm._s(nivel.nombre_nivel)
-                      )
+                      _vm._v(_vm._s(nivel.nombre_nivel))
                     ])
                   })
                 ],
@@ -540,7 +505,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", [
-              _vm._m(0),
+              _vm._m(3),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -574,7 +539,7 @@ var render = function() {
             _c(
               "button",
               { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-              [_vm._v("Guardar")]
+              [_vm._v("💾 Guardar")]
             ),
             _vm._v(" "),
             _c(
@@ -583,13 +548,13 @@ var render = function() {
                 staticClass: "btn btn-secondary",
                 attrs: { to: { name: "mostrarAsigna_catedraticos" } }
               },
-              [_vm._v("Cancelar")]
+              [_vm._v("✖ Cancelar")]
             ),
             _vm._v(" "),
             _c(
               "button",
               { staticClass: "btn btn-danger", attrs: { type: "reset" } },
-              [_vm._v("Limpiar")]
+              [_vm._v(" 🧹 Limpiar")]
             )
           ],
           1
@@ -599,6 +564,36 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("b", [
+      _c("label", { staticClass: "mt-2", attrs: { for: "id_catedratico" } }, [
+        _vm._v("Catedrático")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("b", [
+      _c("label", { staticClass: "mt-2", attrs: { for: "id_curso" } }, [
+        _vm._v("Curso")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("b", [
+      _c("label", { staticClass: "mt-2", attrs: { for: "id_nivel" } }, [
+        _vm._v("Nivel")
+      ])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

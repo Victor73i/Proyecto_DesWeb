@@ -62,10 +62,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "alumno_inscritos",
@@ -227,14 +223,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
     _c(
       "div",
       { staticClass: "col-12 mb-2" },
@@ -246,8 +234,8 @@ var render = function() {
             attrs: { to: { name: "crearAlumno_inscrito" } }
           },
           [
-            _c("i", { staticClass: "fa fa-book  fa-2x" }, [
-              _vm._v("Nuevo Alumno Inscrito")
+            _c("i", { staticClass: "fa fa-plus  fa-2x" }, [
+              _vm._v(" Inscribir Alumno")
             ])
           ]
         )
@@ -263,7 +251,7 @@ var render = function() {
     _vm._v(" "),
     _c("br"),
     _vm._v(" "),
-    _c("div", { staticClass: "col-12" }, [
+    _c("div", { staticClass: "col-12 m-0 p-0" }, [
       _c("div", { staticClass: "table-responsive" }, [
         _c(
           "table",
