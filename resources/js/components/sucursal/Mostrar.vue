@@ -4,10 +4,9 @@
         <div class="col-12 mb-5">
             <router-link :to='{name:"crearSucursal"}' class="btn btn-outline-secondary"><i class="fa fa-plus  fa-2x"> Nueva Sucursal</i></router-link>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
+        <div class="col-12 mb-2">
+            <button class="btn btn-success" style="float: right;" @click="descargarExcel()">Exportar</button>
+        </div>
         <div class="col-12"  >
             <div class="table-responsive"  >
                 <table class="table table-bordered border-dark" style="background-color: #F3F0E7; ">
@@ -35,6 +34,7 @@
 </template>
 
 <script>
+import exportFromJSON from 'export-from-json';
 export default {
     name:"sucursals",
     data(){
@@ -49,13 +49,6 @@ export default {
         async mostrarSucursals(){
             await this.axios.get('/api/sucursal').then(response=>{
                 this.sucursals = response.data
-                // Swal.fire({
-                //     position: 'top',
-                //     icon: '',
-                //     title: 'Mostrando Sucursales',
-                //     showConfirmButton: false,
-                //     timer: 1500
-                // })
 
             }).catch(error=>{
                 Swal.fire({
@@ -107,6 +100,12 @@ export default {
                     )
                 }
             })
+        },
+        descargarExcel(){
+            const data = this.sucursals;
+            const fileName = 'sucursales';
+            const exportType = exportFromJSON.types.xls;
+            exportFromJSON({data, fileName, exportType})
         }
     }
 }
