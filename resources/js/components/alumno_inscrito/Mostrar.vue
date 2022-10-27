@@ -4,10 +4,9 @@
         <div class="col-12 mb-2">
             <router-link :to='{name:"crearAlumno_inscrito"}' class="btn btn-outline-secondary"><i class="fa fa-plus  fa-2x"> Inscribir Alumno</i></router-link>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
+        <div class="col-12 mb-2">
+            <button class="btn btn-success" style="float: right;" @click="descargarExcel()">Exportar</button>
+        </div>
         <div class="col-12 m-0 p-0"  >
             <div class="table-responsive"  >
                 <table class="table table-bordered border-dark" style="background-color: #F3F0E7; ">
@@ -46,6 +45,7 @@
 </template>
 
 <script>
+import exportFromJSON from 'export-from-json';
 export default {
     name:"alumno_inscritos",
     data(){
@@ -113,6 +113,12 @@ export default {
                 }
             })
 
+        },
+        descargarExcel(){
+            const data = this.alumno_inscritos;
+            const fileName = 'alumnos_inscritos';
+            const exportType = exportFromJSON.types.xls;
+            exportFromJSON({data, fileName, exportType})
         }
     }
 }

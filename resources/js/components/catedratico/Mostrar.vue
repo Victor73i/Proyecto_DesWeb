@@ -5,6 +5,9 @@
             <router-link :to='{name:"crearCatedratico"}' class="btn btn-outline-secondary"><i class="fa fa-plus  fa-2x"> Nuevo Catedrático</i></router-link>
             <router-link  to ="/asigna_catedraticos" class="btn btn-outline-info" style="float: right;"> <i class="fa fa-address-book fa-2x" aria-hidden="true"> Catedráticos Asignados </i> </router-link>
         </div>
+        <div class="col-12 mb-2">
+            <button class="btn btn-success" style="float: right;" @click="descargarExcel()">Exportar</button>
+        </div>
         <div class="col-12 m-0 p-0">
             <div class="table-responsive"  >
                 <table class="table table-bordered border-dark" style="background-color: #F3F0E7; ">
@@ -44,6 +47,7 @@
 </template>
 
 <script>
+import exportFromJSON from 'export-from-json';
 export default {
     name:"catedraticos",
     data(){
@@ -110,6 +114,12 @@ export default {
                 }
             })
 
+        },
+        descargarExcel(){
+            const data = this.catedraticos;
+            const fileName = 'catedraticos_registrados';
+            const exportType = exportFromJSON.types.xls;
+            exportFromJSON({data, fileName, exportType})
         }
     }
 }

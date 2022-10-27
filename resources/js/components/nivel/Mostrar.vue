@@ -4,6 +4,9 @@
         <div class="col-12 mb-5">
             <router-link :to='{name:"crearNivel"}' class="btn btn-outline-secondary"><i class="fa fa-plus  fa-2x"> Nuevo Nivel</i></router-link>
         </div>
+        <div class="col-12 mb-2">
+            <button class="btn btn-success" style="float: right;" @click="descargarExcel()">Exportar</button>
+        </div>
 
         <div class="col-12"  >
             <div class="table-responsive"  >
@@ -35,6 +38,7 @@
 </template>
 
 <script>
+import exportFromJSON from 'export-from-json';
 export default {
     name:"nivels",
     data(){
@@ -102,6 +106,12 @@ export default {
                 }
             })
 
+        },
+        descargarExcel(){
+            const data = this.nivels;
+            const fileName = 'niveles';
+            const exportType = exportFromJSON.types.xls;
+            exportFromJSON({data, fileName, exportType})
         }
     }
 }
