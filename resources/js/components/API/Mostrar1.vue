@@ -1,14 +1,18 @@
 <template>
     <div class="col-12 m-0 p-0"  >
-        <h1>Deseas buscar por MUNICIPALIDAD y DEPARTAMENTO</h1>
-        <input type="text" v-model="search1" v-on:keyup.enter="searchData" placeholder="Buscar MUNICIPALIDAD">
-        <input type="text" v-model="search" v-on:keyup.enter="searchData" placeholder="Buscar DEPARTAMENTO">
-        <input type="date" v-model="search4" v-on:keyup.enter="searchData" placeholder="Buscar Date inicio">
-        <input type="date" v-model="search5" v-on:keyup.enter="searchData" placeholder="Buscar Date Final">
+        <center><h3>¿Deseas buscar por Municipalidad y Departamento?</h3></center>
+        <div class="input-group mb-3" >
+        <input class="form-control" type="text" v-model="search1" v-on:keyup.enter="searchData" placeholder="Buscar Municipalidad">
+        <input class="form-control" type="text" v-model="search" v-on:keyup.enter="searchData" placeholder="Buscar Departamento">
+        <input class="form-control" type="date" v-model="search4" v-on:keyup.enter="searchData" placeholder="Buscar Date inicio">
+        <input class="form-control" type="date" v-model="search5" v-on:keyup.enter="searchData" placeholder="Buscar Date Final">
+        </div>
 
-        <h1>Deseas buscar por MUNICIPALIDAD o DEPARTAMENTO</h1>
-        <input type="text" v-model="search2" v-on:keyup.enter="searchData1" placeholder="Buscar MUNICIPALIDAD">
-        <input type="text" v-model="search3" v-on:keyup.enter="searchData1" placeholder="Buscar DEPARTAMENTO">
+        <center><h3>¿Deseas buscar por Municipalidad o Departamento?</h3></center>
+        <div class="input-group mb-3" >
+        <input class="form-control" type="text" v-model="search2" v-on:keyup.enter="searchData1" placeholder="Buscar Municipalidad">
+        <input class="form-control" type="text" v-model="search3" v-on:keyup.enter="searchData1" placeholder="Buscar Departamento">
+        </div>
         <div class="col-12 mb-2">
             <button class="btn btn-success" style="float: right;" @click="descargarExcel()">Exportar</button>
         </div>
