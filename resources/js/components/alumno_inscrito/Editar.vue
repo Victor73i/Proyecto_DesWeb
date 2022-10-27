@@ -18,7 +18,7 @@
                             <option
                                 v-for="alumno in alumnos"
                                 v-bind:value="alumno.id"
-                            >{{ alumno.nombre_alumno }}</option>
+                            >{{ alumno.nombre_alumno }}{{" "}}{{ alumno.carnet_alumno }}</option>
                         </select>
                     </div>
                     <div>

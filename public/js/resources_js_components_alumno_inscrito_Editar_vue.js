@@ -396,7 +396,11 @@ var render = function() {
                 },
                 _vm._l(_vm.alumnos, function(alumno) {
                   return _c("option", { domProps: { value: alumno.id } }, [
-                    _vm._v(_vm._s(alumno.nombre_alumno))
+                    _vm._v(
+                      _vm._s(alumno.nombre_alumno) +
+                        _vm._s(" ") +
+                        _vm._s(alumno.carnet_alumno)
+                    )
                   ])
                 }),
                 0

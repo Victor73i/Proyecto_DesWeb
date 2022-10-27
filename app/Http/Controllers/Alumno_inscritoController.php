@@ -16,9 +16,11 @@ class Alumno_inscritoController extends Controller
         $alumno_inscritos = DB::table('alumno_inscrito as ai')
 
             ->join('alumno as al','ai.id_alumno','=','al.id')
+            ->join('sucursal as su','al.id_sucursal','=','su.id')
+
             ->join('curso as cu','ai.id_curso','=','cu.id')
             ->join('nivel as ni','ai.id_nivel','=','ni.id')
-            ->select('ai.id','al.nombre_alumno','cu.nombre_curso','ni.nombre_nivel','ai.fecha','ai.nota')->get();
+            ->select('ai.id','al.nombre_alumno','su.nombre_sucursal','cu.nombre_curso','ni.nombre_nivel','ai.fecha','ai.nota')->get();
 
 
         return response()->json($alumno_inscritos);
