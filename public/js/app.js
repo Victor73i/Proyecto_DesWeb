@@ -2116,6 +2116,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
@@ -2226,6 +2228,12 @@ var Editar = function Editar() {
 };
 var Mostrar8 = function Mostrar8() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_API_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/API/Mostrar.vue */ "./resources/js/components/API/Mostrar.vue"));
+};
+var Mostrar9 = function Mostrar9() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_API_Mostrar1_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/API/Mostrar1.vue */ "./resources/js/components/API/Mostrar1.vue"));
+};
+var Mostrar10 = function Mostrar10() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_API_Mostrar2_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/API/Mostrar2.vue */ "./resources/js/components/API/Mostrar2.vue"));
 };
 var Mostrar1 = function Mostrar1() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_nivel_Mostrar_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/nivel/Mostrar.vue */ "./resources/js/components/nivel/Mostrar.vue"));
@@ -2394,6 +2402,14 @@ var routes = [{
   name: 'mostrarAPIs',
   path: '/APIs',
   component: Mostrar8
+}, {
+  name: 'mostrarAPIs1',
+  path: '/APIs1',
+  component: Mostrar9
+}, {
+  name: 'mostrarAPIs2',
+  path: '/APIs2',
+  component: Mostrar10
 }];
 
 /***/ }),
@@ -24336,7 +24352,15 @@ var staticRenderFns = [
         },
         [
           _c("a", { staticClass: "dropdown-item", attrs: { href: "/APIs" } }, [
-            _vm._v("  SICOEP ")
+            _vm._v("  SICOEP POR PROFESOR")
+          ]),
+          _vm._v(" "),
+          _c("a", { staticClass: "dropdown-item", attrs: { href: "/APIs1" } }, [
+            _vm._v("  SICOEP POR ESTUDIANTES")
+          ]),
+          _vm._v(" "),
+          _c("a", { staticClass: "dropdown-item", attrs: { href: "/APIs2" } }, [
+            _vm._v("  SICOEP POR ESCUELA")
           ])
         ]
       )
@@ -39783,7 +39807,7 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_sucursal_Mostrar_vue":1,"resources_js_components_sucursal_Crear_vue":1,"resources_js_components_sucursal_Editar_vue":1,"resources_js_components_API_Mostrar_vue":1,"resources_js_components_nivel_Mostrar_vue":1,"resources_js_components_nivel_Crear_vue":1,"resources_js_components_nivel_Editar_vue":1,"resources_js_components_catedratico_Mostrar_vue":1,"resources_js_components_catedratico_Crear_vue":1,"resources_js_components_catedratico_Editar_vue":1,"resources_js_components_curso_Mostrar_vue":1,"resources_js_components_curso_Crear_vue":1,"resources_js_components_curso_Editar_vue":1,"resources_js_components_grado_Mostrar_vue":1,"resources_js_components_grado_Crear_vue":1,"resources_js_components_grado_Editar_vue":1,"resources_js_components_alumno_Mostrar_vue":1,"resources_js_components_alumno_Crear_vue":1,"resources_js_components_alumno_Editar_vue":1,"resources_js_components_asigna_catedratico_Mostrar_vue":1,"resources_js_components_asigna_catedratico_Crear_vue":1,"resources_js_components_asigna_catedratico_Editar_vue":1,"resources_js_components_alumno_inscrito_Mostrar_vue":1,"resources_js_components_alumno_inscrito_Crear_vue":1,"resources_js_components_alumno_inscrito_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_sucursal_Mostrar_vue":1,"resources_js_components_sucursal_Crear_vue":1,"resources_js_components_sucursal_Editar_vue":1,"resources_js_components_API_Mostrar_vue":1,"resources_js_components_API_Mostrar1_vue":1,"resources_js_components_API_Mostrar2_vue":1,"resources_js_components_nivel_Mostrar_vue":1,"resources_js_components_nivel_Crear_vue":1,"resources_js_components_nivel_Editar_vue":1,"resources_js_components_catedratico_Mostrar_vue":1,"resources_js_components_catedratico_Crear_vue":1,"resources_js_components_catedratico_Editar_vue":1,"resources_js_components_curso_Mostrar_vue":1,"resources_js_components_curso_Crear_vue":1,"resources_js_components_curso_Editar_vue":1,"resources_js_components_grado_Mostrar_vue":1,"resources_js_components_grado_Crear_vue":1,"resources_js_components_grado_Editar_vue":1,"resources_js_components_alumno_Mostrar_vue":1,"resources_js_components_alumno_Crear_vue":1,"resources_js_components_alumno_Editar_vue":1,"resources_js_components_asigna_catedratico_Mostrar_vue":1,"resources_js_components_asigna_catedratico_Crear_vue":1,"resources_js_components_asigna_catedratico_Editar_vue":1,"resources_js_components_alumno_inscrito_Mostrar_vue":1,"resources_js_components_alumno_inscrito_Crear_vue":1,"resources_js_components_alumno_inscrito_Editar_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

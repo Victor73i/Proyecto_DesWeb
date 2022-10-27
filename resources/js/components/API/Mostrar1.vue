@@ -1,14 +1,12 @@
 <template>
-
     <div class="col-12 m-0 p-0"  >
         <div class="table-responsive"  >
             <table class="table table-bordered border-dark" style="background-color: #F3F0E7; ">
                 <thead class="bg-dark text-white" STYLE="background-color: #67DECD;">
                 <tr>
                     <th>ID</th>
-                    <th>Escuela</th>
-                    <th>Municipalidad</th>
-                    <th>PROFESSOR</th>
+                    <th>Estudiante Enrolados</th>
+                    <th>Municipio</th>
 
 
 
@@ -18,10 +16,9 @@
                 <tr v-for="todo in todos" :key="todo.id">
                     <td>{{todo.id}}</td>
 
+                    <td>{{todo.count_student_enrollments}}</td>
                     <td>{{todo.name}}</td>
-                    <td>{{todo.municipality_id}}</td>
 
-                    <td>{{todo.professors}}</td>
 
 
 
@@ -31,6 +28,7 @@
             </table>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -48,7 +46,7 @@ export default {
     methods:{
         getTodos(){
             axios
-            .get('http://sicoep.org/api/students_by_professor')
+            .get('http://sicoep.org/api/students_by_department_municipality')
                     .then(response =>{
                         console.log(response)
                         this.todos = response.data

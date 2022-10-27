@@ -35,7 +35,9 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                            <a class="dropdown-item" href="/APIs">  SICOEP </a>
+                            <a class="dropdown-item" href="/APIs">  SICOEP POR PROFESOR</a>
+                            <a class="dropdown-item" href="/APIs1">  SICOEP POR ESTUDIANTES</a>
+                            <a class="dropdown-item" href="/APIs2">  SICOEP POR ESCUELA</a>
 
                         </div>
 

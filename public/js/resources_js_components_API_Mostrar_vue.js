@@ -34,6 +34,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -145,25 +159,62 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("table", [
+  return _c("div", { staticClass: "col-12 m-0 p-0" }, [
+    _c("div", { staticClass: "table-responsive" }, [
       _c(
-        "tbody",
-        _vm._l(_vm.todos, function(todo) {
-          return _c("tr", { key: todo.id }, [
-            _c("td", [_vm._v(_vm._s(todo.id))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(todo.name))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(todo.municipality_id))])
-          ])
-        }),
-        0
+        "table",
+        {
+          staticClass: "table table-bordered border-dark",
+          staticStyle: { "background-color": "#F3F0E7" }
+        },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.todos, function(todo) {
+              return _c("tr", { key: todo.id }, [
+                _c("td", [_vm._v(_vm._s(todo.id))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(todo.name))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(todo.municipality_id))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(todo.professors))])
+              ])
+            }),
+            0
+          )
+        ]
       )
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "thead",
+      {
+        staticClass: "bg-dark text-white",
+        attrs: { STYLE: "background-color: #67DECD;" }
+      },
+      [
+        _c("tr", [
+          _c("th", [_vm._v("ID")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("Escuela")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("Municipalidad")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("PROFESSOR")])
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
