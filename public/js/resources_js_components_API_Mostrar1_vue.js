@@ -46,12 +46,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      todos: null
+      todos: null,
+      student: null,
+      search: null,
+      search1: null,
+      search2: null,
+      search3: null,
+      search4: null,
+      search5: null
     };
   },
   mounted: function mounted() {
@@ -67,6 +83,35 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (e) {
         return console.log(e);
       });
+    },
+    searchData: function searchData() {
+      var _this2 = this;
+      if (this.search1 && this.search && this.search4 && this.search5) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://sicoep.org/api/students_by_department_municipality?municipality=' + this.search1 + '&department=' + this.search + '&dateStart=' + this.search4 + '&dateEnd=' + this.search5).then(function (res) {
+          _this2.student = res.data;
+        })["catch"](function (err) {
+          console.log(err);
+        });
+      } else {}
+      alert("Tecla enter presionada");
+    },
+    searchData1: function searchData1() {
+      var _this3 = this;
+      if (this.search2) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://sicoep.org/api/students_by_department_municipality?municipality=' + this.search2).then(function (res) {
+          _this3.student = res.data;
+        })["catch"](function (err) {
+          console.log(err);
+        });
+      }
+      if (this.search3) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://sicoep.org/api/students_by_department_municipality?department=' + this.search3).then(function (res) {
+          _this3.student = res.data;
+        })["catch"](function (err) {
+          console.log(err);
+        });
+      } else {}
+      alert("Tecla enter presionada");
     }
   }
 });
@@ -158,6 +203,190 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "col-12 m-0 p-0" }, [
+    _c("h1", [_vm._v("Deseas buscar por MUNICIPALIDAD y DEPARTAMENTO")]),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.search1,
+          expression: "search1"
+        }
+      ],
+      attrs: { type: "text", placeholder: "Buscar MUNICIPALIDAD" },
+      domProps: { value: _vm.search1 },
+      on: {
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+          ) {
+            return null
+          }
+          return _vm.searchData.apply(null, arguments)
+        },
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.search1 = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.search,
+          expression: "search"
+        }
+      ],
+      attrs: { type: "text", placeholder: "Buscar DEPARTAMENTO" },
+      domProps: { value: _vm.search },
+      on: {
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+          ) {
+            return null
+          }
+          return _vm.searchData.apply(null, arguments)
+        },
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.search = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.search4,
+          expression: "search4"
+        }
+      ],
+      attrs: { type: "date", placeholder: "Buscar Date inicio" },
+      domProps: { value: _vm.search4 },
+      on: {
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+          ) {
+            return null
+          }
+          return _vm.searchData.apply(null, arguments)
+        },
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.search4 = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.search5,
+          expression: "search5"
+        }
+      ],
+      attrs: { type: "date", placeholder: "Buscar Date Final" },
+      domProps: { value: _vm.search5 },
+      on: {
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+          ) {
+            return null
+          }
+          return _vm.searchData.apply(null, arguments)
+        },
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.search5 = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("h1", [_vm._v("Deseas buscar por MUNICIPALIDAD o DEPARTAMENTO")]),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.search2,
+          expression: "search2"
+        }
+      ],
+      attrs: { type: "text", placeholder: "Buscar MUNICIPALIDAD" },
+      domProps: { value: _vm.search2 },
+      on: {
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+          ) {
+            return null
+          }
+          return _vm.searchData1.apply(null, arguments)
+        },
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.search2 = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.search3,
+          expression: "search3"
+        }
+      ],
+      attrs: { type: "text", placeholder: "Buscar DEPARTAMENTO" },
+      domProps: { value: _vm.search3 },
+      on: {
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+          ) {
+            return null
+          }
+          return _vm.searchData1.apply(null, arguments)
+        },
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.search3 = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
     _c("div", { staticClass: "table-responsive" }, [
       _c(
         "table",
@@ -170,13 +399,13 @@ var render = function() {
           _vm._v(" "),
           _c(
             "tbody",
-            _vm._l(_vm.todos, function(todo) {
-              return _c("tr", { key: todo.id }, [
-                _c("td", [_vm._v(_vm._s(todo.id))]),
+            _vm._l(_vm.student, function(students) {
+              return _c("tr", { key: students.id }, [
+                _c("td", [_vm._v(_vm._s(students.id))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(todo.count_student_enrollments))]),
+                _c("td", [_vm._v(_vm._s(students.count_student_enrollments))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(todo.name))])
+                _c("td", [_vm._v(_vm._s(students.name))])
               ])
             }),
             0

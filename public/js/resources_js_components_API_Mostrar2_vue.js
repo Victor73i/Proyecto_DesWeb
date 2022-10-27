@@ -59,6 +59,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -69,7 +71,9 @@ __webpack_require__.r(__webpack_exports__);
       search: null,
       search1: null,
       search2: null,
-      search3: null
+      search3: null,
+      search4: null,
+      search5: null
     };
   },
   mounted: function mounted() {
@@ -88,15 +92,13 @@ __webpack_require__.r(__webpack_exports__);
     },
     searchData: function searchData() {
       var _this2 = this;
-      if (this.search1 && this.search) {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://sicoep.org/api/students_by_school?school=' + this.search1 + '&grade=' + this.search).then(function (res) {
+      if (this.search1 && this.search && this.search4 && this.search5) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://sicoep.org/api/students_by_school?school=' + this.search1 + '&grade=' + this.search + '&dateStart=' + this.search4 + '&dateEnd=' + this.search5).then(function (res) {
           _this2.student = res.data;
         })["catch"](function (err) {
           console.log(err);
         });
-      } else {
-        alert("Debes ingresar un texto");
-      }
+      } else {}
       alert("Tecla enter presionada");
     },
     searchData1: function searchData1() {
@@ -114,9 +116,7 @@ __webpack_require__.r(__webpack_exports__);
         })["catch"](function (err) {
           console.log(err);
         });
-      } else {
-        alert("Debes ingresar un texto");
-      }
+      } else {}
       alert("Tecla enter presionada");
     }
   }
@@ -267,6 +267,66 @@ var render = function() {
             return
           }
           _vm.search = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.search4,
+          expression: "search4"
+        }
+      ],
+      attrs: { type: "date", placeholder: "Buscar Escuela" },
+      domProps: { value: _vm.search4 },
+      on: {
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+          ) {
+            return null
+          }
+          return _vm.searchData.apply(null, arguments)
+        },
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.search4 = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.search5,
+          expression: "search5"
+        }
+      ],
+      attrs: { type: "date", placeholder: "Buscar Grado" },
+      domProps: { value: _vm.search5 },
+      on: {
+        keyup: function($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+          ) {
+            return null
+          }
+          return _vm.searchData.apply(null, arguments)
+        },
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.search5 = $event.target.value
         }
       }
     }),

@@ -4,6 +4,8 @@
         <h1>Deseas buscar por Escuela y Grado</h1>
         <input type="text" v-model="search1" v-on:keyup.enter="searchData" placeholder="Buscar Escuela">
         <input type="text" v-model="search" v-on:keyup.enter="searchData" placeholder="Buscar Grado">
+        <input type="date" v-model="search4" v-on:keyup.enter="searchData" placeholder="Buscar Escuela">
+        <input type="date" v-model="search5" v-on:keyup.enter="searchData" placeholder="Buscar Grado">
 
         <h1>Deseas buscar por Escuela o Grado</h1>
         <input type="text" v-model="search2" v-on:keyup.enter="searchData1" placeholder="Buscar Escuela">
@@ -55,6 +57,8 @@ export default {
            search1: null,
            search2: null,
            search3: null,
+           search4: null,
+           search5: null,
 
 
        }
@@ -75,9 +79,9 @@ export default {
 
         },
         searchData(){
-            if(this.search1 && this.search) {
+            if(this.search1 && this.search && this.search4 && this.search5) {
                 axios
-                    .get('http://sicoep.org/api/students_by_school?school=' + this.search1 + '&grade=' + this.search)
+                    .get('http://sicoep.org/api/students_by_school?school=' + this.search1 + '&grade=' + this.search + '&dateStart='  + this.search4 + '&dateEnd=' + this.search5)
                     .then((res) => {
                         this.student = res.data
                     })
@@ -86,7 +90,6 @@ export default {
                     })
             }
              else{
-                alert("Debes ingresar un texto")
             }
             alert("Tecla enter presionada");
         },
@@ -110,7 +113,6 @@ export default {
                         console.log(err);
                     })
             } else{
-                alert("Debes ingresar un texto")
             }
             alert("Tecla enter presionada");
         }
