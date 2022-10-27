@@ -4,6 +4,11 @@ const Mostrar = () => import('./components/sucursal/Mostrar.vue')
 const Crear = () => import('./components/sucursal/Crear.vue')
 const Editar = () => import('./components/sucursal/Editar.vue')
 
+const Mostrar8 = () => import('./components/API/Mostrar.vue')
+const Mostrar9 = () => import('./components/API/Mostrar1.vue')
+const Mostrar10= () => import('./components/API/Mostrar2.vue')
+
+
 const Mostrar1 = () => import('./components/nivel/Mostrar.vue')
 const Crear1 = () => import('./components/nivel/Crear.vue')
 const Editar1 = () => import('./components/nivel/Editar.vue')
@@ -160,4 +165,20 @@ export const routes = [
         path: '/editar7/:id',
         component: Editar7
     },
+    {
+        name: 'mostrarAPIs',
+        path: '/APIs',
+        component: Mostrar8
+    },
+    {
+        name: 'mostrarAPIs1',
+        path: '/APIs1',
+        component: Mostrar9
+    },
+    {
+        name: 'mostrarAPIs2',
+        path: '/APIs2',
+        component: Mostrar10
+    },
+
 ]

@@ -15,6 +15,7 @@
                     <li class="nav-item active">
                         <router-link exact-active-class="active" to="/catedraticos" class="nav-link">Catedráticos Registrados</router-link>
                     </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Más
@@ -24,7 +25,22 @@
                             <a class="dropdown-item" href="/grados">   Grados </a>
                             <a class="dropdown-item" href="/cursos">   Cursos </a>
                             <a class="dropdown-item" href="/sucursals">  Sucursales </a>
+
                         </div>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="APIS" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            API GRUPOS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                            <a class="dropdown-item" href="/APIs">  SICOEP POR PROFESOR</a>
+                            <a class="dropdown-item" href="/APIs1">  SICOEP POR ESTUDIANTES</a>
+                            <a class="dropdown-item" href="/APIs2">  SICOEP POR ESCUELA</a>
+
+                        </div>
+
                     </li>
                 </ul>
             </div>
