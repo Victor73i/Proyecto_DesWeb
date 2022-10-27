@@ -14,6 +14,8 @@
                     <tr>
                         <th>ID</th>
                         <th>Alumnos</th>
+                        <th>Sucursal</th>
+
                         <th>Curso</th>
                         <th>Nivel</th>
                         <th>Fecha</th>
@@ -25,6 +27,8 @@
                     <tr v-for="alumno_inscrito in alumno_inscritos" :key="alumno_inscrito.id">
                         <td>{{ alumno_inscrito.id }}</td>
                         <td>{{ alumno_inscrito.nombre_alumno }}</td>
+                        <td>{{ alumno_inscrito.nombre_sucursal }}</td>
+
                         <td>{{ alumno_inscrito.nombre_curso }}</td>
                         <td>{{ alumno_inscrito.nombre_nivel }}</td>
                         <td>{{ alumno_inscrito.fecha }}</td>

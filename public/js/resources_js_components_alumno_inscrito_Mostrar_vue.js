@@ -62,6 +62,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -289,6 +293,8 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(alumno_inscrito.nombre_alumno))]),
                   _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(alumno_inscrito.nombre_sucursal))]),
+                  _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(alumno_inscrito.nombre_curso))]),
                   _vm._v(" "),
                   _c("td", [_vm._v(_vm._s(alumno_inscrito.nombre_nivel))]),
@@ -362,6 +368,8 @@ var staticRenderFns = [
           _c("th", [_vm._v("ID")]),
           _vm._v(" "),
           _c("th", [_vm._v("Alumnos")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("Sucursal")]),
           _vm._v(" "),
           _c("th", [_vm._v("Curso")]),
           _vm._v(" "),
