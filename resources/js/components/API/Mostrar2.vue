@@ -4,13 +4,15 @@
         <h1>Deseas buscar por Escuela y Grado</h1>
         <input type="text" v-model="search1" v-on:keyup.enter="searchData" placeholder="Buscar Escuela">
         <input type="text" v-model="search" v-on:keyup.enter="searchData" placeholder="Buscar Grado">
-        <input type="date" v-model="search4" v-on:keyup.enter="searchData" placeholder="Buscar Escuela">
-        <input type="date" v-model="search5" v-on:keyup.enter="searchData" placeholder="Buscar Grado">
+        <input type="date" v-model="search4" v-on:keyup.enter="searchData" placeholder="Buscar Date inicio">
+        <input type="date" v-model="search5" v-on:keyup.enter="searchData" placeholder="Buscar Date Final">
 
         <h1>Deseas buscar por Escuela o Grado</h1>
         <input type="text" v-model="search2" v-on:keyup.enter="searchData1" placeholder="Buscar Escuela">
         <input type="text" v-model="search3" v-on:keyup.enter="searchData1" placeholder="Buscar Grado">
-
+        <div class="col-12 mb-2">
+            <button class="btn btn-success" style="float: right;" @click="descargarExcel()">Exportar</button>
+        </div>
 
         <div class="table-responsive"  >
             <table class="table table-bordered border-dark" style="background-color: #F3F0E7; ">
@@ -48,6 +50,7 @@
 
 <script>
 import axios from 'axios'
+import exportFromJSON from "export-from-json";
 export default {
    data(){
        return{
@@ -115,6 +118,12 @@ export default {
             } else{
             }
             alert("Tecla enter presionada");
+        },
+        descargarExcel(){
+            const data = this.student;
+            const fileName = 'SICOEP_ESTUDIANTES';
+            const exportType = exportFromJSON.types.xls;
+            exportFromJSON({data, fileName, exportType})
         }
     }
 
