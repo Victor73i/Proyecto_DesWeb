@@ -1,15 +1,20 @@
 <template>
 
     <div class="col-12 m-0 p-0"  >
-        <h1>Deseas buscar por Escuela y Professor</h1>
-        <input type="text" v-model="search1" v-on:keyup.enter="searchData" placeholder="Buscar Escuela">
-        <input type="text" v-model="search" v-on:keyup.enter="searchData" placeholder="Buscar Professor">
-        <input type="date" v-model="search4" v-on:keyup.enter="searchData" placeholder="Buscar Date inicio">
-        <input type="date" v-model="search5" v-on:keyup.enter="searchData" placeholder="Buscar Date Final">
+        <center><h3>¿Deseas buscar por Escuela y Profesor?</h3></center>
+        <div class="input-group mb-3" >
+        <input class="form-control" type="text" v-model="search1" v-on:keyup.enter="searchData" placeholder="Buscar Escuela">
+        <input class="form-control" type="text" v-model="search" v-on:keyup.enter="searchData" placeholder="Buscar Professor">
+        <input class="form-control" type="date" v-model="search4" v-on:keyup.enter="searchData" placeholder="Buscar Date inicio">
+        <input class="form-control" type="date" v-model="search5" v-on:keyup.enter="searchData" placeholder="Buscar Date Final">
+        </div>
 
-        <h1>Deseas buscar por Escuela o Professor</h1>
-        <input type="text" v-model="search2" v-on:keyup.enter="searchData1" placeholder="Buscar Escuela">
-        <input type="text" v-model="search3" v-on:keyup.enter="searchData1" placeholder="Buscar Professor">
+
+        <center><h3>¿Deseas buscar por Escuela o Profesor?</h3></center>
+        <div class="input-group mb-3"  >
+        <input class="form-control" style="width: 2%" type="text" v-model="search2" v-on:keyup.enter="searchData1" placeholder="Buscar Escuela">
+        <input class="form-control" style="width: 2%" type="text" v-model="search3" v-on:keyup.enter="searchData1" placeholder="Buscar Professor">
+        </div>
 
         <div class="col-12 mb-2">
             <button class="btn btn-success" style="float: right;" @click="descargarExcel()">Exportar</button>
@@ -21,7 +26,7 @@
                     <th>ID</th>
                     <th>Escuela</th>
                     <th>Municipalidad</th>
-                    <th>PROFESSOR</th>
+                    <th>Profesor</th>
 
 
 

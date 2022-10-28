@@ -62,6 +62,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -220,236 +225,257 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-12 m-0 p-0" }, [
-    _c("h1", [_vm._v("Deseas buscar por Escuela y Professor")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.search1,
-          expression: "search1"
-        }
-      ],
-      attrs: { type: "text", placeholder: "Buscar Escuela" },
-      domProps: { value: _vm.search1 },
-      on: {
-        keyup: function($event) {
-          if (
-            !$event.type.indexOf("key") &&
-            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-          ) {
-            return null
-          }
-          return _vm.searchData.apply(null, arguments)
-        },
-        input: function($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.search1 = $event.target.value
-        }
-      }
-    }),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.search,
-          expression: "search"
-        }
-      ],
-      attrs: { type: "text", placeholder: "Buscar Professor" },
-      domProps: { value: _vm.search },
-      on: {
-        keyup: function($event) {
-          if (
-            !$event.type.indexOf("key") &&
-            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-          ) {
-            return null
-          }
-          return _vm.searchData.apply(null, arguments)
-        },
-        input: function($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.search = $event.target.value
-        }
-      }
-    }),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.search4,
-          expression: "search4"
-        }
-      ],
-      attrs: { type: "date", placeholder: "Buscar Date inicio" },
-      domProps: { value: _vm.search4 },
-      on: {
-        keyup: function($event) {
-          if (
-            !$event.type.indexOf("key") &&
-            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-          ) {
-            return null
-          }
-          return _vm.searchData.apply(null, arguments)
-        },
-        input: function($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.search4 = $event.target.value
-        }
-      }
-    }),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.search5,
-          expression: "search5"
-        }
-      ],
-      attrs: { type: "date", placeholder: "Buscar Date Final" },
-      domProps: { value: _vm.search5 },
-      on: {
-        keyup: function($event) {
-          if (
-            !$event.type.indexOf("key") &&
-            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-          ) {
-            return null
-          }
-          return _vm.searchData.apply(null, arguments)
-        },
-        input: function($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.search5 = $event.target.value
-        }
-      }
-    }),
-    _vm._v(" "),
-    _c("h1", [_vm._v("Deseas buscar por Escuela o Professor")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.search2,
-          expression: "search2"
-        }
-      ],
-      attrs: { type: "text", placeholder: "Buscar Escuela" },
-      domProps: { value: _vm.search2 },
-      on: {
-        keyup: function($event) {
-          if (
-            !$event.type.indexOf("key") &&
-            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-          ) {
-            return null
-          }
-          return _vm.searchData1.apply(null, arguments)
-        },
-        input: function($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.search2 = $event.target.value
-        }
-      }
-    }),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.search3,
-          expression: "search3"
-        }
-      ],
-      attrs: { type: "text", placeholder: "Buscar Professor" },
-      domProps: { value: _vm.search3 },
-      on: {
-        keyup: function($event) {
-          if (
-            !$event.type.indexOf("key") &&
-            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-          ) {
-            return null
-          }
-          return _vm.searchData1.apply(null, arguments)
-        },
-        input: function($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.search3 = $event.target.value
-        }
-      }
-    }),
-    _vm._v(" "),
-    _c("div", { staticClass: "col-12 mb-2" }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-success",
-          staticStyle: { float: "right" },
+  return _c(
+    "div",
+    { staticClass: "col-12 m-0 p-0" },
+    [
+      _c("center", [
+        _c("h3", [_vm._v("¿Deseas buscar por Escuela y Profesor?")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-group mb-3" }, [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.search1,
+              expression: "search1"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { type: "text", placeholder: "Buscar Escuela" },
+          domProps: { value: _vm.search1 },
           on: {
-            click: function($event) {
-              return _vm.descargarExcel()
+            keyup: function($event) {
+              if (
+                !$event.type.indexOf("key") &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.searchData.apply(null, arguments)
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.search1 = $event.target.value
             }
           }
-        },
-        [_vm._v("Exportar")]
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "table-responsive" }, [
-      _c(
-        "table",
-        {
-          staticClass: "table table-bordered border-dark",
-          staticStyle: { "background-color": "#F3F0E7" }
-        },
-        [
-          _vm._m(0),
-          _vm._v(" "),
-          _c(
-            "tbody",
-            _vm._l(_vm.student, function(students) {
-              return _c("tr", { key: students.id }, [
-                _c("td", [_vm._v(_vm._s(students.id))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(students.name))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(students.municipality_id))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(students.professors))])
-              ])
-            }),
-            0
-          )
-        ]
-      )
-    ])
-  ])
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.search,
+              expression: "search"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { type: "text", placeholder: "Buscar Professor" },
+          domProps: { value: _vm.search },
+          on: {
+            keyup: function($event) {
+              if (
+                !$event.type.indexOf("key") &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.searchData.apply(null, arguments)
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.search = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.search4,
+              expression: "search4"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { type: "date", placeholder: "Buscar Date inicio" },
+          domProps: { value: _vm.search4 },
+          on: {
+            keyup: function($event) {
+              if (
+                !$event.type.indexOf("key") &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.searchData.apply(null, arguments)
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.search4 = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.search5,
+              expression: "search5"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { type: "date", placeholder: "Buscar Date Final" },
+          domProps: { value: _vm.search5 },
+          on: {
+            keyup: function($event) {
+              if (
+                !$event.type.indexOf("key") &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.searchData.apply(null, arguments)
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.search5 = $event.target.value
+            }
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("center", [
+        _c("h3", [_vm._v("¿Deseas buscar por Escuela o Profesor?")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-group mb-3" }, [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.search2,
+              expression: "search2"
+            }
+          ],
+          staticClass: "form-control",
+          staticStyle: { width: "2%" },
+          attrs: { type: "text", placeholder: "Buscar Escuela" },
+          domProps: { value: _vm.search2 },
+          on: {
+            keyup: function($event) {
+              if (
+                !$event.type.indexOf("key") &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.searchData1.apply(null, arguments)
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.search2 = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.search3,
+              expression: "search3"
+            }
+          ],
+          staticClass: "form-control",
+          staticStyle: { width: "2%" },
+          attrs: { type: "text", placeholder: "Buscar Professor" },
+          domProps: { value: _vm.search3 },
+          on: {
+            keyup: function($event) {
+              if (
+                !$event.type.indexOf("key") &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.searchData1.apply(null, arguments)
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.search3 = $event.target.value
+            }
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-12 mb-2" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-success",
+            staticStyle: { float: "right" },
+            on: {
+              click: function($event) {
+                return _vm.descargarExcel()
+              }
+            }
+          },
+          [_vm._v("Exportar")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "table-responsive" }, [
+        _c(
+          "table",
+          {
+            staticClass: "table table-bordered border-dark",
+            staticStyle: { "background-color": "#F3F0E7" }
+          },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              _vm._l(_vm.student, function(students) {
+                return _c("tr", { key: students.id }, [
+                  _c("td", [_vm._v(_vm._s(students.id))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(students.name))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(students.municipality_id))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(students.professors))])
+                ])
+              }),
+              0
+            )
+          ]
+        )
+      ])
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -470,7 +496,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("th", [_vm._v("Municipalidad")]),
           _vm._v(" "),
-          _c("th", [_vm._v("PROFESSOR")])
+          _c("th", [_vm._v("Profesor")])
         ])
       ]
     )
