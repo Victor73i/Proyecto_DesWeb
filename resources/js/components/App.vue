@@ -31,13 +31,14 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="APIS" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            API GRUPOS
+                            Api´s
                         </a>
+
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                            <a class="dropdown-item" href="/APIs">  SICOEP POR PROFESOR</a>
-                            <a class="dropdown-item" href="/APIs1">  SICOEP POR ESTUDIANTES</a>
-                            <a class="dropdown-item" href="/APIs2">  SICOEP POR ESCUELA</a>
+                            <a class="dropdown-item" href="/APIs">  SICOEP Por Profesor</a>
+                            <a class="dropdown-item" href="/APIs1">  SICOEP Por Estudiantes</a>
+                            <a class="dropdown-item" href="/APIs2">  SICOEP Por Escuela</a>
 
                         </div>
 

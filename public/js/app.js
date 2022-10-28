@@ -2118,6 +2118,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
@@ -24339,7 +24340,7 @@ var staticRenderFns = [
         },
         [
           _vm._v(
-            "\n                            API GRUPOS\n                        "
+            "\n                            Api´s\n                        "
           )
         ]
       ),
@@ -24352,15 +24353,15 @@ var staticRenderFns = [
         },
         [
           _c("a", { staticClass: "dropdown-item", attrs: { href: "/APIs" } }, [
-            _vm._v("  SICOEP POR PROFESOR")
+            _vm._v("  SICOEP Por Profesor")
           ]),
           _vm._v(" "),
           _c("a", { staticClass: "dropdown-item", attrs: { href: "/APIs1" } }, [
-            _vm._v("  SICOEP POR ESTUDIANTES")
+            _vm._v("  SICOEP Por Estudiantes")
           ]),
           _vm._v(" "),
           _c("a", { staticClass: "dropdown-item", attrs: { href: "/APIs2" } }, [
-            _vm._v("  SICOEP POR ESCUELA")
+            _vm._v("  SICOEP Por Escuela")
           ])
         ]
       )
