@@ -1,7 +1,20 @@
 <template>
 
     <div class="row">
+        <div class="form-group">
+            <label>Filtrado</label>
+            <input type="text" v-model="filterField" class="form-control"></input>
+        </div>
+        <div class="form-group">
+            <label>Sucursal</label>
+            <input type="int" v-model="filterField1" ></input>
+        </div>
 
+
+        <div class="form-group">
+            <label>Fecha de Nacimiento</label>
+            <input type="date" v-model="filterField3" ></input>
+        </div>
         <div class="col-12 mb-5">
             <router-link :to='{name:"crearAlumno"}' class="btn btn-outline-secondary"><i class="fa fa-plus fa-2x"> Nuevo Alumno</i></router-link>
             <router-link  to ="/alumno_inscritos" class="btn btn-outline-info" style="float: right;"> <i class="fa fa-address-book fa-2x" aria-hidden="true"> Alumnos Inscritos </i> </router-link>
@@ -26,7 +39,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr v-for="alumno in alumnos" :key="alumno.id">
+                    <tr  v-if="filter(alumno)" v-for="alumno in alumnos" :key="alumno.id">
                         <td>{{ alumno.id }}</td>
                         <td>{{ alumno.carnet_alumno }}</td>
                         <td>{{ alumno.nombre_alumno }}</td>
@@ -54,13 +67,31 @@ export default {
     name:"alumnos",
     data(){
         return {
-            alumnos:[]
+            alumnos:[],
+            filterField:'',
+            filterField1:"",
+            filterField3:"",
+
+
         }
     },
     mounted(){
         this.mostrarAlumnos()
     },
     methods:{
+        filter(alumno){
+            console.log(alumno.carnet_alumno+""+this.filterField+""+this.filterField1)
+
+            var show = true
+            if(alumno.carnet_alumno.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase())<0 && alumno.nombre_alumno.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase())<0 && alumno.direccion.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase())<0 )
+                show =false
+
+            else if(alumno.fecha_nacimiento.toLocaleLowerCase().indexOf(this.filterField3.toLocaleLowerCase())<0)
+                show =false
+            else if(alumno.nombre_sucursal.toLocaleLowerCase().indexOf(this.filterField1.toLocaleLowerCase())<0)//alumno_inscrito.fecha.toLocaleLowerCase().indexOf(this.filterField1.toLocaleLowerCase())<0)
+                show = false
+            return show
+        },
         async mostrarAlumnos(){
             await this.axios.get('/api/alumno').then(response=>{
                 this.alumnos = response.data
