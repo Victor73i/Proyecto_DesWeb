@@ -90,8 +90,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -275,9 +273,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [
+  return _c("div", {}, [
     _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Filtrado")]),
+      _c("label", [_vm._v("Busqueda de Informacion")]),
       _vm._v(" "),
       _c("input", {
         directives: [
@@ -289,7 +287,7 @@ var render = function() {
           }
         ],
         staticClass: "form-control",
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Sucursal, Alumno, Curso, Nivel" },
         domProps: { value: _vm.filterField },
         on: {
           input: function($event) {
@@ -297,6 +295,30 @@ var render = function() {
               return
             }
             _vm.filterField = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("label", [_vm._v("Fecha")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.filterField3,
+            expression: "filterField3"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { type: "date", placeholder: "" },
+        domProps: { value: _vm.filterField3 },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.filterField3 = $event.target.value
           }
         }
       })
@@ -314,7 +336,8 @@ var render = function() {
             expression: "filterField1"
           }
         ],
-        attrs: { type: "int" },
+        staticClass: "form-control",
+        attrs: { type: "int", placeholder: "60" },
         domProps: { value: _vm.filterField1 },
         on: {
           input: function($event) {
@@ -324,77 +347,52 @@ var render = function() {
             _vm.filterField1 = $event.target.value
           }
         }
-      })
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Select Nota")]),
+      }),
       _vm._v(" "),
-      _c(
-        "select",
-        {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.filterField2,
-              expression: "filterField2"
-            }
-          ],
-          staticClass: "form-control",
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.filterField2 = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        [
-          _c("option", { attrs: { value: ">" } }, [_vm._v(" <")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "<" } }, [_vm._v(" >")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: ">=" } }, [_vm._v(" <=")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "<=" } }, [_vm._v(" >=")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "==" } }, [_vm._v(" =")])
-        ]
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Fecha")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
+      _c("div", { staticClass: "swal2-grow-column" }, [
+        _c("label", [_vm._v("Funciones de Notas")]),
+        _vm._v(" "),
+        _c(
+          "select",
           {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.filterField3,
-            expression: "filterField3"
-          }
-        ],
-        attrs: { type: "date" },
-        domProps: { value: _vm.filterField3 },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.filterField2,
+                expression: "filterField2"
+              }
+            ],
+            staticClass: "form-control",
+            on: {
+              change: function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.filterField2 = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              }
             }
-            _vm.filterField3 = $event.target.value
-          }
-        }
-      })
+          },
+          [
+            _c("option", { attrs: { value: ">" } }, [_vm._v(" <")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "<" } }, [_vm._v(" >")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: ">=" } }, [_vm._v(" <=")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "<=" } }, [_vm._v(" >=")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "==" } }, [_vm._v(" =")])
+          ]
+        )
+      ])
     ]),
     _vm._v(" "),
     _c(

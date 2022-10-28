@@ -1,29 +1,27 @@
 <template>
 
-    <div class="row">
+    <div class="">
+
         <div class="form-group">
-            <label>Filtrado</label>
-            <input type="text" v-model="filterField" class="form-control"></input>
+            <label>Busqueda de Informacion</label>
+            <input type="text" v-model="filterField" class="form-control" placeholder="Sucursal, Alumno, Curso, Nivel"></input>
+            <label>Fecha</label>
+            <input type="date" class="form-control" placeholder="" v-model="filterField3" ></input>
         </div>
         <div class="form-group">
             <label>Nota</label>
-            <input type="int" v-model="filterField1" ></input>
-        </div>
+            <input type="int" class="form-control" placeholder="60" v-model="filterField1" ></input>
+            <div class="swal2-grow-column">
+                <label>Funciones de Notas</label>
+                <select  class="form-control" v-model="filterField2">
+                    <option value=">"> &#60;</option>
+                    <option value="<"> &#62;</option>
+                    <option value=">="> &#60;=</option>
+                    <option value="<="> &#62;=</option>
+                    <option value="=="> =</option>
 
-        <div class="form-group">
-            <label>Select Nota</label>
-            <select  class="form-control" v-model="filterField2">
-                <option value=">"> &#60;</option>
-                <option value="<"> &#62;</option>
-                <option value=">="> &#60;=</option>
-                <option value="<="> &#62;=</option>
-                <option value="=="> =</option>
-
-            </select>
-        </div>
-        <div class="form-group">
-            <label>Fecha</label>
-            <input type="date" v-model="filterField3" ></input>
+                </select>
+            </div>
         </div>
         <div class="col-12 mb-2">
             <router-link :to='{name:"crearAlumno_inscrito"}' class="btn btn-outline-secondary"><i class="fa fa-plus  fa-2x"> Inscribir Alumno</i></router-link>
