@@ -77,8 +77,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -263,7 +261,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Filtrado")]),
+      _c("label", [_vm._v(" Busqueda de Informacion  ")]),
       _vm._v(" "),
       _c("input", {
         directives: [
@@ -275,7 +273,7 @@ var render = function() {
           }
         ],
         staticClass: "form-control",
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Canet, Nombre, Dirreccion" },
         domProps: { value: _vm.filterField },
         on: {
           input: function($event) {
@@ -289,7 +287,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Sucursal")]),
+      _c("label", [_vm._v(" Sucursal  ")]),
       _vm._v(" "),
       _c("input", {
         directives: [
@@ -300,7 +298,8 @@ var render = function() {
             expression: "filterField1"
           }
         ],
-        attrs: { type: "int" },
+        staticClass: "form-control",
+        attrs: { type: "int", placeholder: "Puerto Barrios" },
         domProps: { value: _vm.filterField1 },
         on: {
           input: function($event) {
@@ -314,7 +313,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Fecha de Nacimiento")]),
+      _c("label", [_vm._v(" Fecha de Nacimiento")]),
       _vm._v(" "),
       _c("input", {
         directives: [
@@ -325,6 +324,7 @@ var render = function() {
             expression: "filterField3"
           }
         ],
+        staticClass: "form-control",
         attrs: { type: "date" },
         domProps: { value: _vm.filterField3 },
         on: {
