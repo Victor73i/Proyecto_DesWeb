@@ -2,18 +2,16 @@
 
     <div class="row">
         <div class="form-group">
-            <label>Filtrado</label>
-            <input type="text" v-model="filterField" class="form-control"></input>
+            <label> Busqueda de Informacion  </label>
+            <input type="text" v-model="filterField" class="form-control" placeholder="Canet, Nombre, Dirreccion"></input>
         </div>
         <div class="form-group">
-            <label>Sucursal</label>
-            <input type="int" v-model="filterField1" ></input>
+            <label> Sucursal  </label>
+            <input type="int" class="form-control" v-model="filterField1" placeholder="Puerto Barrios"></input>
         </div>
-
-
         <div class="form-group">
-            <label>Fecha de Nacimiento</label>
-            <input type="date" v-model="filterField3" ></input>
+            <label> Fecha de Nacimiento</label>
+            <input type="date" class="form-control" v-model="filterField3" ></input>
         </div>
         <div class="col-12 mb-5">
             <router-link :to='{name:"crearAlumno"}' class="btn btn-outline-secondary"><i class="fa fa-plus fa-2x"> Nuevo Alumno</i></router-link>
