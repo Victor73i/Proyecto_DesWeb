@@ -29,6 +29,7 @@
 
         <div class="col-12 mb-2">
             <button class="btn btn-success" style="float: right;" @click="descargarExcel()">Exportar</button>
+            <br>
         </div>
         <div class="col-12 m-0 p-0"  >
 
