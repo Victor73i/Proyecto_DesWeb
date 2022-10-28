@@ -66,19 +66,57 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "alumno_inscritos",
   data: function data() {
     return {
-      alumno_inscritos: []
+      alumno_inscritos: [],
+      filterField: '',
+      filterField1: "",
+      filterField3: "",
+      filterField2: ""
     };
   },
   mounted: function mounted() {
     this.mostrarAlumno_inscritos();
   },
   methods: {
+    filter: function filter(alumno_inscrito) {
+      console.log(alumno_inscrito.nombre_sucursal + "" + this.filterField + "" + this.filterField1);
+      var show = true;
+      if (alumno_inscrito.nombre_sucursal.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase()) < 0 && alumno_inscrito.nombre_nivel.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase()) < 0 && alumno_inscrito.nombre_alumno.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase()) < 0 && alumno_inscrito.nombre_curso.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase()) < 0) show = false;else if (alumno_inscrito.fecha.toLocaleLowerCase().indexOf(this.filterField3.toLocaleLowerCase()) < 0) show = false;else if (this.filterField1 !== "")
+        //alumno_inscrito.fecha.toLocaleLowerCase().indexOf(this.filterField1.toLocaleLowerCase())<0)
+        show = eval(this.filterField1 + this.filterField2 + alumno_inscrito.nota);
+      return show;
+    },
     mostrarAlumno_inscritos: function mostrarAlumno_inscritos() {
       var _this = this;
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
@@ -238,6 +276,127 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Filtrado")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.filterField,
+            expression: "filterField"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { type: "text" },
+        domProps: { value: _vm.filterField },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.filterField = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Nota")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.filterField1,
+            expression: "filterField1"
+          }
+        ],
+        attrs: { type: "int" },
+        domProps: { value: _vm.filterField1 },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.filterField1 = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Select Nota")]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.filterField2,
+              expression: "filterField2"
+            }
+          ],
+          staticClass: "form-control",
+          on: {
+            change: function($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function(o) {
+                  return o.selected
+                })
+                .map(function(o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.filterField2 = $event.target.multiple
+                ? $$selectedVal
+                : $$selectedVal[0]
+            }
+          }
+        },
+        [
+          _c("option", { attrs: { value: ">" } }, [_vm._v(" <")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "<" } }, [_vm._v(" >")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: ">=" } }, [_vm._v(" <=")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "<=" } }, [_vm._v(" >=")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "==" } }, [_vm._v(" =")])
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Fecha")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.filterField3,
+            expression: "filterField3"
+          }
+        ],
+        attrs: { type: "date" },
+        domProps: { value: _vm.filterField3 },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.filterField3 = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
     _c(
       "div",
       { staticClass: "col-12 mb-2" },
@@ -288,61 +447,65 @@ var render = function() {
             _c(
               "tbody",
               _vm._l(_vm.alumno_inscritos, function(alumno_inscrito) {
-                return _c("tr", { key: alumno_inscrito.id }, [
-                  _c("td", [_vm._v(_vm._s(alumno_inscrito.id))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(alumno_inscrito.nombre_alumno))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(alumno_inscrito.nombre_sucursal))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(alumno_inscrito.nombre_curso))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(alumno_inscrito.nombre_nivel))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(alumno_inscrito.fecha))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(alumno_inscrito.nota))]),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "btn btn-outline-warning",
-                          attrs: {
-                            to: {
-                              name: "editarAlumno_inscrito",
-                              params: { id: alumno_inscrito.id }
-                            }
-                          }
-                        },
-                        [
-                          _c("i", {
-                            staticClass: "fa fa-cog fa-spin fa-2x fa-fw"
-                          })
-                        ]
-                      ),
+                return _vm.filter(alumno_inscrito)
+                  ? _c("tr", { key: alumno_inscrito.id }, [
+                      _c("td", [_vm._v(_vm._s(alumno_inscrito.id))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(alumno_inscrito.nombre_alumno))]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(_vm._s(alumno_inscrito.nombre_sucursal))
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(alumno_inscrito.nombre_curso))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(alumno_inscrito.nombre_nivel))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(alumno_inscrito.fecha))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(alumno_inscrito.nota))]),
                       _vm._v(" "),
                       _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-outline-danger",
-                          attrs: { type: "button" },
-                          on: {
-                            click: function($event) {
-                              return _vm.borrarAlumno_inscrito(
-                                alumno_inscrito.id
-                              )
-                            }
-                          }
-                        },
-                        [_c("i", { staticClass: "fas fa-trash fa-2x" })]
+                        "td",
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "btn btn-outline-warning",
+                              attrs: {
+                                to: {
+                                  name: "editarAlumno_inscrito",
+                                  params: { id: alumno_inscrito.id }
+                                }
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "fa fa-cog fa-spin fa-2x fa-fw"
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "btn btn-outline-danger",
+                              attrs: { type: "button" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.borrarAlumno_inscrito(
+                                    alumno_inscrito.id
+                                  )
+                                }
+                              }
+                            },
+                            [_c("i", { staticClass: "fas fa-trash fa-2x" })]
+                          )
+                        ],
+                        1
                       )
-                    ],
-                    1
-                  )
-                ])
+                    ])
+                  : _vm._e()
               }),
               0
             )
