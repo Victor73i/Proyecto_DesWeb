@@ -66,19 +66,43 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "alumnos",
   data: function data() {
     return {
-      alumnos: []
+      alumnos: [],
+      filterField: '',
+      filterField1: "",
+      filterField3: ""
     };
   },
   mounted: function mounted() {
     this.mostrarAlumnos();
   },
   methods: {
+    filter: function filter(alumno) {
+      console.log(alumno.carnet_alumno + "" + this.filterField + "" + this.filterField1);
+      var show = true;
+      if (alumno.carnet_alumno.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase()) < 0 && alumno.nombre_alumno.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase()) < 0 && alumno.direccion.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase()) < 0) show = false;else if (alumno.fecha_nacimiento.toLocaleLowerCase().indexOf(this.filterField3.toLocaleLowerCase()) < 0) show = false;else if (alumno.nombre_sucursal.toLocaleLowerCase().indexOf(this.filterField1.toLocaleLowerCase()) < 0)
+        //alumno_inscrito.fecha.toLocaleLowerCase().indexOf(this.filterField1.toLocaleLowerCase())<0)
+        show = false;
+      return show;
+    },
     mostrarAlumnos: function mostrarAlumnos() {
       var _this = this;
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
@@ -238,6 +262,82 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Filtrado")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.filterField,
+            expression: "filterField"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { type: "text" },
+        domProps: { value: _vm.filterField },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.filterField = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Sucursal")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.filterField1,
+            expression: "filterField1"
+          }
+        ],
+        attrs: { type: "int" },
+        domProps: { value: _vm.filterField1 },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.filterField1 = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Fecha de Nacimiento")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.filterField3,
+            expression: "filterField3"
+          }
+        ],
+        attrs: { type: "date" },
+        domProps: { value: _vm.filterField3 },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.filterField3 = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
     _c(
       "div",
       { staticClass: "col-12 mb-5" },
@@ -307,61 +407,63 @@ var render = function() {
             _c(
               "tbody",
               _vm._l(_vm.alumnos, function(alumno) {
-                return _c("tr", { key: alumno.id }, [
-                  _c("td", [_vm._v(_vm._s(alumno.id))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(alumno.carnet_alumno))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(alumno.nombre_alumno))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(alumno.fecha_nacimiento))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(alumno.direccion))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(alumno.telefono))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(alumno.correo))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(alumno.nombre_sucursal))]),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "btn btn-outline-warning",
-                          attrs: {
-                            to: {
-                              name: "editarAlumno",
-                              params: { id: alumno.id }
-                            }
-                          }
-                        },
-                        [
-                          _c("i", {
-                            staticClass: "fa fa-cog fa-spin fa-2x fa-fw"
-                          })
-                        ]
-                      ),
+                return _vm.filter(alumno)
+                  ? _c("tr", { key: alumno.id }, [
+                      _c("td", [_vm._v(_vm._s(alumno.id))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(alumno.carnet_alumno))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(alumno.nombre_alumno))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(alumno.fecha_nacimiento))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(alumno.direccion))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(alumno.telefono))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(alumno.correo))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(alumno.nombre_sucursal))]),
                       _vm._v(" "),
                       _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-outline-danger",
-                          attrs: { type: "button" },
-                          on: {
-                            click: function($event) {
-                              return _vm.borrarAlumno(alumno.id)
-                            }
-                          }
-                        },
-                        [_c("i", { staticClass: "fas fa-trash fa-2x" })]
+                        "td",
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "btn btn-outline-warning",
+                              attrs: {
+                                to: {
+                                  name: "editarAlumno",
+                                  params: { id: alumno.id }
+                                }
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "fa fa-cog fa-spin fa-2x fa-fw"
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "btn btn-outline-danger",
+                              attrs: { type: "button" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.borrarAlumno(alumno.id)
+                                }
+                              }
+                            },
+                            [_c("i", { staticClass: "fas fa-trash fa-2x" })]
+                          )
+                        ],
+                        1
                       )
-                    ],
-                    1
-                  )
-                ])
+                    ])
+                  : _vm._e()
               }),
               0
             )
