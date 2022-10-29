@@ -72,7 +72,7 @@ export default {
     methods:{
         getTodos(){
             axios
-            .get('http://sicoep.org/api/students_by_department_municipality')
+            .get('https://sicoep.org/api/students_by_department_municipality')
                     .then(response =>{
                         console.log(response)
                         this.todos = response.data
@@ -84,7 +84,7 @@ export default {
         searchData() {
             if (this.search1 && this.search && this.search4 && this.search5) {
                 axios
-                    .get('http://sicoep.org/api/students_by_department_municipality?municipality=' + this.search1 + '&department=' + this.search + '&dateStart=' + this.search4 + '&dateEnd=' + this.search5)
+                    .get('https://sicoep.org/api/students_by_department_municipality?municipality=' + this.search1 + '&department=' + this.search + '&dateStart=' + this.search4 + '&dateEnd=' + this.search5)
                     .then((res) => {
                         this.student = res.data
                     })
@@ -93,12 +93,12 @@ export default {
                     })
             } else {
             }
-            alert("Tecla enter presionada");
+            alert("Mostrando Datos");
         },
         searchData1() {
             if (this.search2) {
                 axios
-                    .get('http://sicoep.org/api/students_by_department_municipality?municipality=' + this.search2)
+                    .get('https://sicoep.org/api/students_by_department_municipality?municipality=' + this.search2)
                     .then((res) => {
                         this.student = res.data
                     })
@@ -108,7 +108,7 @@ export default {
             }
             if (this.search3) {
                 axios
-                    .get('http://sicoep.org/api/students_by_department_municipality?department=' + this.search3)
+                    .get('https://sicoep.org/api/students_by_department_municipality?department=' + this.search3)
                     .then((res) => {
                         this.student = res.data
                     })
@@ -117,7 +117,7 @@ export default {
                     })
             } else {
             }
-            alert("Tecla enter presionada");
+            alert("Mostrando Datos");
         },
         descargarExcel(){
             const data = this.student;
