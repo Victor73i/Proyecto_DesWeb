@@ -90,7 +90,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     getTodos: function getTodos() {
       var _this = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://sicoep.org/api/students_by_professor').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('https://sicoep.org/api/students_by_professor').then(function (response) {
         console.log(response);
         _this.todos = response.data;
       })["catch"](function (e) {
@@ -100,31 +100,31 @@ __webpack_require__.r(__webpack_exports__);
     searchData: function searchData() {
       var _this2 = this;
       if (this.search1 && this.search && this.search4 && this.search5) {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://sicoep.org/api/students_by_professor?school=' + this.search1 + '&professor=' + this.search + '&dateStart=' + this.search4 + '&dateEnd=' + this.search5).then(function (res) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('https://sicoep.org/api/students_by_professor?school=' + this.search1 + '&professor=' + this.search + '&dateStart=' + this.search4 + '&dateEnd=' + this.search5).then(function (res) {
           _this2.student = res.data;
         })["catch"](function (err) {
           console.log(err);
         });
       } else {}
-      alert("Tecla enter presionada");
+      alert("Mostrando Datos");
     },
     searchData1: function searchData1() {
       var _this3 = this;
       if (this.search2) {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://sicoep.org/api/students_by_professor?school=' + this.search2).then(function (res) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('https://sicoep.org/api/students_by_professor?school=' + this.search2).then(function (res) {
           _this3.student = res.data;
         })["catch"](function (err) {
           console.log(err);
         });
       }
       if (this.search3) {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://sicoep.org/api/students_by_professor?professor=' + this.search3).then(function (res) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('https://sicoep.org/api/students_by_professor?professor=' + this.search3).then(function (res) {
           _this3.student = res.data;
         })["catch"](function (err) {
           console.log(err);
         });
       } else {}
-      alert("Tecla enter presionada");
+      alert("Mostrando Datos");
     },
     descargarExcel: function descargarExcel() {
       var data = this.student;
