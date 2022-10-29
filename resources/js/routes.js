@@ -7,6 +7,8 @@ const Editar = () => import('./components/sucursal/Editar.vue')
 const Mostrar8 = () => import('./components/API/Mostrar.vue')
 const Mostrar9 = () => import('./components/API/Mostrar1.vue')
 const Mostrar10= () => import('./components/API/Mostrar2.vue')
+const Mostrar11= () => import('./components/API/Mostrar3.vue')
+const Mostrar12= () => import('./components/API/Mostrar4.vue')
 
 
 const Mostrar1 = () => import('./components/nivel/Mostrar.vue')
@@ -180,5 +182,16 @@ export const routes = [
         path: '/APIs2',
         component: Mostrar10
     },
+    {
+        name: 'mostrarAPIs3',
+        path: '/APIs3',
+        component: Mostrar11
+    },
+    {
+        name: 'mostrarAPIs4',
+        path: '/APIs4',
+        component: Mostrar12
+    },
+
 
 ]

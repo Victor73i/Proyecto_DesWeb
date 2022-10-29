@@ -1,6 +1,7 @@
 <template>
 
     <div class="row">
+
         <div class="col-12 mb-5">
             <router-link :to='{name:"crearCurso"}' class="btn btn-outline-secondary"><i class="fa fa-plus  fa-2x"> Nuevo Curso</i></router-link>
         </div>
@@ -47,6 +48,19 @@ export default {
         this.mostrarCursos()
     },
     methods:{
+        filter(todo){
+            console.log(todo.name+""+this.filterField+""+this.filterField1)
+
+            var show = true
+            if(todo.name.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase())<0 && todo.address.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase())<0)
+                show =false
+            else if(todo.contactoName.toLocaleLowerCase().indexOf(this.filterField1.toLocaleLowerCase())<0)
+                show =false
+            else if(todo.contacto.name.toLocaleLowerCase().indexOf(this.filterField2.toLocaleLowerCase())<0 && todo.contacto.number.toLocaleLowerCase().indexOf(this.filterField2.toLocaleLowerCase())<0 && todo.contacto.email.toLocaleLowerCase().indexOf(this.filterField2.toLocaleLowerCase())<0)
+                show =false
+
+            return show
+        },
         async mostrarCursos(){
             await this.axios.get('/api/curso').then(response=>{
                 this.cursos = response.data

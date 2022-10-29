@@ -52,6 +52,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -65,6 +66,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     this.mostrarCursos();
   },
   methods: {
+    filter: function filter(todo) {
+      console.log(todo.name + "" + this.filterField + "" + this.filterField1);
+      var show = true;
+      if (todo.name.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase()) < 0 && todo.address.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase()) < 0) show = false;else if (todo.contactoName.toLocaleLowerCase().indexOf(this.filterField1.toLocaleLowerCase()) < 0) show = false;else if (todo.contacto.name.toLocaleLowerCase().indexOf(this.filterField2.toLocaleLowerCase()) < 0 && todo.contacto.number.toLocaleLowerCase().indexOf(this.filterField2.toLocaleLowerCase()) < 0 && todo.contacto.email.toLocaleLowerCase().indexOf(this.filterField2.toLocaleLowerCase()) < 0) show = false;
+      return show;
+    },
     mostrarCursos: function mostrarCursos() {
       var _this = this;
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {

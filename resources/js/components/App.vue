@@ -39,6 +39,10 @@
                             <a class="dropdown-item" href="/APIs">  SICOEP Por Profesor</a>
                             <a class="dropdown-item" href="/APIs1">  SICOEP Por Estudiantes</a>
                             <a class="dropdown-item" href="/APIs2">  SICOEP Por Escuela</a>
+                            <a class="dropdown-item" href="/APIs3">  Transportes_SA Por Actions</a>
+                            <a class="dropdown-item" href="/APIs4">  Transportes_SA Por Transportista</a>
+
+
 
                         </div>
 
