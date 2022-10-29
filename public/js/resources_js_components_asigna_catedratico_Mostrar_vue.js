@@ -59,19 +59,36 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "asigna_catedraticos",
   data: function data() {
     return {
-      asigna_catedraticos: []
+      asigna_catedraticos: [],
+      filterField: "",
+      filterField1: ""
     };
   },
   mounted: function mounted() {
     this.mostrarAsigna_catedraticos();
+    this.filter();
   },
   methods: {
+    filter: function filter(asigna_catedratico) {
+      console.log(asigna_catedratico.nombre_catedratico + "" + this.filterField + "" + this.filterField1);
+      var show = true;
+      if (asigna_catedratico.nombre_catedratico.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase()) < 0 && asigna_catedratico.nombre_curso.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase()) < 0 && asigna_catedratico.nombre_nivel.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase()) < 0) show = false;else if (asigna_catedratico.fecha.toLocaleLowerCase().indexOf(this.filterField1.toLocaleLowerCase()) < 0) show = false;
+      return show;
+    },
     mostrarAsigna_catedraticos: function mostrarAsigna_catedraticos() {
       var _this = this;
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
@@ -231,6 +248,56 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Busqueda de Informacion")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.filterField,
+            expression: "filterField"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { type: "text", placeholder: "Catedratico, Curso, Nivel" },
+        domProps: { value: _vm.filterField },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.filterField = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("label", [_vm._v("Fecha de Nacimiento")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.filterField1,
+            expression: "filterField1"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { type: "date", placeholder: "Fecha" },
+        domProps: { value: _vm.filterField1 },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.filterField1 = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
     _c(
       "div",
       { staticClass: "col-12 mb-2" },
@@ -281,59 +348,65 @@ var render = function() {
             _c(
               "tbody",
               _vm._l(_vm.asigna_catedraticos, function(asigna_catedratico) {
-                return _c("tr", { key: asigna_catedratico.id }, [
-                  _c("td", [_vm._v(_vm._s(asigna_catedratico.id))]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(_vm._s(asigna_catedratico.nombre_catedratico))
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(asigna_catedratico.nombre_curso))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(asigna_catedratico.nombre_nivel))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(asigna_catedratico.fecha))]),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "btn btn-outline-warning",
-                          attrs: {
-                            to: {
-                              name: "editarAsigna_catedratico",
-                              params: { id: asigna_catedratico.id }
-                            }
-                          }
-                        },
-                        [
-                          _c("i", {
-                            staticClass: "fa fa-cog fa-spin fa-2x fa-fw"
-                          })
-                        ]
-                      ),
+                return _vm.filter(asigna_catedratico)
+                  ? _c("tr", { key: asigna_catedratico.id }, [
+                      _c("td", [_vm._v(_vm._s(asigna_catedratico.id))]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(_vm._s(asigna_catedratico.nombre_catedratico))
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(_vm._s(asigna_catedratico.nombre_curso))
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(_vm._s(asigna_catedratico.nombre_nivel))
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(asigna_catedratico.fecha))]),
                       _vm._v(" "),
                       _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-outline-danger",
-                          attrs: { type: "button" },
-                          on: {
-                            click: function($event) {
-                              return _vm.borrarAsigna_catedratico(
-                                asigna_catedratico.id
-                              )
-                            }
-                          }
-                        },
-                        [_c("i", { staticClass: "fas fa-trash fa-2x" })]
+                        "td",
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "btn btn-outline-warning",
+                              attrs: {
+                                to: {
+                                  name: "editarAsigna_catedratico",
+                                  params: { id: asigna_catedratico.id }
+                                }
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "fa fa-cog fa-spin fa-2x fa-fw"
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "btn btn-outline-danger",
+                              attrs: { type: "button" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.borrarAsigna_catedratico(
+                                    asigna_catedratico.id
+                                  )
+                                }
+                              }
+                            },
+                            [_c("i", { staticClass: "fas fa-trash fa-2x" })]
+                          )
+                        ],
+                        1
                       )
-                    ],
-                    1
-                  )
-                ])
+                    ])
+                  : _vm._e()
               }),
               0
             )

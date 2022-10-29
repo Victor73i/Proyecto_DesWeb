@@ -1,6 +1,14 @@
 <template>
 
     <div class="row">
+        <div class="form-group">
+            <label>Busqueda de Informacion</label>
+            <input type="text" v-model="filterField" class="form-control" placeholder="Catedratico, Curso, Nivel"></input>
+            <label>Fecha de Nacimiento</label>
+            <input type="date" class="form-control" placeholder="Fecha" v-model="filterField1" ></input>
+        </div>
+
+
         <div class="col-12 mb-2">
             <router-link :to='{name:"crearAsigna_catedratico"}' class="btn btn-outline-secondary"><i class="fa fa-plus  fa-2x"> Asignar Catedrático</i></router-link>
         </div>
@@ -21,7 +29,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr v-for="asigna_catedratico in asigna_catedraticos" :key="asigna_catedratico.id">
+                    <tr  v-if="filter(asigna_catedratico)" v-for="asigna_catedratico in asigna_catedraticos" :key="asigna_catedratico.id">
                         <td>{{ asigna_catedratico.id }}</td>
                         <td>{{ asigna_catedratico.nombre_catedratico }}</td>
                         <td>{{ asigna_catedratico.nombre_curso }}</td>
@@ -47,13 +55,28 @@ export default {
     name:"asigna_catedraticos",
     data(){
         return {
-            asigna_catedraticos:[]
+            asigna_catedraticos:[],
+            filterField:"",
+
+            filterField1:"",
         }
     },
     mounted(){
         this.mostrarAsigna_catedraticos()
+        this.filter()
     },
     methods:{
+        filter(asigna_catedratico){
+            console.log(asigna_catedratico.nombre_catedratico+""+this.filterField+""+this.filterField1)
+
+            var show = true
+            if(asigna_catedratico.nombre_catedratico.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase())<0 && asigna_catedratico.nombre_curso.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase())<0 && asigna_catedratico.nombre_nivel.toLocaleLowerCase().indexOf(this.filterField.toLocaleLowerCase())<0)
+                show =false
+            else if(asigna_catedratico.fecha.toLocaleLowerCase().indexOf(this.filterField1.toLocaleLowerCase())<0)
+                show =false
+
+            return show
+        },
         async mostrarAsigna_catedraticos(){
             await this.axios.get('/api/asigna_catedratico').then(response=>{
                 this.asigna_catedraticos = response.data
